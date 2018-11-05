@@ -11,7 +11,5 @@ Passive Dynamic Object Locomotion by Rocking and Walking Manipulation
 ## Deomonstration
 To see how the parameters are defined and a demonstration of the manipulation, take a look at the following video.
 
-<a href="https://drive.google.com/file/d/1rxQy9nd6O5Jt5PxMQcQ-WqnGz0_dPL5v/preview"><img src="https://drive.google.com/file/d/1rxQy9nd6O5Jt5PxMQcQ-WqnGz0_dPL5v/preview" style="width: 500px; max-width: 100%; height: auto" title="Click for the larger version." /></a>
-
-
-<iframe src="https://drive.google.com/file/d/1rxQy9nd6O5Jt5PxMQcQ-WqnGz0_dPL5v/preview" width="640" height="480"></iframe>
+<a href="https://drive.google.com/file/d/1rxQy9nd6O5Jt5PxMQcQ-WqnGz0_dPL5v/view?usp=sharing"><img src="https://lh3.googleusercontent.com/JyIFBdyEsLwuUKHb34dDD-foJIwI7LqDNZKWyLc3v3hIBc8cDJgNKG69RNoBT-YgAy2B17KGmxvFPj5poUxd=w1280-h720-n-k-rw" style="width: 1280px; max-width: 100%; height: auto"/>
+</a>
