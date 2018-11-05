@@ -253,15 +253,9 @@ function [X_ann, Y_ann, U_ann, V_ann]= ...
 
     %{
     Given a vector field along a line, this vector rotates it (about
-    origin) to fill the entire annulus
-    
-    Input: 
-    
-    Params:
-    
-    Returns:
-    
+    origin) to fill the entire annulus   
     %}
+    
     angular_count = 1;
     for theta = linspace(0,2*pi,angular_res)
         
@@ -277,12 +271,6 @@ function [X_ann, Y_ann, U_ann, V_ann]= ...
         Y_ann(radial_count, angular_count) = rot_query_pt(2);
         U_ann(radial_count, angular_count) = rot_tan_unit_vec(1);
         V_ann(radial_count, angular_count) = rot_tan_unit_vec(2);
-
-        
-%         quiver(rot_query_pt(1), rot_query_pt(2), rot_tan_unit_vec(1), ...
-%             rot_tan_unit_vec(2), 0.1)
-%         drawnow
-%         hold on;
 
 
     angular_count = angular_count + 1;
