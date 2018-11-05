@@ -31,9 +31,9 @@ left_rock = zeros(total_rocking_steps, 2);
 
 
 
-start_angle = deg2rad(15);
+rocking_angle = deg2rad(15);
 
-start_pt = flowGivenPhi(start_angle, AX, h, 90);
+start_pt = flowGivenPhi(rocking_angle, AX, h, 90);
 new_start_pt = double([start_pt(1); start_pt(2)]);
 
 anchor_point = [0;0];
