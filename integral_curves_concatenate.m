@@ -12,25 +12,23 @@ load params.mat
 figure('units','normalized','outerposition',[0 0 1 1])
 
 
-%%%%%%%%Integration Params-Don't Change%%%%%%%
+%Integration Params
 steps = 10;
 step_length = 0.005;
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%Transcribing to a file%%%%%%%%%%%
+%To save anchor point positions to a file
 fileID_hong = fopen('kong_manipulator_motion.txt','w');
 fprintf(fileID_hong,'%10s %10s\n','x_position', 'y_position');
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%Transcribing rocking values to a variable%%%%%%%
+%Transcribing rocking values to a variable. TO DO: Check redundancy with the text file above
 filename = 'lr_rocking.mat';
 total_rocking_steps = 10; %Keep it even number
 right_rock = zeros(total_rocking_steps-1, 2);
 
 left_rock = zeros(total_rocking_steps, 2);
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 start_angle = deg2rad(15);
@@ -205,10 +203,8 @@ end
 function new_anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt)
 
     motion_dir =  current_stream_pt-new_start_pt;
-    
     new_anchor_point = anchor_point + motion_dir
     
-
 end
 
 
@@ -224,7 +220,6 @@ function new_anchor_point = anchorPoint2(anchor_point, current_stream_pt, rot_di
 
     new_anchor_point = current_stream_pt + new_anchor_curr_stream;
     
-
 end
 
 
@@ -293,8 +288,6 @@ function [stream_x, stream_y, current_stream_pt] = flowFieldCW(del_lb, start_pt,
     stream_x = stream_x(1, 1:stp);
     stream_y = stream_y(1, 1:stp);
         
-
-
 end
 
 function [stream_x, stream_y, current_stream_pt] = flowFieldCCW(del_lb, start_pt,...
@@ -358,13 +351,10 @@ function [stream_x, stream_y, current_stream_pt] = flowFieldCCW(del_lb, start_pt
         end
        
     end
-    
-    
+        
     stream_x = stream_x(1, 1:stp);
     stream_y = stream_y(1, 1:stp);
         
-
-
 end
 
 function start_pt = flowGivenPhi(phi, AX, h, rot_angle)
@@ -403,14 +393,6 @@ function drawAnnulus(del_lb,del_ub, anchor_point, color)
         'Color', [.3+color .3+color .3+color]);
     
     hold on
-
-    %Draw line
-
-%     line_lb_ub = linspace(del_lb, del_ub, 50);
-% 
-%     plot(line_lb_ub, zeros(1,50), ....
-%         'LineWidth', 2.5, ...
-%         'Color', 'm')
 
     pbaspect([1 1 1])
     hold on
