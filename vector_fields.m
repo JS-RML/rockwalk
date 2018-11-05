@@ -197,30 +197,8 @@ save(filename, 'AX', 'h', 'R', 'hc', 'r', 'del_lb', 'del_ub')
 
 clear all
 
-function [reflected_stream_x, reflected_stream_y] = processStreamData(stream_x, stream_y)
-
-    t = pi/2 - atan(stream_y(end)/stream_x(end));
-
-    rot_matrix = [cos(t) -sin(t); sin(t) cos(t)];
-    
-    stream_rotated = zeros(length(stream_x), 2);
-    
-   
-    for i = 1:length(stream_x)
-        
-        stream_rotated(i, :) = transpose(rot_matrix*[stream_x(i); stream_y(i)]);        
-        
-    end
-    
-    reflected_stream_x = stream_rotated(:,2);
-    reflected_stream_y = stream_rotated(:,1);
-
-end
 
 
-
-
-%Given the initial angle phi, compute the corresponding streamline.
 function start_pt = flowGivenPhi(phi, AX, h, rot_angle, del_lb)
 
     subs_phi_AX = subs(AX, phi); 
@@ -230,8 +208,6 @@ function start_pt = flowGivenPhi(phi, AX, h, rot_angle, del_lb)
     start_pt_y = del_lb*sin(rot_angle);
     
     start_pt = [start_pt_x start_pt_y];
-    
-    
 end
 
 
@@ -266,24 +242,6 @@ function drawAnnulus(del_lb,del_ub)
         'Color', 'm')
 
     pbaspect([1 1 1])
-    hold on
-
-end
-
-
-function drawVectorField(AP, tan_unit_vec, n_base)
-
-    scale = 0.4;
-
-    q_h = quiver(AP(1), AP(2), tan_unit_vec(1), tan_unit_vec(2), ...
-    'LineWidth', 1, ...
-    'Color', [.4 .4 .4]);
-    set(q_h,'AutoScale','on', 'AutoScaleFactor',.5);
-
-%     hold on
-%     quiver3(AP(1), AP(2), AP(3), n_base(1), n_base(2),n_base(3), scale)
-
-    drawnow
     hold on
 
 end
