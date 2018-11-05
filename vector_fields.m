@@ -68,9 +68,6 @@ for del_query = linspace(del_lb, del_ub, radial_res)
     AP = [del_query 0 -h];
     unit_AP = AP/norm(AP);
 
-    %Compute length of the vector AP
-
-
     %Based on the distance constraint, solve for variable phi in AX
     sol_phi = solve(AX(1)^2 + AX(2)^2 + AX(3)^2 - norm(AP)^2 == 0,...
         phi, 'Real', true, 'PrincipalValue', true);
@@ -82,17 +79,12 @@ for del_query = linspace(del_lb, del_ub, radial_res)
     unit_X_tangent = subs_X_tangent/norm(subs_X_tangent);
     unit_AX = subs_AX/norm(subs_AX);
 
-
-
     first_rot_axis = cross(unit_AX, unit_AP)/ norm(cross(unit_AX, unit_AP));
     first_rot_angle = acos(dot(unit_AX, unit_AP));
-
 
     first_rot_mat = subs(sym_rot_axang_mat,...
         [w1 w2 w3 t], ...
         double([first_rot_axis first_rot_angle]));
-
-
 
    transformed_unit_tangent = first_rot_mat*unit_X_tangent';
 
@@ -101,31 +93,22 @@ for del_query = linspace(del_lb, del_ub, radial_res)
 
     sol_t = solve(...
         second_rot_mat_t(3,:)*double(transformed_unit_tangent) == 0, ...
-        t >=0, t <=pi, ... %these limits are different fro pos and neg fields
+        t >=0, t <=pi, ... %these limits are different for positive and negative fields
         t,...
         'Real', true, 'PrincipalValue', false, 'IgnoreAnalyticConstraints', false);
 
-
-
     second_rot_mat = subs(second_rot_mat_t, t, sol_t(1));
-
 
     rot_mat = second_rot_mat*first_rot_mat;
 
-
     n_base = rot_mat*[0 0 1]';   
-
 
     tan_vec = cross(n_base, [0 0 1]);
     tan_unit_vec = tan_vec/norm(tan_vec);
-
-%     fillAnnulusVectorField(del_query, tan_unit_vec)
-%     drawVectorField(AP, tan_unit_vec, n_base)
-
+    
     [X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos]= ...
     fillAnnulusVectorField(X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos, ...
     del_query, tan_unit_vec, radial_count, angular_res);
-
 
     radial_count = radial_count + 1;
 
@@ -138,9 +121,6 @@ for del_query = linspace(del_lb, del_ub, radial_res)
     AP = [del_query 0 -h];
     unit_AP = AP/norm(AP);
 
-    %Compute length of the vector AP
-
-
     %Based on the distance constraint, solve for variable phi in AX
     sol_phi = solve(AX(1)^2 + AX(2)^2 + AX(3)^2 - norm(AP)^2 == 0,...
         phi, 'Real', true, 'PrincipalValue', true);
@@ -152,8 +132,6 @@ for del_query = linspace(del_lb, del_ub, radial_res)
     unit_X_tangent = subs_X_tangent/norm(subs_X_tangent);
     unit_AX = subs_AX/norm(subs_AX);
 
-
-
     first_rot_axis = cross(unit_AX, unit_AP)/ norm(cross(unit_AX, unit_AP));
     first_rot_angle = acos(dot(unit_AX, unit_AP));
 
@@ -161,8 +139,6 @@ for del_query = linspace(del_lb, del_ub, radial_res)
     first_rot_mat = subs(sym_rot_axang_mat,...
         [w1 w2 w3 t], ...
         double([first_rot_axis first_rot_angle]));
-
-
 
    transformed_unit_tangent = first_rot_mat*unit_X_tangent';
 
@@ -175,33 +151,40 @@ for del_query = linspace(del_lb, del_ub, radial_res)
         t,...
         'Real', true, 'PrincipalValue', false, 'IgnoreAnalyticConstraints', false);
 
-
-
     second_rot_mat = subs(second_rot_mat_t, t, sol_t(1));
-
 
     rot_mat = second_rot_mat*first_rot_mat;
 
-
     n_base = rot_mat*[0 0 1]';   
-
 
     tan_vec = cross(n_base, [0 0 1]);
     tan_unit_vec = tan_vec/norm(tan_vec);
-
-%     fillAnnulusVectorField(del_query, tan_unit_vec)
-%     drawVectorField(AP, tan_unit_vec, n_base)
 
     [X_ann_neg, Y_ann_neg, U_ann_neg, V_ann_neg]= ...
     fillAnnulusVectorField(X_ann_neg, Y_ann_neg, U_ann_neg, V_ann_neg, ...
     del_query, tan_unit_vec, radial_count, angular_res);
 
-
     radial_count = radial_count + 1;
 
 end
 
+start_pt = flowGivenPhi(pi-0.9, AX, h, deg2rad(0), del_lb); 
 
+[stream_x, stream_y] = flowField(...
+     start_pt, X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos);
+ 
+plot(stream_x, stream_y, ...
+    'LineWidth', 1.40, ...
+    'Color', [.1 .1 .1])
+hold on
+
+quiver(X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos, 0.3, ...
+    'LineWidth', 1.0, ... %previously 0.05
+    'Color', [.4 .4 .4])
+hold on
+
+
+%Save vector fields data and parameters
 filename = 'vector_field_pos.mat';
 save(filename, 'X_ann_pos', 'Y_ann_pos', 'U_ann_pos', 'V_ann_pos')
 
@@ -210,26 +193,6 @@ save(filename, 'X_ann_neg', 'Y_ann_neg', 'U_ann_neg', 'V_ann_neg')
 
 filename = 'params.mat';
 save(filename, 'AX', 'h', 'R', 'hc', 'r', 'del_lb', 'del_ub')
-
-
-
-quiver(X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos, 0.3, ...
-    'LineWidth', 1.0, ... %previously 0.05
-    'Color', [.4 .4 .4])
-hold on
-
-start_pt = flowGivenPhi(pi-0.9, AX, h, deg2rad(0), del_lb); 
-
-[stream_x, stream_y] = flowField(...
-     start_pt, X_ann_pos, Y_ann_pos, U_ann_pos, V_ann_pos);
-
- 
-% [reflected_stream_x, reflected_stream_y] = processStreamData(stream_x, stream_y);
- 
-plot(stream_x, stream_y, ...
-    'LineWidth', 1.40, ...
-    'Color', [.1 .1 .1])
-hold on
 
 
 clear all
