@@ -5,10 +5,12 @@ Passive Dynamic Object Locomotion by Rocking and Walking Manipulation
 
 - First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three `.mat` files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate` in the next step. `vector_fields.m` will also output a figure showing an annulus filled with (positive) vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone. The following image outlines the concept.
 
-![Concept](https://github.com/nazir-ust/PRW-Manipulation/blob/master/media/vector_field.png)
+![](https://github.com/nazir-ust/PRW-Manipulation/blob/master/media/vector_field.png)
 
-- Then run `integral_curves_concatenate.m`. This file outputs a sequence of oblique cone's apex positions (correspondingly, the end-effector positions of a robot manipulator attached to the cone's apex). If these sequence of waypoints are followed, a net straight line displacement of the cone is obtained through alternate rocking. In this script, total number of rocking steps (`total_rocking_steps`) and `rocking_angle` may be altered. A large value of `rocking_angle` means that the end-effector moves large displacement and can potentially make the system (robot+object_cone) unstable. A small value, on the other hand, would result in a small net forward displacement per rocking step.
-  
+- Then run `integral_curves_concatenate.m`. This file outputs a sequence of oblique cone's apex positions (correspondingly, the end-effector positions of a robot manipulator attached to the cone's apex). If these sequence of waypoints are followed, a net straight line displacement of the cone is obtained through alternate rocking. In this script, total number of rocking steps (`total_rocking_steps`) and `rocking_angle` may be altered. A large value of `rocking_angle` means that the end-effector moves large displacement and can potentially make the system (robot+object_cone) unstable. A small value, on the other hand, would result in a small net forward displacement per rocking step. The following figure outlines the concatenation process.
+
+
+<img src="https://github.com/nazir-ust/PRW-Manipulation/blob/master/media/concatenation.png" width="450" height="450">
 
 ## Deomonstration
 To see how the parameters are defined and a demo of our manipulation task, please take a look at the following video.
