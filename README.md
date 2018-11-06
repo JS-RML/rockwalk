@@ -3,7 +3,8 @@ Passive Dynamic Object Locomotion by Rocking and Walking Manipulation
 
 ## Usage
 
-- First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three `.mat` files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate` in the next step. `vector_fields.m` will also output a figure showing an annulus filled with (positive) vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone. The following image outlines the concept.
+- First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three `.mat` files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate.m` in the next step. `vector_fields.m` will also output a figure showing an annulus filled with (positive) vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone. The following image outlines the concept.
+
 
 ![](https://github.com/nazir-ust/PRW-Manipulation/blob/master/media/vector_field.png)
 
