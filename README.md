@@ -21,4 +21,4 @@ To see how the parameters are defined and a demo of our manipulation task, pleas
 </a>
 
 ## References
-Please read our [manuscript](http://junseo.people.ust.hk/) to be presented at ICRA'19.  
+Please read our [manuscript](http://junseo.people.ust.hk/papers/rnw.pdf) to be presented at ICRA'19.  
