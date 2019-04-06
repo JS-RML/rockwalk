@@ -58,7 +58,7 @@ This will setup the robot controllers as well as `MoveIt!`. An `RViz` window wil
 `$  roslaunch usb_cam usb_cam-test.launch `  
 `$  roslaunch apriltags_ros example.launch`
 
-5. Then, the following command will run a node to visualize the object cone and publish its Euler angles. Successfully executing this script requires that AprilTag is published at least initially. We have to modify this, or remove AprilTag dependency altogether from future commits.
+5. Then, the following command will run a node to visualize the object cone and publish its Euler angles. Successfully executing this script requires that AprilTag is published at least initially. We have to modify this, or remove AprilTag dependency altogether from future commits.  
 `$  rosrun ur10_cm cone_pose_visualization.py`
 
 **CAUTION: The following steps are to execute real robot motion. Keep the emergency stop button close in case the robot controller fails and the robot begins to exhibit any weird motions**
