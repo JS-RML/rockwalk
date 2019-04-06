@@ -51,7 +51,7 @@ create ROS namespaces for our robot arms.
 `$  roslaunch ur10_cm dual_arm_execution.launch`  
 This will setup the robot controllers as well as `MoveIt!`. An `RViz` window will also pop-up which can be used to visually plan the motion of the real robot arms.
 
-3. The robot control takes as input the data from a 9-axis motion shield mounted on the object. Connect the Arduino mounted on the object to your robot using a USB cable and begin receiving data from the motion shield, by running the following command
+3. The robot control takes as input the data from a 9-axis motion shield mounted on the object. Connect the Arduino mounted on the object to your robot using a USB cable and begin receiving data from the motion shield, by running the following command  
 `$  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200`
 
 4. For object cone's visualization, we also use a camera, together with an AprilTag printed on the object. If a camera is connected, the first command will load the camera driver. If the camera can see the AprilTag of `id: 4`, it will begin streaming its pose on a particular `rostopic`. Feel free to tweak their launch files to configure according to your camera or the available AprilTag.  
