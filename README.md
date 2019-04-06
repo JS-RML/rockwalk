@@ -15,7 +15,7 @@ Here is a step-by-step instruction on how setup this workspace. We assume **Ubun
 2.  Then, install `catkin_tools` using `apt-get` as described [here](https://catkin-tools.readthedocs.io/en/latest/installing.html)
 
 3.  Clone this repository into your home directory, and rename it to `ws_moveit`  
-`$  git clone https://github.com/nazir-ust/RW_ROS_WS.git`
+`$  git clone https://github.com/HKUST-RML/PRW-Manipulation.git`
 
 4.  Enter the `ws_moveit` directory and run the following commands to clean up and initialize the workspace with catkin tools  
 `$  cd ws_moveit`  
