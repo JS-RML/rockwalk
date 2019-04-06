@@ -1,0 +1,10 @@
+Symlinking /home/nazir/ws_moveit/devel/include/ur_driver/URDriverConfig.h
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/ur_driver.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/ur_driver/__init__.py
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/ur_driver/cfg/URDriverConfig.py
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/ur_driver/cfg/__init__.py
+Symlinking /home/nazir/ws_moveit/devel/share/ur_driver/cmake/ur_driverConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/ur_driver/cmake/ur_driverConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/ur_driver/docs/URDriverConfig.wikidoc
+Symlinking /home/nazir/ws_moveit/devel/share/ur_driver/docs/URDriverConfig-usage.dox
+Symlinking /home/nazir/ws_moveit/devel/share/ur_driver/docs/URDriverConfig.dox

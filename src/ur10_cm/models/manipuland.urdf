@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot name = "manipuland_cone">
+  <link name="base_link">
+    <visual>
+      <origin rpy="${pi/2} 0 0" xyz="-0.40 1.150 0"/>
+      <geometry>
+        <mesh filename="package://ur10_cm/models/cone_stl.STL" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <!--link name="world">
+    <origin rpy="0.0 0 0" xyz="0 0 0"/>
+  </link>
+
+  <joint name="world_to_base_link" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0"/>
+  </joint-->
+</robot>

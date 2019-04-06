@@ -1,0 +1,3 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/ur3_moveit_config.pc
+Symlinking /home/nazir/ws_moveit/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake

@@ -1,0 +1,3 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/ur10_cm.pc
+Symlinking /home/nazir/ws_moveit/devel/share/ur10_cm/cmake/ur10_cmConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/ur10_cm/cmake/ur10_cmConfig-version.cmake

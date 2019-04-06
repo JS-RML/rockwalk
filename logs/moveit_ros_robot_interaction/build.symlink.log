@@ -1,0 +1,5 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_robot_interaction.so.0.9.11
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_robot_interaction.so
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_ros_robot_interaction.pc
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_ros_robot_interaction/cmake/moveit_ros_robot_interactionConfig.cmake

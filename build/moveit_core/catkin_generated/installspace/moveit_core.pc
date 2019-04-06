@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: moveit_core
+Description: Description of moveit_core
+Version: 0.9.11
+Cflags: -I/home/nazir/ws_moveit/install/include -I/usr/include -I/usr/include/eigen3 -I/opt/ros/kinetic/include
+Libs: -L/home/nazir/ws_moveit/install/lib -lmoveit_exceptions -lmoveit_background_processing -lmoveit_kinematics_base -lmoveit_robot_model -lmoveit_transforms -lmoveit_robot_state -lmoveit_robot_trajectory -lmoveit_planning_interface -lmoveit_collision_detection -lmoveit_collision_detection_fcl -lmoveit_kinematic_constraints -lmoveit_planning_scene -lmoveit_constraint_samplers -lmoveit_planning_request_adapter -lmoveit_profiler -lmoveit_trajectory_processing -lmoveit_distance_field -lmoveit_kinematics_metrics -lmoveit_dynamics_solver -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/usr/lib/x86_64-linux-gnu/libboost_date_time.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libboost_iostreams.so -l:/usr/lib/x86_64-linux-gnu/libboost_chrono.so -l:/usr/lib/x86_64-linux-gnu/libboost_atomic.so -l:/usr/lib/x86_64-linux-gnu/libboost_regex.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so -l:/usr/lib/x86_64-linux-gnu/libfcl.so -l:/opt/ros/kinetic/lib/liboctomap.so -l:/opt/ros/kinetic/lib/liboctomath.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_model.so -l:/usr/lib/x86_64-linux-gnu/liburdfdom_world.so -l:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+Requires: eigen_conversions eigen_stl_containers geometric_shapes geometry_msgs kdl_parser moveit_msgs octomap_msgs random_numbers sensor_msgs srdfdom std_msgs trajectory_msgs visualization_msgs

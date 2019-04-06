@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/rosserial_embeddedlinux/lib/pkgconfig/rosserial_embeddedlinux.pc

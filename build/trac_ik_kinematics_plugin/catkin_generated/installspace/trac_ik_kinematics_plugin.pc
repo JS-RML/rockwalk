@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: trac_ik_kinematics_plugin
+Description: Description of trac_ik_kinematics_plugin
+Version: 1.4.11
+Cflags: -I/home/nazir/ws_moveit/install/include
+Libs: -L/home/nazir/ws_moveit/install/lib 
+Requires: moveit_core pluginlib roscpp tf_conversions trac_ik_lib

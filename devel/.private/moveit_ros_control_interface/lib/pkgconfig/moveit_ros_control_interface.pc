@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/devel/.private/moveit_ros_control_interface
+
+Name: moveit_ros_control_interface
+Description: Description of moveit_ros_control_interface
+Version: 0.9.11
+Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_plugins/moveit_ros_control_interface/include -I/usr/include
+Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_ros_control_interface/lib -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libboost_chrono.so -l:/usr/lib/x86_64-linux-gnu/libboost_date_time.so -l:/usr/lib/x86_64-linux-gnu/libboost_atomic.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: moveit_core

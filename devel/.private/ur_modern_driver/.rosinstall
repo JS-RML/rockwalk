@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nazir/ws_moveit/devel/.private/ur_modern_driver/setup.sh

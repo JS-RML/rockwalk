@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/rosserial_arduino/share/roseus/ros/rosserial_arduino/srv/Test.l

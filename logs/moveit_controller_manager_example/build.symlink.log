@@ -1,0 +1,5 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_controller_manager_example.so.0.9.11
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_controller_manager_example.so
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_controller_manager_example.pc
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig.cmake

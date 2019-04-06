@@ -1,0 +1,10 @@
+[35m[1mScanning dependencies of target geometric_shapes[0m
+[ 12%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/bodies.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/body_operations.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/mesh_operations.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_extents.cpp.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_operations.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shape_to_marker.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/geometric_shapes.dir/src/shapes.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/geometric_shapes/lib/libgeometric_shapes.so[0m
+[100%] Built target geometric_shapes

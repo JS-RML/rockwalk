@@ -1,0 +1,6 @@
+srdfdom
+/home/nazir/ws_moveit/devel/.private/srdfdom/lib/libsrdfdom.so /home/nazir/ws_moveit/devel/lib/libsrdfdom.so
+/home/nazir/ws_moveit/devel/.private/srdfdom/lib/pkgconfig/srdfdom.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/srdfdom.pc
+/home/nazir/ws_moveit/devel/.private/srdfdom/lib/python2.7/dist-packages/srdfdom/__init__.py /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/srdfdom/__init__.py
+/home/nazir/ws_moveit/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig.cmake /home/nazir/ws_moveit/devel/share/srdfdom/cmake/srdfdomConfig.cmake
+/home/nazir/ws_moveit/devel/.private/srdfdom/share/srdfdom/cmake/srdfdomConfig-version.cmake /home/nazir/ws_moveit/devel/share/srdfdom/cmake/srdfdomConfig-version.cmake

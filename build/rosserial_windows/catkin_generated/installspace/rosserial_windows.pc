@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: rosserial_windows
+Description: Description of rosserial_windows
+Version: 0.7.7
+Cflags: 
+Libs: -L/home/nazir/ws_moveit/install/lib 
+Requires: 

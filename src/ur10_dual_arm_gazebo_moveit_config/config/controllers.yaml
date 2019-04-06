@@ -1,0 +1,51 @@
+#DEFAULT CONTROL HERE
+controller_list:
+  - name: "ns_hong"
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - hong_shoulder_pan_joint
+      - hong_shoulder_lift_joint
+      - hong_elbow_joint
+      - hong_wrist_1_joint
+      - hong_wrist_2_joint
+      - hong_wrist_3_joint
+
+
+  - name: "ns_kong"
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - kong_shoulder_pan_joint
+      - kong_shoulder_lift_joint
+      - kong_elbow_joint
+      - kong_wrist_1_joint
+      - kong_wrist_2_joint
+      - kong_wrist_3_joint
+
+#ROS CONTROL here
+#
+# controller_list:
+#  - name: ns_hong/hong_pos_based_pos_traj_controller #or /vel_based_pos_traj_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - hong_shoulder_pan_joint
+#       - hong_shoulder_lift_joint
+#       - hong_elbow_joint
+#       - hong_wrist_1_joint
+#       - hong_wrist_2_joint
+#       - hong_wrist_3_joint
+#
+#  - name: ns_kong/kong_pos_based_pos_traj_controller #or /vel_based_pos_traj_controller
+#    action_ns: follow_joint_trajectory
+#    type: FollowJointTrajectory
+#    default: true
+#    joints:
+#       - kong_shoulder_pan_joint
+#       - kong_shoulder_lift_joint
+#       - kong_elbow_joint
+#       - kong_wrist_1_joint
+#       - kong_wrist_2_joint
+#       - kong_wrist_3_joint

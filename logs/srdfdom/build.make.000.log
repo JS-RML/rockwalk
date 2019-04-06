@@ -1,0 +1,5 @@
+[35m[1mScanning dependencies of target srdfdom[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/srdfdom.dir/src/model.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/srdfdom.dir/src/srdf_writer.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/srdfdom/lib/libsrdfdom.so[0m
+[100%] Built target srdfdom

@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/rosserial_python/lib/pkgconfig/rosserial_python.pc

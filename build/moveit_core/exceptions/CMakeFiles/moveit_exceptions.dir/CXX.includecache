@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nazir/ws_moveit/src/moveit/moveit_core/exceptions/include/moveit/exceptions/exceptions.h
+stdexcept
+-
+
+/home/nazir/ws_moveit/src/moveit/moveit_core/exceptions/src/exceptions.cpp
+moveit/exceptions/exceptions.h
+-
+console_bridge/console.h
+-
+

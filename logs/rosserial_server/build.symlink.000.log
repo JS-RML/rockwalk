@@ -1,0 +1,6 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/rosserial_server.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/rosserial_server/socket_node
+Symlinking /home/nazir/ws_moveit/devel/lib/rosserial_server/udp_socket_node
+Symlinking /home/nazir/ws_moveit/devel/lib/rosserial_server/serial_node
+Symlinking /home/nazir/ws_moveit/devel/share/rosserial_server/cmake/rosserial_serverConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/rosserial_server/cmake/rosserial_serverConfig-version.cmake

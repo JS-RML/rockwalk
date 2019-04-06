@@ -1,0 +1,9 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_lma_kinematics_plugin.so.0.9.11
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_kdl_kinematics_plugin.so
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_srv_kinematics_plugin.so
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_lma_kinematics_plugin.so
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_kdl_kinematics_plugin.so.0.9.11
+Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_srv_kinematics_plugin.so.0.9.11
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_kinematics.pc
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_kinematics/cmake/moveit_kinematicsConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_kinematics/cmake/moveit_kinematicsConfig.cmake

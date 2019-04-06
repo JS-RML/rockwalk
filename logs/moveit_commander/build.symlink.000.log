@@ -1,0 +1,4 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_commander.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/moveit_commander/__init__.py
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_commander/cmake/moveit_commanderConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/moveit_commander/cmake/moveit_commanderConfig.cmake

@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur3_moveit_config/lib/pkgconfig/ur3_moveit_config.pc

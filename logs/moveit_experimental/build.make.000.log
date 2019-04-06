@@ -1,0 +1,13 @@
+[35m[1mScanning dependencies of target moveit_collision_distance_field[0m
+[ 11%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_distance_field_types.cpp.o[0m
+[ 22%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_common_distance_field.cpp.o[0m
+[ 33%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_robot_distance_field.cpp.o[0m
+[ 44%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_world_distance_field.cpp.o[0m
+[ 55%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_robot_hybrid.cpp.o[0m
+[ 66%] [32mBuilding CXX object collision_distance_field/CMakeFiles/moveit_collision_distance_field.dir/src/collision_world_hybrid.cpp.o[0m
+[ 77%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_experimental/lib/libmoveit_collision_distance_field.so[0m
+[ 77%] Built target moveit_collision_distance_field
+[35m[1mScanning dependencies of target collision_detector_hybrid_plugin[0m
+[ 88%] [32mBuilding CXX object collision_distance_field/CMakeFiles/collision_detector_hybrid_plugin.dir/src/collision_detector_hybrid_plugin_loader.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_experimental/lib/libcollision_detector_hybrid_plugin.so[0m
+[100%] Built target collision_detector_hybrid_plugin

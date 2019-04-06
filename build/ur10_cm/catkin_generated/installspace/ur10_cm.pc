@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: ur10_cm
+Description: Description of ur10_cm
+Version: 0.0.0
+Cflags: -I/usr/include/eigen3
+Libs: -L/home/nazir/ws_moveit/install/lib 
+Requires: moveit_core moveit_ros_planning_interface interactive_markers
