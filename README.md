@@ -22,7 +22,7 @@ Here is a step-by-step instruction on how setup this workspace. We assume **Ubun
 `$  catkin init`  
 `$  catkin clean`  
 
-5.  Then build the workspace. This will take 15-20 minutes. There may be a few warnings. Just ignore them.
+5.  Then build the workspace. This will take 15-20 minutes. There may be a few warnings. Just ignore them.  
 `$  catkin build`
 
 6. Finally, source your new workspace everytime before use, or add it to your `.bashrc` script so that it is executed everytime you open the terminal.  
