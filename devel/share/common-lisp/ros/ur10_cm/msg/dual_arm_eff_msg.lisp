@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur10_cm/share/common-lisp/ros/ur10_cm/msg/dual_arm_eff_msg.lisp

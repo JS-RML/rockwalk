@@ -1,0 +1,8 @@
+[35m[1mScanning dependencies of target kinect2_bridge[0m
+[35m[1mScanning dependencies of target kinect2_bridge_nodelet[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/kinect2_bridge_nodelet.dir/src/kinect2_bridge.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/kinect2_bridge.dir/src/kinect2_bridge.cpp.o[0m
+[ 75%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/kinect2_bridge/lib/libkinect2_bridge_nodelet.so[0m
+[ 75%] Built target kinect2_bridge_nodelet
+[100%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/kinect2_bridge/lib/kinect2_bridge/kinect2_bridge[0m
+[100%] Built target kinect2_bridge

@@ -1,0 +1,14 @@
+[35m[1mScanning dependencies of target kinect2_viewer[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/kinect2_viewer.dir/src/viewer.cpp.o[0m
+In file included from [01m[K/home/nazir/ws_moveit/src/iai_kinect2/kinect2_viewer/src/viewer.cpp:32:0[m[K:
+[01m[K/usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h:202:14:[m[K [01;35m[Kwarning: [m[K‘[01m[Ktemplate<class> class std::auto_ptr[m[K’ is deprecated [-Wdeprecated-declarations]
+         std::auto_ptr<CloudViewer_impl> impl_;
+[01;32m[K              ^[m[K
+In file included from [01m[K/usr/include/c++/5/memory:81:0[m[K,
+                 from [01m[K/usr/include/c++/5/thread:40[m[K,
+                 from [01m[K/home/nazir/ws_moveit/src/iai_kinect2/kinect2_viewer/src/viewer.cpp:26[m[K:
+[01m[K/usr/include/c++/5/bits/unique_ptr.h:49:28:[m[K [01;36m[Knote: [m[Kdeclared here
+   template<typename> class auto_ptr;
+[01;32m[K                            ^[m[K
+[100%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/kinect2_viewer/lib/kinect2_viewer/kinect2_viewer[0m
+[100%] Built target kinect2_viewer

@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur10_cm/share/common-lisp/ros/ur10_cm/msg/ur10_cm-msg.asd

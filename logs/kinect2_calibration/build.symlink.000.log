@@ -1,0 +1,4 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/kinect2_calibration.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/kinect2_calibration/kinect2_calibration
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_calibration/cmake/kinect2_calibrationConfig.cmake

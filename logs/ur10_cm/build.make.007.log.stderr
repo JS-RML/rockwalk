@@ -1,0 +1,22 @@
+[01m[K/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp:138:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_pose4[m[K’ was not declared in this scope
+   target_pose4.orientation.w = 1.0;
+[01;32m[K   ^[m[K
+[01m[K/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp:157:3:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuccess[m[K’ was not declared in this scope
+   success = (move_group.plan(dual_arm_plan) == moveit::planning_interface::MoveItErrorCode::SUCCESS);
+[01;32m[K   ^[m[K
+[01m[K/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp:157:3:[m[K [01;36m[Knote: [m[Ksuggested alternative:
+In file included from [01m[K/usr/include/boost/system/system_error.hpp:14:0[m[K,
+                 from [01m[K/usr/include/boost/thread/exceptions.hpp:22[m[K,
+                 from [01m[K/usr/include/boost/thread/pthread/mutex.hpp:14[m[K,
+                 from [01m[K/usr/include/boost/thread/mutex.hpp:16[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/time_cache.h:36[m[K,
+                 from [01m[K/opt/ros/kinetic/include/tf/tf.h:43[m[K,
+                 from [01m[K/home/nazir/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include/moveit/move_group_interface/move_group_interface.h:53[m[K,
+                 from [01m[K/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp:5[m[K:
+[01m[K/usr/include/boost/system/error_code.hpp:59:9:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksuccess[m[K’
+         success = 0,
+[01;32m[K         ^[m[K
+make[2]: *** [CMakeFiles/cpp_hong_kong_manipulation.dir/ros_nodes/cpp_hong_kong_manipulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cpp_hong_kong_manipulation.dir/all] Error 2
+make: *** [all] Error 2

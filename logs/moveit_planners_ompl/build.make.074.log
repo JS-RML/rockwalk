@@ -1,0 +1,9 @@
+[  4%] Built target moveit_planners_ompl_gencfg
+[  8%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_planners_ompl/lib/libmoveit_ompl_interface.so[0m
+[ 76%] Built target moveit_ompl_interface
+[ 80%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_planners_ompl/lib/libmoveit_ompl_planner_plugin.so[0m
+[ 84%] Built target moveit_ompl_planner_plugin
+[ 88%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/moveit_planners_ompl/lib/moveit_planners_ompl/moveit_ompl_planner[0m
+[ 92%] Built target moveit_ompl_planner
+[ 96%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/moveit_planners_ompl/lib/moveit_planners_ompl/moveit_demo_construct_constraints_database[0m
+[100%] Built target moveit_demo_construct_constraints_database

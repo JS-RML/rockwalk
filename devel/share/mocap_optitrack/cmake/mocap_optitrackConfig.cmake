@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/mocap_optitrack/share/mocap_optitrack/cmake/mocap_optitrackConfig.cmake

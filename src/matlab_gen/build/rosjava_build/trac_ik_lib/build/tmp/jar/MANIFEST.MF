@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.4.11
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: trac_ik_lib
+Bnd-LastModified: 1521692417000
+Created-By: 1.7.0_60 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.ros.rosjava_messages.trac_ik_lib
+

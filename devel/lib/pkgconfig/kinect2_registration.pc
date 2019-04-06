@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/kinect2_registration/lib/pkgconfig/kinect2_registration.pc

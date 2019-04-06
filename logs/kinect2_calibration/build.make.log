@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target kinect2_calibration[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/kinect2_calibration.dir/src/kinect2_calibration.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/kinect2_calibration/lib/kinect2_calibration/kinect2_calibration[0m
+[100%] Built target kinect2_calibration

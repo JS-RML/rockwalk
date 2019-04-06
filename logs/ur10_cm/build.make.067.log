@@ -1,0 +1,6 @@
+[35m[1mScanning dependencies of target cpp_hong_kong_manipulation[0m
+make[2]: *** No rule to make target '/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp', needed by 'CMakeFiles/cpp_hong_kong_manipulation.dir/ros_nodes/cpp_hong_kong_manipulation.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/cpp_hong_kong_manipulation.dir/all] Error 2
+make: *** [all] Error 2
+CMakeFiles/Makefile2:2435: recipe for target 'CMakeFiles/cpp_hong_kong_manipulation.dir/all' failed
+Makefile:138: recipe for target 'all' failed

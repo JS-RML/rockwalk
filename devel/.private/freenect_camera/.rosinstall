@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nazir/ws_moveit/devel/.private/freenect_camera/setup.sh

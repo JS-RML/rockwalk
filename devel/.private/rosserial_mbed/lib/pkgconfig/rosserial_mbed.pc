@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/devel/.private/rosserial_mbed
+
+Name: rosserial_mbed
+Description: Description of rosserial_mbed
+Version: 0.7.7
+Cflags: -I/home/nazir/ws_moveit/devel/.private/rosserial_mbed/include
+Libs: -L/home/nazir/ws_moveit/devel/.private/rosserial_mbed/lib 
+Requires: message_runtime

@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur10_cm/lib/pkgconfig/ur10_cm.pc

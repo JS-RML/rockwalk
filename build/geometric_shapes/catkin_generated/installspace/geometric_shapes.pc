@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: geometric_shapes
+Description: Description of geometric_shapes
+Version: 0.5.3
+Cflags: -I/home/nazir/ws_moveit/install/include -I/usr/include/eigen3 -I/opt/ros/kinetic/include -I/usr/include
+Libs: -L/home/nazir/ws_moveit/install/lib -lgeometric_shapes -l:/opt/ros/kinetic/lib/liboctomap.so -l:/opt/ros/kinetic/lib/liboctomath.so -l:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+Requires: eigen_stl_containers random_numbers shape_msgs visualization_msgs

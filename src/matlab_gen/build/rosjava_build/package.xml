@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+   <name>rosjava_build</name>
+   <version>1.0</version>
+   <build_depend>rosjava_build_tools</build_depend>
+   <build_depend>rosjava_bootstrap</build_depend><!-- Add the packages you want to build on the following lines --><!-- e.g. <build_depend>std_msgs</build_depend> -->
+   <build_depend>geometric_shapes</build_depend>
+   <build_depend>moveit_msgs</build_depend>
+   <build_depend>moveit_resources</build_depend>
+   <build_depend>moveit_visual_tools</build_depend>
+   <build_depend>srdfdom</build_depend>
+   <build_depend>trac_ik_kinematics_plugin</build_depend>
+   <build_depend>trac_ik_lib</build_depend>
+   <build_depend>ur10_cm</build_depend>
+   <build_depend>ur10_dual_arm_gazebo_moveit_config</build_depend>
+   <build_depend>ur_modern_driver</build_depend>
+</package>

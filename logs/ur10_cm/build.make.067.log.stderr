@@ -1,0 +1,3 @@
+make[2]: *** No rule to make target '/home/nazir/ws_moveit/src/ur10_cm/ros_nodes/cpp_hong_kong_manipulation.cpp', needed by 'CMakeFiles/cpp_hong_kong_manipulation.dir/ros_nodes/cpp_hong_kong_manipulation.cpp.o'.  Stop.
+make[1]: *** [CMakeFiles/cpp_hong_kong_manipulation.dir/all] Error 2
+make: *** [all] Error 2

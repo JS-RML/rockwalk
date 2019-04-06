@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur10_cm/share/roseus/ros/ur10_cm/manifest.l

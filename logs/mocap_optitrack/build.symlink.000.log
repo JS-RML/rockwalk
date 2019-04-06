@@ -1,0 +1,4 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/mocap_optitrack/mocap_node
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/mocap_optitrack.pc
+Symlinking /home/nazir/ws_moveit/devel/share/mocap_optitrack/cmake/mocap_optitrackConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/mocap_optitrack/cmake/mocap_optitrackConfig-version.cmake

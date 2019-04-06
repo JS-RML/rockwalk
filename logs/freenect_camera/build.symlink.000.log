@@ -1,0 +1,12 @@
+Symlinking /home/nazir/ws_moveit/devel/include/freenect_camera/FreenectConfig.h
+Symlinking /home/nazir/ws_moveit/devel/lib/libfreenect_nodelet.so
+Symlinking /home/nazir/ws_moveit/devel/lib/freenect_camera/freenect_node
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/freenect_camera.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/freenect_camera/__init__.py
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/freenect_camera/cfg/FreenectConfig.py
+Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/freenect_camera/cfg/__init__.py
+Symlinking /home/nazir/ws_moveit/devel/share/freenect_camera/cmake/freenect_cameraConfig-version.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/freenect_camera/cmake/freenect_cameraConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/freenect_camera/docs/FreenectConfig.wikidoc
+Symlinking /home/nazir/ws_moveit/devel/share/freenect_camera/docs/FreenectConfig.dox
+Symlinking /home/nazir/ws_moveit/devel/share/freenect_camera/docs/FreenectConfig-usage.dox

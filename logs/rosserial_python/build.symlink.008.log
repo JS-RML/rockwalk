@@ -1,0 +1,4 @@
+Linked: (/home/nazir/ws_moveit/devel/.private/rosserial_python/lib/pkgconfig/rosserial_python.pc, /home/nazir/ws_moveit/devel/lib/pkgconfig/rosserial_python.pc)
+Linked: (/home/nazir/ws_moveit/devel/.private/rosserial_python/lib/python2.7/dist-packages/rosserial_python/__init__.py, /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/rosserial_python/__init__.py)
+Linked: (/home/nazir/ws_moveit/devel/.private/rosserial_python/share/rosserial_python/cmake/rosserial_pythonConfig-version.cmake, /home/nazir/ws_moveit/devel/share/rosserial_python/cmake/rosserial_pythonConfig-version.cmake)
+Linked: (/home/nazir/ws_moveit/devel/.private/rosserial_python/share/rosserial_python/cmake/rosserial_pythonConfig.cmake, /home/nazir/ws_moveit/devel/share/rosserial_python/cmake/rosserial_pythonConfig.cmake)

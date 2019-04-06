@@ -1,0 +1,3 @@
+[ 40%] Built target moveit_kdl_kinematics_plugin
+[ 80%] Built target moveit_lma_kinematics_plugin
+[100%] Built target moveit_srv_kinematics_plugin

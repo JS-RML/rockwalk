@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/nazir/ws_moveit/devel/.private/rosserial_tivac/setup.sh

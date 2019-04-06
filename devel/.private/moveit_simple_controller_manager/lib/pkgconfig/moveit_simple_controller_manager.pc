@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/devel/.private/moveit_simple_controller_manager
+
+Name: moveit_simple_controller_manager
+Description: Description of moveit_simple_controller_manager
+Version: 0.9.11
+Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_plugins/moveit_simple_controller_manager/include
+Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_simple_controller_manager/lib 
+Requires: moveit_core actionlib control_msgs

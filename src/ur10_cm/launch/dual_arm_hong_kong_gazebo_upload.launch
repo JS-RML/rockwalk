@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <!--Only joint limited version supported here-->
+  <arg name="model" default="$(find ur10_cm)/models/dual_arm_hong_kong_gazebo_joint_limited.urdf.xacro"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+</launch>

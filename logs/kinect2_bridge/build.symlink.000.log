@@ -1,0 +1,5 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/libkinect2_bridge_nodelet.so
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/kinect2_bridge.pc
+Symlinking /home/nazir/ws_moveit/devel/lib/kinect2_bridge/kinect2_bridge
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_bridge/cmake/kinect2_bridgeConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_bridge/cmake/kinect2_bridgeConfig-version.cmake

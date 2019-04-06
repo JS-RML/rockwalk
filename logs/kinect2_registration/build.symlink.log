@@ -1,0 +1,5 @@
+Symlinking /home/nazir/ws_moveit/devel/lib/libkinect2_registration.so
+Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/kinect2_registration.pc
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_registration/cmake/kinect2_registrationConfig.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_registration/cmake/kinect2_registration.cmake
+Symlinking /home/nazir/ws_moveit/devel/share/kinect2_registration/cmake/kinect2_registrationConfig-version.cmake

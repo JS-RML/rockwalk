@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/ur10_cm/include/ur10_cm/dual_arm_eff_msg.h

@@ -1,0 +1,1 @@
+/home/nazir/ws_moveit/devel/.private/freenect_camera/lib/pkgconfig/freenect_camera.pc

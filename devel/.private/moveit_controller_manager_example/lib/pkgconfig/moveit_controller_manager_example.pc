@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example
+
+Name: moveit_controller_manager_example
+Description: Description of moveit_controller_manager_example
+Version: 0.9.11
+Cflags: 
+Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/lib 
+Requires: moveit_core

@@ -1,0 +1,5 @@
+[  8%] Built target moveit_ros_manipulation_gencfg
+[ 16%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_ros_manipulation/lib/libmoveit_pick_place_planner.so[0m
+[ 83%] Built target moveit_pick_place_planner
+[ 91%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_ros_manipulation/lib/libmoveit_move_group_pick_place_capability.so[0m
+[100%] Built target moveit_move_group_pick_place_capability

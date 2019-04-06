@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ur10_cm
+    relative_path: models/dual_arm_hong_kong_gazebo_joint_limited.urdf.xacro
+  SRDF:
+    relative_path: config/dual_arm_hong_kong.srdf
+  CONFIG:
+    author_name: Abdullah Nazir
+    author_email: sanazir.ust@gmail.com
+    generated_timestamp: 1521178256

@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/devel/.private/moveit_ros_benchmarks
+
+Name: moveit_ros_benchmarks
+Description: Description of moveit_ros_benchmarks
+Version: 0.9.11
+Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_ros/benchmarks/include
+Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_ros_benchmarks/lib -lmoveit_ros_benchmarks
+Requires: moveit_ros_planning moveit_ros_warehouse roscpp

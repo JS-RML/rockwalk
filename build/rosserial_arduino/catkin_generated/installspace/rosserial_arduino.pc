@@ -1,0 +1,8 @@
+prefix=/home/nazir/ws_moveit/install
+
+Name: rosserial_arduino
+Description: Description of rosserial_arduino
+Version: 0.7.7
+Cflags: -I/home/nazir/ws_moveit/install/include
+Libs: -L/home/nazir/ws_moveit/install/lib 
+Requires: message_runtime
