@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/freenect_launch/lib/pkgconfig/freenect_launch.pc

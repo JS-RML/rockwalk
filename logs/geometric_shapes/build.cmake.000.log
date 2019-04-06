@@ -13,6 +13,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Detecting CXX compiler ABI info - done
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
+geometric_shapes: You did not request a specific build type: Choosing 'Release' for maximum performance
 [36m--[0m Boost version: 1.58.0
 [36m--[0m Found the following Boost libraries:
 [36m--[0m   system

@@ -8,9 +8,6 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/nazir/ws_moveit/devel/.private/rosserial_msgs:$CMAKE_PREFIX_PATH"
-export LD_LIBRARY_PATH="/home/nazir/ws_moveit/devel/.private/rosserial_msgs/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="/home/nazir/ws_moveit/devel/.private/rosserial_msgs/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/nazir/ws_moveit/build/rosserial_msgs"
-export PYTHONPATH="/home/nazir/ws_moveit/devel/.private/rosserial_msgs/lib/python2.7/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/nazir/ws_moveit/devel/.private/rosserial_msgs/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/nazir/ws_moveit/src/rosserial/rosserial_msgs:$ROS_PACKAGE_PATH"

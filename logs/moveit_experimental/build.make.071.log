@@ -1,4 +1,0 @@
-[ 11%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_experimental/lib/libmoveit_collision_distance_field.so[0m
-[ 77%] Built target moveit_collision_distance_field
-[ 88%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_experimental/lib/libcollision_detector_hybrid_plugin.so[0m
-[100%] Built target collision_detector_hybrid_plugin

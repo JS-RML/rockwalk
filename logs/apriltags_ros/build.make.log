@@ -1,41 +1,60 @@
+[35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
 [  0%] Built target std_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target _apriltags_ros_generate_messages_check_deps_AprilTagDetection[0m
 [  0%] Built target _apriltags_ros_generate_messages_check_deps_AprilTagDetection
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
 [  0%] Built target geometry_msgs_generate_messages_cpp
-[  0%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target _apriltags_ros_generate_messages_check_deps_AprilTagDetectionArray[0m
 [  0%] Built target _apriltags_ros_generate_messages_check_deps_AprilTagDetectionArray
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [  0%] Built target std_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
 [  0%] Built target std_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
 [  0%] Built target geometry_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
 [  0%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
 [  0%] Built target geometry_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target std_msgs_generate_messages_py[0m
 [  0%] Built target std_msgs_generate_messages_py
+[35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
+[  0%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages_cpp[0m
 [  5%] [34m[1mGenerating C++ code from apriltags_ros/AprilTagDetectionArray.msg[0m
-[  5%] Built target geometry_msgs_generate_messages_py
-[ 11%] [34m[1mGenerating Javascript code from apriltags_ros/AprilTagDetectionArray.msg[0m
-[ 16%] [34m[1mGenerating Javascript code from apriltags_ros/AprilTagDetection.msg[0m
-[ 22%] [34m[1mGenerating C++ code from apriltags_ros/AprilTagDetection.msg[0m
+[ 11%] [34m[1mGenerating C++ code from apriltags_ros/AprilTagDetection.msg[0m
+[ 11%] Built target apriltags_ros_generate_messages_cpp
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages_nodejs[0m
+[ 16%] [34m[1mGenerating Javascript code from apriltags_ros/AprilTagDetectionArray.msg[0m
+[ 22%] [34m[1mGenerating Javascript code from apriltags_ros/AprilTagDetection.msg[0m
 [ 22%] Built target apriltags_ros_generate_messages_nodejs
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages_lisp[0m
 [ 27%] [34m[1mGenerating Lisp code from apriltags_ros/AprilTagDetectionArray.msg[0m
-[ 27%] Built target apriltags_ros_generate_messages_cpp
 [ 33%] [34m[1mGenerating Lisp code from apriltags_ros/AprilTagDetection.msg[0m
+[ 33%] Built target apriltags_ros_generate_messages_lisp
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages_eus[0m
 [ 38%] [34m[1mGenerating EusLisp code from apriltags_ros/AprilTagDetectionArray.msg[0m
-[ 38%] Built target apriltags_ros_generate_messages_lisp
 [ 44%] [34m[1mGenerating EusLisp code from apriltags_ros/AprilTagDetection.msg[0m
+[ 50%] [34m[1mGenerating EusLisp manifest code for apriltags_ros[0m
 [ 50%] Built target apriltags_ros_generate_messages_eus
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages_py[0m
 [ 55%] [34m[1mGenerating Python from MSG apriltags_ros/AprilTagDetectionArray[0m
 [ 61%] [34m[1mGenerating Python from MSG apriltags_ros/AprilTagDetection[0m
 [ 66%] [34m[1mGenerating Python msg __init__.py for apriltags_ros[0m
 [ 66%] Built target apriltags_ros_generate_messages_py
 [35m[1mScanning dependencies of target apriltag_detector[0m
 [ 72%] [32mBuilding CXX object CMakeFiles/apriltag_detector.dir/src/apriltag_detector.cpp.o[0m
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages[0m
 [ 72%] Built target apriltags_ros_generate_messages
 [ 77%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/libapriltag_detector.so[0m
 [ 77%] Built target apriltag_detector
 [35m[1mScanning dependencies of target apriltag_detector_node[0m
-[ 83%] [32mBuilding CXX object CMakeFiles/apriltag_detector_node.dir/src/apriltag_detector_node.cpp.o[0m
-[ 88%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/apriltags_ros/apriltag_detector_node[0m
-[ 88%] Built target apriltag_detector_node
 [35m[1mScanning dependencies of target apriltag_detector_nodelet[0m
-[ 94%] [32mBuilding CXX object CMakeFiles/apriltag_detector_nodelet.dir/src/apriltag_detector_nodelet.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/apriltag_detector_node.dir/src/apriltag_detector_node.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/apriltag_detector_nodelet.dir/src/apriltag_detector_nodelet.cpp.o[0m
+[ 94%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/apriltags_ros/apriltag_detector_node[0m
 [100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/libapriltag_detector_nodelet.so[0m
+[100%] Built target apriltag_detector_node
 [100%] Built target apriltag_detector_nodelet

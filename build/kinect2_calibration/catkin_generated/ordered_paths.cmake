@@ -1,1 +1,0 @@
-set(ORDERED_PATHS "/home/nazir/ws_moveit/devel/.private/kinect2_registration/lib;/opt/ros/kinetic/lib")

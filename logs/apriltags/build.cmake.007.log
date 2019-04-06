@@ -1,2 +1,0 @@
-Not searching for unused variables given on the command line.
-CMake Error: The source "/home/nazir/ws_moveit/src/apriltags_ros/apriltags/CMakeLists.txt" does not match the source "/home/nazir/ws_moveit/src/apriltags/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/freenect_camera/share/freenect_camera/cmake/freenect_cameraConfig-version.cmake

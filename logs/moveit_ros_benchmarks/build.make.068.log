@@ -1,4 +1,0 @@
-[ 20%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_ros_benchmarks/lib/libmoveit_ros_benchmarks.so[0m
-[ 60%] Built target moveit_ros_benchmarks
-[ 80%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/moveit_ros_benchmarks/lib/moveit_ros_benchmarks/moveit_run_benchmark[0m
-[100%] Built target moveit_run_benchmark

@@ -39,7 +39,7 @@ add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:std_msgs/Header:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg" "geometry_msgs/Quaternion:geometry_msgs/Pose:geometry_msgs/Point"
 )
 
 get_filename_component(_filename "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
@@ -95,7 +95,7 @@ _generate_msg_cpp(ur_msgs
 _generate_msg_cpp(ur_msgs
   "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_cpp(ur_msgs
@@ -192,7 +192,7 @@ _generate_msg_eus(ur_msgs
 _generate_msg_eus(ur_msgs
   "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_eus(ur_msgs
@@ -289,7 +289,7 @@ _generate_msg_lisp(ur_msgs
 _generate_msg_lisp(ur_msgs
   "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_lisp(ur_msgs
@@ -386,7 +386,7 @@ _generate_msg_nodejs(ur_msgs
 _generate_msg_nodejs(ur_msgs
   "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_nodejs(ur_msgs
@@ -483,7 +483,7 @@ _generate_msg_py(ur_msgs
 _generate_msg_py(ur_msgs
   "/home/nazir/ws_moveit/src/universal_robot/ur_msgs/msg/DualArmEff.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/kinetic/share/geometry_msgs/cmake/../msg/Point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_py(ur_msgs

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/kinect2_calibration/lib/pkgconfig/kinect2_calibration.pc

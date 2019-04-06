@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/kinect2_bridge/lib/pkgconfig/kinect2_bridge.pc

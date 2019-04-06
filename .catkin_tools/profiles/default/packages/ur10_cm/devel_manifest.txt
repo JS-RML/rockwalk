@@ -1,0 +1,4 @@
+ur10_cm
+/home/nazir/ws_moveit/devel/.private/ur10_cm/lib/pkgconfig/ur10_cm.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/ur10_cm.pc
+/home/nazir/ws_moveit/devel/.private/ur10_cm/share/ur10_cm/cmake/ur10_cmConfig.cmake /home/nazir/ws_moveit/devel/share/ur10_cm/cmake/ur10_cmConfig.cmake
+/home/nazir/ws_moveit/devel/.private/ur10_cm/share/ur10_cm/cmake/ur10_cmConfig-version.cmake /home/nazir/ws_moveit/devel/share/ur10_cm/cmake/ur10_cmConfig-version.cmake

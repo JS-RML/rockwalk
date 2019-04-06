@@ -1,5 +1,0 @@
-[  0%] Built target graph_msgs_generate_messages_cpp
-[ 16%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_visual_tools/lib/libmoveit_visual_tools.so[0m
-[ 66%] Built target moveit_visual_tools
-[ 83%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/moveit_visual_tools/lib/moveit_visual_tools/moveit_visual_tools_demo[0m
-[100%] Built target moveit_visual_tools_demo

@@ -95,9 +95,9 @@ clean: CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/clean
 # Target rules for target CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir
 
 # All Build rule for target.
-CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all: CMakeFiles/clean_test_results_rosserial_client.dir/all
-CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all: CMakeFiles/float64_test.dir/all
 CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all: CMakeFiles/tests.dir/all
+CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all: CMakeFiles/float64_test.dir/all
+CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/all: CMakeFiles/clean_test_results_rosserial_client.dir/all
 	$(MAKE) -f CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build.make CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/depend
 	$(MAKE) -f CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build.make CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nazir/ws_moveit/build/rosserial_client/CMakeFiles --progress-num= "Built target _run_tests_rosserial_client_gtest_float64_test"
@@ -742,9 +742,9 @@ clean: CMakeFiles/rosserial_msgs_generate_messages_py.dir/clean
 # Target rules for target CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir
 
 # All Build rule for target.
-CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/clean_test_results_rosserial_client.dir/all
-CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/subscriber_test.dir/all
 CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/tests.dir/all
+CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/subscriber_test.dir/all
+CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/all: CMakeFiles/clean_test_results_rosserial_client.dir/all
 	$(MAKE) -f CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build.make CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/depend
 	$(MAKE) -f CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build.make CMakeFiles/_run_tests_rosserial_client_gtest_subscriber_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nazir/ws_moveit/build/rosserial_client/CMakeFiles --progress-num= "Built target _run_tests_rosserial_client_gtest_subscriber_test"

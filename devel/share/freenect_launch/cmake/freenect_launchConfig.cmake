@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/freenect_launch/share/freenect_launch/cmake/freenect_launchConfig.cmake

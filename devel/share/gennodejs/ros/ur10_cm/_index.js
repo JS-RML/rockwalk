@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/ur10_cm/share/gennodejs/ros/ur10_cm/_index.js

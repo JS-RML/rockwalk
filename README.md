@@ -19,10 +19,10 @@ Here is a step-by-step instruction on how setup this workspace. We assume **Ubun
 
 4.  Enter the `ws_moveit` directory and run the following commands to clean up and initialize the workspace with catkin tools  
 `$  cd ws_moveit`  
-`$  catkin clean`  
 `$  catkin init`  
+`$  catkin clean`  
 
-5.  Then build the workspace. This may take approximately 10 minutes. There may be a couple of warnings.  
+5.  Then build the workspace. This will take 15-20 minutes. There may be a few warnings. Just ignore them.
 `$  catkin build`
 
 6. Finally, source your new workspace everytime before use, or add it to your `.bashrc` script so that it is executed everytime you open the terminal.  
@@ -45,11 +45,11 @@ which the robot can move. The `MATLAB` scripts are located in the relative direc
 In our lab, the two UR-10 arms named `hong` and `kong`. We use these names to
 create ROS namespaces for our robot arms.
 
-1. First configure the network between your laptop and the UR-10 robot arms. Enter the robot IPs in the file `dual_arm_execution.launch`. You can obtain the robot IP using its teaching pedant. Because, we will be using only `kong` arm here, so just configure the IP of this robot arm.
+1. First configure the network between your laptop and the UR-10 robot arms. Enter the robot IPs in the file `/src/ur10_cm/launch/dual_arm_execution.launch`. You can obtain the robot IP using its teaching pedant. Because, we will be using only `kong` arm here, so just configure the IP of this robot arm.
 
 2. In the command line run the following command  
 `$  roslaunch ur10_cm dual_arm_execution.launch`  
-This will setup the robot controllers as well as MoveIt. An RViz window will also pop-up which can be used to visually plan the motion of the real robot arms.
+This will setup the robot controllers as well as `MoveIt!`. An `RViz` window will also pop-up which can be used to visually plan the motion of the real robot arms.
 
 3. The robot control takes as input the data from a 9-axis motion shield mounted on the object. Connect the Arduino mounted on the object to your robot using a USB cable and begin receiving data from the motion shield, by running the following command
 `$  rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200`
@@ -69,7 +69,7 @@ Setup the robot arm and the object as in the [demonstration video](https://drive
 6. Run the following command to initialize and implement rock-and-walk motion with the robot arm.  
 `$  rosrun ur10_cm kong_rigid_effector_control.py`
 
-*Note: In the above script, I have commented out the command* `self._group.execute(plan)` *which executes real robot motion. So first visualize the motion in RViz and then uncomment it to execute the motion in a real setting.*
+*Note: In the above script, we have commented out the command* `self._group.execute(plan)` *which executes real robot motion. So first visualize the motion in RViz and then uncomment it to execute the motion in a real setting.*
 
 ##  Demonstration
 To see how the parameters are defined and a demo of our manipulation task, take a look at the following video.

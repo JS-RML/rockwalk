@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/freenect_camera/include/freenect_camera/FreenectConfig.h

@@ -13,6 +13,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Detecting CXX compiler ABI info - done
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
+moveit_core: You did not request a specific build type: Choosing 'Release' for maximum performance
 [36m--[0m Looking for pthread.h
 [36m--[0m Looking for pthread.h - found
 [36m--[0m Looking for pthread_create

@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: kinect2_bridge
-Description: Description of kinect2_bridge
-Version: 0.0.1
-Cflags: -I/home/nazir/ws_moveit/install/include
-Libs: -L/home/nazir/ws_moveit/install/lib 
-Requires: kinect2_registration

@@ -1,0 +1,6 @@
+moveit/moveit_plugins/moveit_fake_controller_manager
+/home/nazir/ws_moveit/devel/.private/moveit_fake_controller_manager/lib/libmoveit_fake_controller_manager.so /home/nazir/ws_moveit/devel/lib/libmoveit_fake_controller_manager.so
+/home/nazir/ws_moveit/devel/.private/moveit_fake_controller_manager/lib/libmoveit_fake_controller_manager.so.0.9.11 /home/nazir/ws_moveit/devel/lib/libmoveit_fake_controller_manager.so.0.9.11
+/home/nazir/ws_moveit/devel/.private/moveit_fake_controller_manager/lib/pkgconfig/moveit_fake_controller_manager.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_fake_controller_manager.pc
+/home/nazir/ws_moveit/devel/.private/moveit_fake_controller_manager/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig-version.cmake /home/nazir/ws_moveit/devel/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig-version.cmake
+/home/nazir/ws_moveit/devel/.private/moveit_fake_controller_manager/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig.cmake /home/nazir/ws_moveit/devel/share/moveit_fake_controller_manager/cmake/moveit_fake_controller_managerConfig.cmake

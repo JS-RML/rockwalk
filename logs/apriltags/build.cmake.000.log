@@ -35,8 +35,6 @@ Not searching for unused variables given on the command line.
 [36m--[0m Found gtest sources under '/usr/src/gtest': gtests will be built
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.6
-[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-[36m--[0m Found OpenCV: /opt/ros/kinetic (found version "3.2.0")
 [36m--[0m Found PkgConfig: /usr/bin/pkg-config (found version "0.29.1")
 [36m--[0m Checking for module 'eigen3'
 [36m--[0m   Found eigen3, version 3.2.92
@@ -48,28 +46,12 @@ Not searching for unused variables given on the command line.
   FindEigen3.cmake Module for the resulting CMake variable names.
 
 [36mCall Stack (most recent call first):[0m
-  CMakeLists.txt:16 (find_package)
+  CMakeLists.txt:10 (find_package)
 
 
 [36m--[0m Found Eigen: /usr/include/eigen3
 [36m--[0m Eigen found (include: /usr/include/eigen3)
-[31m[1mCMake Error[0m at /home/nazir/ws_moveit/src/apriltags/CMakeLists.txt:19 (find_package):
-  By not providing "Findapriltagscpp.cmake" in CMAKE_MODULE_PATH this project
-  has asked CMake to find a package configuration file provided by
-  "apriltagscpp", but CMake did not find one.
-
-  Could not find a package configuration file provided by "apriltagscpp" with
-  any of the following names:
-
-    apriltagscppConfig.cmake
-    apriltagscpp-config.cmake
-
-  Add the installation prefix of "apriltagscpp" to CMAKE_PREFIX_PATH or set
-  "apriltagscpp_DIR" to a directory containing one of the above files.  If
-  "apriltagscpp" provides a separate development package or SDK, be sure it
-  has been installed.
-
-
-[36m--[0m Configuring incomplete, errors occurred!
-See also "/home/nazir/ws_moveit/build/apriltags/CMakeFiles/CMakeOutput.log".
-See also "/home/nazir/ws_moveit/build/apriltags/CMakeFiles/CMakeError.log".
+[36m--[0m Found OpenCV: /opt/ros/kinetic (found version "3.2.0")
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/nazir/ws_moveit/build/apriltags

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/mocap_optitrack/lib/pkgconfig/mocap_optitrack.pc

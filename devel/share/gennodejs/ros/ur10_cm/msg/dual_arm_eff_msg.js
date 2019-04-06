@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/ur10_cm/share/gennodejs/ros/ur10_cm/msg/dual_arm_eff_msg.js

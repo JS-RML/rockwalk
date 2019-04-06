@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/kinect2_registration/share/kinect2_registration/cmake/kinect2_registrationConfig.cmake

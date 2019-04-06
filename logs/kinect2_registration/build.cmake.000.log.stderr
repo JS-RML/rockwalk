@@ -1,5 +1,0 @@
-[33m[1mCMake Warning[0m at /home/nazir/ws_moveit/src/iai_kinect2/kinect2_registration/CMakeLists.txt:60 (message):
-  Your libOpenCL.so is incompatible with CL/cl.h.  Install ocl-icd-opencl-dev
-  to update libOpenCL.so?
-
-

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/kinect2_viewer/share/kinect2_viewer/cmake/kinect2_viewerConfig-version.cmake
