@@ -2,11 +2,9 @@
 
 
 ##  Usage
-
-
-### Setting-up the Workspace
 This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and some other packages to perform rock-and-walk manipulation with a UR-10 robot arm. The setup here is general to facilitate dual arm control of UR-10s in our laboratory setting. If you would like to use the two UR-10 arms for some other manipulation task, then you can setup your workspace as prescribed below and scroll down to Robot Control section to begin controlling one or two UR-10 arms. We assume **Ubuntu 16.04** with **ROS Kinetic** installed.
 
+### Setting-up the Workspace
 
 1.  Install `trac_ik` plugin  
 `$  sudo apt-get install ros-kinetic-trac-ik-kinematics-plugin`
