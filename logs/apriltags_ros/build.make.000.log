@@ -46,13 +46,13 @@
 [ 66%] Built target apriltags_ros_generate_messages_py
 [35m[1mScanning dependencies of target apriltag_detector[0m
 [ 72%] [32mBuilding CXX object CMakeFiles/apriltag_detector.dir/src/apriltag_detector.cpp.o[0m
-[35m[1mScanning dependencies of target apriltags_ros_generate_messages[0m
-[ 72%] Built target apriltags_ros_generate_messages
 [ 77%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/libapriltag_detector.so[0m
+[35m[1mScanning dependencies of target apriltags_ros_generate_messages[0m
+[ 77%] Built target apriltags_ros_generate_messages
 [ 77%] Built target apriltag_detector
 [35m[1mScanning dependencies of target apriltag_detector_node[0m
-[35m[1mScanning dependencies of target apriltag_detector_nodelet[0m
 [ 83%] [32mBuilding CXX object CMakeFiles/apriltag_detector_node.dir/src/apriltag_detector_node.cpp.o[0m
+[35m[1mScanning dependencies of target apriltag_detector_nodelet[0m
 [ 88%] [32mBuilding CXX object CMakeFiles/apriltag_detector_nodelet.dir/src/apriltag_detector_nodelet.cpp.o[0m
 [ 94%] [32m[1mLinking CXX executable /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/apriltags_ros/apriltag_detector_node[0m
 [100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/libapriltag_detector_nodelet.so[0m

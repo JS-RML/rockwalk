@@ -25,20 +25,26 @@ This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and s
 6. Finally, source your new workspace everytime before use, or add it to your `.bashrc` script so that it is executed everytime you open the terminal.  
 `$  source ~/ws_moveit/devel/setup.bash`
 
+### Dual-arm Demo with MoveIt!
+
+The following command will bringup two virtual UR-10 robots as in our lab setting.  
+`$  roslaunch ur10_dual_arm_gazebo_moveit_config demo.launch`
+Note, this has nothing to do with Gazebo simulator. Just the naming has been this way. Play around with these two arms by following MoveIt tutorials [this](https://ros-planning.github.io/moveit_tutorials/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html) and [this](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html). Note that you can also plan paths for the robots in RViz, as in this sceengrab:
+
+![](media/lab_2_ur10s.png)
 
 
-### Rock-and-Walk with one UR-10 arm
 
-####  Concatenating gait and generating waypoints for the robot
+###  Concatenating gait and generating waypoints for the robot
 Here, we use the `MATLAB` scripts to generate a sequence of zigzag waypoints along
 which the robot can move. The `MATLAB` scripts are located in the directory, `/src/ur10_cm/matlab_scripts`
 
-1.  First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate.m` in the next step. In addition, `vector_fields.m` will display a figure showing an annulus filled with (positive) vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone (see the manuscript in the reference below). Note: The code here is inefficient, so it may take a couple of minutes in runtime.
+1.  First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate.m` in the next step. In addition, `vector_fields.m` will display a figure showing an annulus filled with CCW vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone (see the manuscript in the reference below). Note: The code here is inefficient, so it may take a couple of minutes in runtime.
 
 2. Then run `integral_curves_concatenate.m`. This script outputs a file, `lr_rocking.mat` to store the sequence of oblique cone's apex positions (correspondingly, the end-effector positions of a robot manipulator attached to the cone's apex), separated into two variables corresponding to left and right rocking. If these sequence of waypoints are followed, a net straight line displacement of the cone is obtained through alternate rocking. In this script, total number of rocking steps (`total_rocking_steps`) and `rocking_angle` may be altered. A large value of `rocking_angle` means that the end-effector moves large displacement per step and can potentially make the system (robot+object_cone) unstable. A small value, on the other hand, will result in a small net forward displacement per rocking step.
 
 
-####  Robot Control
+###  Robot Control
 In our lab, the two UR-10 arms named `hong` and `kong`. We use these names to
 create ROS namespaces for our robot arms.
 
