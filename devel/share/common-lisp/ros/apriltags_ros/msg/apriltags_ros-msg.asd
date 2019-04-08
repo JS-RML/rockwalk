@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/apriltags_ros/share/common-lisp/ros/apriltags_ros/msg/apriltags_ros-msg.asd

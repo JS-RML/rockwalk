@@ -1,4 +1,0 @@
-rosserial/rosserial_embeddedlinux
-/home/nazir/ws_moveit/devel/.private/rosserial_embeddedlinux/lib/pkgconfig/rosserial_embeddedlinux.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/rosserial_embeddedlinux.pc
-/home/nazir/ws_moveit/devel/.private/rosserial_embeddedlinux/share/rosserial_embeddedlinux/cmake/rosserial_embeddedlinuxConfig.cmake /home/nazir/ws_moveit/devel/share/rosserial_embeddedlinux/cmake/rosserial_embeddedlinuxConfig.cmake
-/home/nazir/ws_moveit/devel/.private/rosserial_embeddedlinux/share/rosserial_embeddedlinux/cmake/rosserial_embeddedlinuxConfig-version.cmake /home/nazir/ws_moveit/devel/share/rosserial_embeddedlinux/cmake/rosserial_embeddedlinuxConfig-version.cmake

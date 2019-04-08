@@ -1,5 +1,0 @@
-rosserial/rosserial_tivac
-/home/nazir/ws_moveit/devel/.private/rosserial_tivac/lib/pkgconfig/rosserial_tivac.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/rosserial_tivac.pc
-/home/nazir/ws_moveit/devel/.private/rosserial_tivac/share/rosserial_tivac/cmake/rosserial_tivac-extras.cmake /home/nazir/ws_moveit/devel/share/rosserial_tivac/cmake/rosserial_tivac-extras.cmake
-/home/nazir/ws_moveit/devel/.private/rosserial_tivac/share/rosserial_tivac/cmake/rosserial_tivacConfig.cmake /home/nazir/ws_moveit/devel/share/rosserial_tivac/cmake/rosserial_tivacConfig.cmake
-/home/nazir/ws_moveit/devel/.private/rosserial_tivac/share/rosserial_tivac/cmake/rosserial_tivacConfig-version.cmake /home/nazir/ws_moveit/devel/share/rosserial_tivac/cmake/rosserial_tivacConfig-version.cmake

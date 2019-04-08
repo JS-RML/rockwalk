@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/rosserial_mbed/lib/pkgconfig/rosserial_mbed.pc

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/moveit_resources/share/moveit_resources/cmake/moveit_resourcesConfig.cmake

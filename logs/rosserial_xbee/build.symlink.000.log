@@ -1,5 +1,0 @@
-Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/rosserial_xbee.pc
-Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/rosserial_xbee/__init__.py
-Symlinking /home/nazir/ws_moveit/devel/lib/python2.7/dist-packages/xbee/__init__.py
-Symlinking /home/nazir/ws_moveit/devel/share/rosserial_xbee/cmake/rosserial_xbeeConfig.cmake
-Symlinking /home/nazir/ws_moveit/devel/share/rosserial_xbee/cmake/rosserial_xbeeConfig-version.cmake

@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/rosserial_msgs/share/rosserial_msgs/cmake/rosserial_msgs-msg-extras.cmake

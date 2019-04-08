@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/moveit_resources/include/moveit_resources/.config_install.h

@@ -1,6 +1,0 @@
-devel_space: /home/nazir/ws_moveit/devel
-install: false
-install_space: /home/nazir/ws_moveit/install
-profile: default
-source_space: /home/nazir/ws_moveit/src
-workspace: /home/nazir/ws_moveit

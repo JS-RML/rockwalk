@@ -1,7 +1,0 @@
-Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_collision_distance_field.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libmoveit_collision_distance_field.so.0.9.11
-Symlinking /home/nazir/ws_moveit/devel/lib/libcollision_detector_hybrid_plugin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libcollision_detector_hybrid_plugin.so.0.9.11
-Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_experimental.pc
-Symlinking /home/nazir/ws_moveit/devel/share/moveit_experimental/cmake/moveit_experimentalConfig-version.cmake
-Symlinking /home/nazir/ws_moveit/devel/share/moveit_experimental/cmake/moveit_experimentalConfig.cmake

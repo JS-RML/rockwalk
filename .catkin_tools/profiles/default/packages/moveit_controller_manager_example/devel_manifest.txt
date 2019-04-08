@@ -1,6 +1,0 @@
-moveit/moveit_plugins/moveit_controller_manager_example
-/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/lib/libmoveit_controller_manager_example.so.0.9.11 /home/nazir/ws_moveit/devel/lib/libmoveit_controller_manager_example.so.0.9.11
-/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/lib/libmoveit_controller_manager_example.so /home/nazir/ws_moveit/devel/lib/libmoveit_controller_manager_example.so
-/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/lib/pkgconfig/moveit_controller_manager_example.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/moveit_controller_manager_example.pc
-/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig-version.cmake /home/nazir/ws_moveit/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig-version.cmake
-/home/nazir/ws_moveit/devel/.private/moveit_controller_manager_example/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig.cmake /home/nazir/ws_moveit/devel/share/moveit_controller_manager_example/cmake/moveit_controller_manager_exampleConfig.cmake

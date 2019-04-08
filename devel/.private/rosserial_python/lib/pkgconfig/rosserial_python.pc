@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/rosserial_python
-
-Name: rosserial_python
-Description: Description of rosserial_python
-Version: 0.7.7
-Cflags: 
-Libs: -L/home/nazir/ws_moveit/devel/.private/rosserial_python/lib 
-Requires: 

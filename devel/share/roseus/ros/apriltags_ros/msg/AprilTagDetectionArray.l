@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/apriltags_ros/share/roseus/ros/apriltags_ros/msg/AprilTagDetectionArray.l

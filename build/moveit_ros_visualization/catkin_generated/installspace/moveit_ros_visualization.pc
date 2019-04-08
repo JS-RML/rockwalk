@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: moveit_ros_visualization
-Description: Description of moveit_ros_visualization
-Version: 0.9.11
-Cflags: -I/home/nazir/ws_moveit/install/include -I/usr/include/eigen3
-Libs: -L/home/nazir/ws_moveit/install/lib -lmoveit_rviz_plugin_render_tools -lmoveit_robot_state_rviz_plugin_core -lmoveit_motion_planning_rviz_plugin_core -lmoveit_trajectory_rviz_plugin_core -lmoveit_planning_scene_rviz_plugin_core
-Requires: moveit_ros_planning_interface moveit_ros_robot_interaction

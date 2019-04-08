@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: rosserial_mbed
-Description: Description of rosserial_mbed
-Version: 0.7.7
-Cflags: -I/home/nazir/ws_moveit/install/include
-Libs: -L/home/nazir/ws_moveit/install/lib 
-Requires: message_runtime
