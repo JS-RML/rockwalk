@@ -1,4 +1,0 @@
-universal_robot/ur3_moveit_config
-/home/nazir/ws_moveit/devel/.private/ur3_moveit_config/lib/pkgconfig/ur3_moveit_config.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/ur3_moveit_config.pc
-/home/nazir/ws_moveit/devel/.private/ur3_moveit_config/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake /home/nazir/ws_moveit/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig-version.cmake
-/home/nazir/ws_moveit/devel/.private/ur3_moveit_config/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake /home/nazir/ws_moveit/devel/share/ur3_moveit_config/cmake/ur3_moveit_configConfig.cmake

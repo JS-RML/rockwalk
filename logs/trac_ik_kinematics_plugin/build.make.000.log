@@ -1,4 +1,0 @@
-[35m[1mScanning dependencies of target trac_ik_kinematics_plugin[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/trac_ik_kinematics_plugin.dir/src/trac_ik_kinematics_plugin.cpp.o[0m
-[100%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/trac_ik_kinematics_plugin/lib/libtrac_ik_kinematics_plugin.so[0m
-[100%] Built target trac_ik_kinematics_plugin

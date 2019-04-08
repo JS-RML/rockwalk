@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/rosserial_server
-
-Name: rosserial_server
-Description: Description of rosserial_server
-Version: 0.7.7
-Cflags: -I/home/nazir/ws_moveit/src/rosserial/rosserial_server/include
-Libs: -L/home/nazir/ws_moveit/devel/.private/rosserial_server/lib 
-Requires: roscpp rosserial_msgs std_msgs topic_tools

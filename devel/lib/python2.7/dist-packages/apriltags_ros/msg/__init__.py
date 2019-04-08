@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/apriltags_ros/lib/python2.7/dist-packages/apriltags_ros/msg/__init__.py

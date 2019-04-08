@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/rosserial_xbee
-
-Name: rosserial_xbee
-Description: Description of rosserial_xbee
-Version: 0.7.7
-Cflags: 
-Libs: -L/home/nazir/ws_moveit/devel/.private/rosserial_xbee/lib 
-Requires: 

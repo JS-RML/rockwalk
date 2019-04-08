@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/moveit_setup_assistant
-
-Name: moveit_setup_assistant
-Description: Description of moveit_setup_assistant
-Version: 0.9.11
-Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_setup_assistant/include
-Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_setup_assistant/lib -lmoveit_setup_assistant_tools
-Requires: moveit_ros_planning moveit_ros_visualization

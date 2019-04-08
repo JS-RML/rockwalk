@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/apriltags_ros
-
-Name: apriltags_ros
-Description: Description of apriltags_ros
-Version: 0.1.2
-Cflags: -I/home/nazir/ws_moveit/devel/.private/apriltags_ros/include -I/home/nazir/ws_moveit/src/apriltags_ros/include -I/usr/include/eigen3
-Libs: -L/home/nazir/ws_moveit/devel/.private/apriltags_ros/lib -lapriltag_detector
-Requires: apriltags image_transport roscpp sensor_msgs geometry_msgs tf cv_bridge message_runtime nodelet std_msgs

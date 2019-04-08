@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: ur_msgs
-Description: Description of ur_msgs
-Version: 1.2.1
-Cflags: -I/home/nazir/ws_moveit/install/include
-Libs: -L/home/nazir/ws_moveit/install/lib 
-Requires: message_runtime std_msgs geometry_msgs

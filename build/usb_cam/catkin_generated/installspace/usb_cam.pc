@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: usb_cam
-Description: Description of usb_cam
-Version: 0.3.6
-Cflags: -I/home/nazir/ws_moveit/install/include
-Libs: -L/home/nazir/ws_moveit/install/lib -lusb_cam
-Requires: 

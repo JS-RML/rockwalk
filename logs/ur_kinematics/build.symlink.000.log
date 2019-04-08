@@ -1,9 +1,0 @@
-Symlinking /home/nazir/ws_moveit/devel/lib/libur5_kin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libur10_kin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libur3_moveit_plugin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libur10_moveit_plugin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libur5_moveit_plugin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/libur3_kin.so
-Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/ur_kinematics.pc
-Symlinking /home/nazir/ws_moveit/devel/share/ur_kinematics/cmake/ur_kinematicsConfig.cmake
-Symlinking /home/nazir/ws_moveit/devel/share/ur_kinematics/cmake/ur_kinematicsConfig-version.cmake

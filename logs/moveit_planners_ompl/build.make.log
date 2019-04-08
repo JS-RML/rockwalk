@@ -1,5 +1,0 @@
-[  4%] Built target moveit_planners_ompl_gencfg
-[ 76%] Built target moveit_ompl_interface
-[ 84%] Built target moveit_ompl_planner_plugin
-[ 92%] Built target moveit_ompl_planner
-[100%] Built target moveit_demo_construct_constraints_database

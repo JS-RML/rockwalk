@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/moveit_resources
-
-Name: moveit_resources
-Description: Description of moveit_resources
-Version: 0.6.2
-Cflags: -I/home/nazir/ws_moveit/src/moveit_resources/include -I/home/nazir/ws_moveit/devel/.private/moveit_resources/include
-Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_resources/lib 
-Requires: 

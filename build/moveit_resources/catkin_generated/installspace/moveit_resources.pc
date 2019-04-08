@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/install
-
-Name: moveit_resources
-Description: Description of moveit_resources
-Version: 0.6.2
-Cflags: -I/home/nazir/ws_moveit/install/include
-Libs: -L/home/nazir/ws_moveit/install/lib 
-Requires: 

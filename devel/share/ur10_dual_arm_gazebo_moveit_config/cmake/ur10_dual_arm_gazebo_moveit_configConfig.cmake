@@ -1,1 +1,0 @@
-/home/nazir/ws_moveit/devel/.private/ur10_dual_arm_gazebo_moveit_config/share/ur10_dual_arm_gazebo_moveit_config/cmake/ur10_dual_arm_gazebo_moveit_configConfig.cmake

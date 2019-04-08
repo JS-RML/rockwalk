@@ -1,4 +1,0 @@
-universal_robot/ur_description
-/home/nazir/ws_moveit/devel/.private/ur_description/lib/pkgconfig/ur_description.pc /home/nazir/ws_moveit/devel/lib/pkgconfig/ur_description.pc
-/home/nazir/ws_moveit/devel/.private/ur_description/share/ur_description/cmake/ur_descriptionConfig-version.cmake /home/nazir/ws_moveit/devel/share/ur_description/cmake/ur_descriptionConfig-version.cmake
-/home/nazir/ws_moveit/devel/.private/ur_description/share/ur_description/cmake/ur_descriptionConfig.cmake /home/nazir/ws_moveit/devel/share/ur_description/cmake/ur_descriptionConfig.cmake

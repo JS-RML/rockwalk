@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/moveit_ros_perception
-
-Name: moveit_ros_perception
-Description: Description of moveit_ros_perception
-Version: 0.9.11
-Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/mesh_filter/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/lazy_free_space_updater/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/depth_image_octomap_updater/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/point_containment_filter/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/occupancy_map_monitor/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/pointcloud_octomap_updater/include -I/home/nazir/ws_moveit/src/moveit/moveit_ros/perception/semantic_world/include -I/opt/ros/kinetic/include -I/usr/include/eigen3
-Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_ros_perception/lib -lmoveit_lazy_free_space_updater -lmoveit_point_containment_filter -lmoveit_occupancy_map_monitor -lmoveit_pointcloud_octomap_updater_core -lmoveit_semantic_world -l:/opt/ros/kinetic/lib/liboctomap.so -l:/opt/ros/kinetic/lib/liboctomath.so
-Requires: moveit_core image_transport moveit_msgs

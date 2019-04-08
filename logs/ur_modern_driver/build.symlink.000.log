@@ -1,5 +1,0 @@
-Symlinking /home/nazir/ws_moveit/devel/lib/libur_hardware_interface.so
-Symlinking /home/nazir/ws_moveit/devel/lib/pkgconfig/ur_modern_driver.pc
-Symlinking /home/nazir/ws_moveit/devel/lib/ur_modern_driver/ur_driver
-Symlinking /home/nazir/ws_moveit/devel/share/ur_modern_driver/cmake/ur_modern_driverConfig.cmake
-Symlinking /home/nazir/ws_moveit/devel/share/ur_modern_driver/cmake/ur_modern_driverConfig-version.cmake

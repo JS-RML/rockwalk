@@ -1,8 +1,0 @@
-prefix=/home/nazir/ws_moveit/devel/.private/moveit_planners_chomp
-
-Name: moveit_planners_chomp
-Description: Description of moveit_planners_chomp
-Version: 0.9.11
-Cflags: -I/home/nazir/ws_moveit/src/moveit/moveit_planners/chomp/chomp_interface/include
-Libs: -L/home/nazir/ws_moveit/devel/.private/moveit_planners_chomp/lib -lmoveit_planners_chomp
-Requires: roscpp moveit_core pluginlib
