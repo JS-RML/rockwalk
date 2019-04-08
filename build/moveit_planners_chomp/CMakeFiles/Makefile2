@@ -161,8 +161,8 @@ clean: CMakeFiles/_run_tests_moveit_planners_chomp.dir/clean
 # Target rules for target CMakeFiles/chomp_moveit_test.dir
 
 # All Build rule for target.
-CMakeFiles/chomp_moveit_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 CMakeFiles/chomp_moveit_test.dir/all: CMakeFiles/chomp_planner_plugin.dir/all
+CMakeFiles/chomp_moveit_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/chomp_moveit_test.dir/build.make CMakeFiles/chomp_moveit_test.dir/depend
 	$(MAKE) -f CMakeFiles/chomp_moveit_test.dir/build.make CMakeFiles/chomp_moveit_test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nazir/ws_moveit/build/moveit_planners_chomp/CMakeFiles --progress-num=1,2 "Built target chomp_moveit_test"

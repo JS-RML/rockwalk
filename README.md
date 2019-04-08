@@ -4,7 +4,7 @@
 ##  Usage
 This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and some other packages to perform rock-and-walk manipulation ([manuscript](http://junseo.people.ust.hk/papers/rnw.pdf), [video](https://drive.google.com/file/d/1CDzb0HQTZxM8v69VRgbU-VmYGj-cTmHZ/view?usp=sharing)) with a UR-10 robot arm. The setup here is general to facilitate dual arm control of UR-10s in our laboratory setting. If you would like to use the two UR-10 arms for some other manipulation task, then you can setup your workspace as prescribed below and scroll down to Robot Control section to begin controlling one or two UR-10 arms. We assume **Ubuntu 16.04** with **ROS Kinetic** installed.
 
-### Setting-up the Workspace
+### 1.  Setting-up the Workspace
 
 1.  Install `trac_ik` plugin  
 `$  sudo apt-get install ros-kinetic-trac-ik-kinematics-plugin`
@@ -25,20 +25,30 @@ This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and s
 6. Finally, source your new workspace everytime before use, or add it to your `.bashrc` script so that it is executed everytime you open the terminal.  
 `$  source ~/ws_moveit/devel/setup.bash`
 
+### 2.  Demo with MoveIt!
+
+1.  The following command will bring-up two virtual UR-10 robots as in our lab setting.  
+`$  roslaunch ur10_dual_arm_gazebo_moveit_config demo.launch`  
+Note, this has nothing to do with Gazebo simulator. Just the naming has been this way. Play around with these two arms by following MoveIt tutorials [this](https://ros-planning.github.io/moveit_tutorials/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html) and [this](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html). You can also plan paths for the robots in RViz, as in this sceengrab:
+
+![](media/lab_2_ur10s.png)
 
 
-### Rock-and-Walk with one UR-10 arm
+2.  You can also run the following script to visualize a dual-arm zigzag motion. Turn-off loop-animation in RViz. Take a look at the script to see how the robot is being controlled using MoveIt.  
+`$  rosrun ur10_cm hong_kong_dual_arm_manipulation_operational.py`  
 
-####  Concatenating gait and generating waypoints for the robot
+3.  You can also practice writing your own code to come up with interesting robot motions like planning a circle, a spiral, etc. with one or both robot arms.
+
+###  Concatenating gait and generating waypoints for the robot
 Here, we use the `MATLAB` scripts to generate a sequence of zigzag waypoints along
 which the robot can move. The `MATLAB` scripts are located in the directory, `/src/ur10_cm/matlab_scripts`
 
-1.  First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate.m` in the next step. In addition, `vector_fields.m` will display a figure showing an annulus filled with (positive) vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone (see the manuscript in the reference below). Note: The code here is inefficient, so it may take a couple of minutes in runtime.
+1.  First execute `vector_fields.m` in `MATLAB` with dimensions of oblique cone of choice. This will generate three files, namely, `vector_field_pos.mat`, `vector_field_neg.mat` and `params.mat`. The former two store the annular vector fields while the latter stores the associated parameters. These three files will be used by `integral_curves_concatenate.m` in the next step. In addition, `vector_fields.m` will display a figure showing an annulus filled with CCW vector field and an example streamline. The streamline denotes the path of the ground contact point on the base rim of the cone (see the manuscript in the reference below). Note: The code here is inefficient, so it may take a couple of minutes in runtime.
 
 2. Then run `integral_curves_concatenate.m`. This script outputs a file, `lr_rocking.mat` to store the sequence of oblique cone's apex positions (correspondingly, the end-effector positions of a robot manipulator attached to the cone's apex), separated into two variables corresponding to left and right rocking. If these sequence of waypoints are followed, a net straight line displacement of the cone is obtained through alternate rocking. In this script, total number of rocking steps (`total_rocking_steps`) and `rocking_angle` may be altered. A large value of `rocking_angle` means that the end-effector moves large displacement per step and can potentially make the system (robot+object_cone) unstable. A small value, on the other hand, will result in a small net forward displacement per rocking step.
 
 
-####  Robot Control
+###  Robot Control
 In our lab, the two UR-10 arms named `hong` and `kong`. We use these names to
 create ROS namespaces for our robot arms.
 

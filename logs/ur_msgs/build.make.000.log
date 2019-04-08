@@ -83,6 +83,7 @@
 [35m[1mScanning dependencies of target ur_msgs_generate_messages_py[0m
 [ 79%] [34m[1mGenerating Python from MSG ur_msgs/ToolDataMsg[0m
 [ 81%] [34m[1mGenerating Python from MSG ur_msgs/Digital[0m
+[ 81%] Built target ur_msgs_generate_messages_eus
 [ 83%] [34m[1mGenerating Python from MSG ur_msgs/Analog[0m
 [ 85%] [34m[1mGenerating Python from MSG ur_msgs/RobotStateRTMsg[0m
 [ 87%] [34m[1mGenerating Python from MSG ur_msgs/DualArmEff[0m
@@ -90,9 +91,8 @@
 [ 91%] [34m[1mGenerating Python from MSG ur_msgs/IOStates[0m
 [ 93%] [34m[1mGenerating Python code from SRV ur_msgs/SetPayload[0m
 [ 95%] [34m[1mGenerating Python code from SRV ur_msgs/SetIO[0m
-[ 97%] [34m[1mGenerating Python msg __init__.py for ur_msgs[0m
-[100%] [34m[1mGenerating Python srv __init__.py for ur_msgs[0m
+[ 97%] [34m[1mGenerating Python srv __init__.py for ur_msgs[0m
+[100%] [34m[1mGenerating Python msg __init__.py for ur_msgs[0m
 [100%] Built target ur_msgs_generate_messages_py
-[100%] Built target ur_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target ur_msgs_generate_messages[0m
 [100%] Built target ur_msgs_generate_messages
