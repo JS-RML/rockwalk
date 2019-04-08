@@ -4,7 +4,7 @@
 ##  Usage
 This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and some other packages to perform rock-and-walk manipulation ([manuscript](http://junseo.people.ust.hk/papers/rnw.pdf), [video](https://drive.google.com/file/d/1CDzb0HQTZxM8v69VRgbU-VmYGj-cTmHZ/view?usp=sharing)) with a UR-10 robot arm. The setup here is general to facilitate dual arm control of UR-10s in our laboratory setting. If you would like to use the two UR-10 arms for some other manipulation task, then you can setup your workspace as prescribed below and scroll down to Robot Control section to begin controlling one or two UR-10 arms. We assume **Ubuntu 16.04** with **ROS Kinetic** installed.
 
-### Setting-up the Workspace
+### 1.  Setting-up the Workspace
 
 1.  Install `trac_ik` plugin  
 `$  sudo apt-get install ros-kinetic-trac-ik-kinematics-plugin`
@@ -25,15 +25,19 @@ This repository is a workspace that contains `MoveIt!`, `ur_modern_driver` and s
 6. Finally, source your new workspace everytime before use, or add it to your `.bashrc` script so that it is executed everytime you open the terminal.  
 `$  source ~/ws_moveit/devel/setup.bash`
 
-### Dual-arm Demo with MoveIt!
+### 2.  Demo with MoveIt!
 
-The following command will bringup two virtual UR-10 robots as in our lab setting.  
-`$  roslaunch ur10_dual_arm_gazebo_moveit_config demo.launch`
-Note, this has nothing to do with Gazebo simulator. Just the naming has been this way. Play around with these two arms by following MoveIt tutorials [this](https://ros-planning.github.io/moveit_tutorials/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html) and [this](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html). Note that you can also plan paths for the robots in RViz, as in this sceengrab:
+1.  The following command will bring-up two virtual UR-10 robots as in our lab setting.  
+`$  roslaunch ur10_dual_arm_gazebo_moveit_config demo.launch`  
+Note, this has nothing to do with Gazebo simulator. Just the naming has been this way. Play around with these two arms by following MoveIt tutorials [this](https://ros-planning.github.io/moveit_tutorials/doc/quickstart_in_rviz/quickstart_in_rviz_tutorial.html) and [this](https://ros-planning.github.io/moveit_tutorials/doc/move_group_python_interface/move_group_python_interface_tutorial.html). You can also plan paths for the robots in RViz, as in this sceengrab:
 
 ![](media/lab_2_ur10s.png)
 
 
+2.  You can also run the following script to visualize a dual-arm zigzag motion. Turn-off loop-animation in RViz. Take a look at the script to see how the robot is being controlled using MoveIt.  
+`$  rosrun ur10_cm hong_kong_dual_arm_manipulation_operational.py`  
+
+3.  You can also practice writing your own code to come up with interesting robot motions like planning a circle, a spiral, etc. with one or both robot arms.
 
 ###  Concatenating gait and generating waypoints for the robot
 Here, we use the `MATLAB` scripts to generate a sequence of zigzag waypoints along
