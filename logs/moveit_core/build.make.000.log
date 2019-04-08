@@ -8,70 +8,69 @@
 [  5%] Built target moveit_exceptions
 [35m[1mScanning dependencies of target moveit_profiler[0m
 [  7%] [32mBuilding CXX object profiler/CMakeFiles/moveit_profiler.dir/src/profiler.cpp.o[0m
-[  8%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_profiler.so[0m
-[  8%] Built target moveit_profiler
 [35m[1mScanning dependencies of target moveit_background_processing[0m
-[ 10%] [32mBuilding CXX object background_processing/CMakeFiles/moveit_background_processing.dir/src/background_processing.cpp.o[0m
+[  8%] [32mBuilding CXX object background_processing/CMakeFiles/moveit_background_processing.dir/src/background_processing.cpp.o[0m
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_cpp[0m
-[ 10%] Built target sensor_msgs_generate_messages_cpp
+[  8%] Built target sensor_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target octomap_msgs_generate_messages_py[0m
-[ 10%] Built target octomap_msgs_generate_messages_py
+[  8%] Built target octomap_msgs_generate_messages_py
 [35m[1mScanning dependencies of target octomap_msgs_generate_messages_lisp[0m
-[ 10%] Built target octomap_msgs_generate_messages_lisp
+[  8%] Built target octomap_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_nodejs[0m
-[ 10%] Built target object_recognition_msgs_generate_messages_nodejs
+[  8%] Built target object_recognition_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_eus[0m
-[ 10%] Built target object_recognition_msgs_generate_messages_eus
+[  8%] Built target object_recognition_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target octomap_msgs_generate_messages_eus[0m
-[ 10%] Built target octomap_msgs_generate_messages_eus
+[  8%] Built target octomap_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_cpp[0m
-[ 10%] Built target object_recognition_msgs_generate_messages_cpp
+[  8%] Built target object_recognition_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_py[0m
-[ 10%] Built target trajectory_msgs_generate_messages_py
+[  8%] Built target trajectory_msgs_generate_messages_py
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_nodejs[0m
-[ 10%] Built target trajectory_msgs_generate_messages_nodejs
+[  8%] Built target trajectory_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_lisp[0m
+[  8%] Built target trajectory_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_eus[0m
-[ 10%] Built target trajectory_msgs_generate_messages_eus
+[  8%] Built target trajectory_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_py[0m
-[ 10%] Built target trajectory_msgs_generate_messages_lisp
-[ 10%] Built target sensor_msgs_generate_messages_py
-[35m[1mScanning dependencies of target shape_msgs_generate_messages_py[0m
-[ 10%] Built target shape_msgs_generate_messages_py
+[  8%] Built target sensor_msgs_generate_messages_py
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_nodejs[0m
+[  8%] Built target sensor_msgs_generate_messages_nodejs
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_py[0m
+[  8%] Built target shape_msgs_generate_messages_py
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_nodejs[0m
-[ 10%] Built target geometry_msgs_generate_messages_nodejs
-[ 10%] Built target sensor_msgs_generate_messages_nodejs
-[35m[1mScanning dependencies of target shape_msgs_generate_messages_nodejs[0m
-[ 10%] Built target shape_msgs_generate_messages_nodejs
+[  8%] Built target geometry_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_py[0m
-[ 10%] Built target visualization_msgs_generate_messages_py
-[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[  8%] Built target visualization_msgs_generate_messages_py
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_nodejs[0m
+[  8%] Built target shape_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target std_msgs_generate_messages_eus[0m
-[ 10%] Built target roscpp_generate_messages_lisp
+[  8%] Built target std_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target roscpp_generate_messages_lisp[0m
+[  8%] Built target roscpp_generate_messages_lisp
 [35m[1mScanning dependencies of target octomap_msgs_generate_messages_cpp[0m
-[ 10%] Built target std_msgs_generate_messages_eus
+[  8%] Built target octomap_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_eus[0m
-[ 10%] Built target octomap_msgs_generate_messages_cpp
-[ 10%] Built target actionlib_msgs_generate_messages_eus
+[  8%] Built target actionlib_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_eus[0m
+[  8%] Built target visualization_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_lisp[0m
-[ 10%] Built target visualization_msgs_generate_messages_eus
-[ 10%] Built target actionlib_msgs_generate_messages_lisp
+[  8%] Built target actionlib_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_lisp[0m
+[  8%] Built target std_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_lisp[0m
-[ 10%] Built target std_msgs_generate_messages_lisp
+[  8%] Built target geometry_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_py[0m
-[ 10%] Built target geometry_msgs_generate_messages_lisp
-[ 10%] Built target object_recognition_msgs_generate_messages_py
+[  8%] Built target object_recognition_msgs_generate_messages_py
+[ 10%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_profiler.so[0m
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_lisp[0m
-[35m[1mScanning dependencies of target shape_msgs_generate_messages_cpp[0m
 [ 10%] Built target sensor_msgs_generate_messages_lisp
+[35m[1mScanning dependencies of target shape_msgs_generate_messages_cpp[0m
 [ 10%] Built target shape_msgs_generate_messages_cpp
-[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
 [35m[1mScanning dependencies of target roscpp_generate_messages_nodejs[0m
-[ 10%] Built target rosgraph_msgs_generate_messages_lisp
 [ 10%] Built target roscpp_generate_messages_nodejs
+[35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_lisp[0m
+[ 10%] Built target rosgraph_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_nodejs[0m
 [ 10%] Built target rosgraph_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target moveit_msgs_generate_messages_cpp[0m
@@ -83,52 +82,53 @@
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_eus[0m
 [ 10%] Built target geometry_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target roscpp_generate_messages_cpp[0m
+[ 10%] Built target moveit_profiler
 [ 10%] Built target roscpp_generate_messages_cpp
 [35m[1mScanning dependencies of target moveit_msgs_generate_messages_nodejs[0m
 [ 10%] Built target moveit_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_py[0m
-[ 10%] Built target actionlib_msgs_generate_messages_py
 [35m[1mScanning dependencies of target shape_msgs_generate_messages_lisp[0m
+[ 10%] Built target actionlib_msgs_generate_messages_py
 [ 10%] Built target shape_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target sensor_msgs_generate_messages_eus[0m
-[ 10%] Built target sensor_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_cpp[0m
+[ 10%] Built target sensor_msgs_generate_messages_eus
 [ 10%] Built target actionlib_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_cpp[0m
-[ 10%] Built target std_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target object_recognition_msgs_generate_messages_lisp[0m
-[ 10%] Built target object_recognition_msgs_generate_messages_lisp
+[ 10%] Built target std_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_cpp[0m
-[ 10%] Built target rosgraph_msgs_generate_messages_cpp
+[ 10%] Built target object_recognition_msgs_generate_messages_lisp
 [35m[1mScanning dependencies of target octomap_msgs_generate_messages_nodejs[0m
-[ 10%] Built target octomap_msgs_generate_messages_nodejs
+[ 10%] Built target rosgraph_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target trajectory_msgs_generate_messages_cpp[0m
-[ 10%] Built target trajectory_msgs_generate_messages_cpp
+[ 10%] Built target octomap_msgs_generate_messages_nodejs
 [35m[1mScanning dependencies of target shape_msgs_generate_messages_eus[0m
 [ 10%] Built target shape_msgs_generate_messages_eus
+[ 10%] Built target trajectory_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_cpp[0m
 [ 10%] Built target geometry_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_cpp[0m
-[ 10%] Built target visualization_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target std_msgs_generate_messages_nodejs[0m
 [ 10%] Built target std_msgs_generate_messages_nodejs
+[ 10%] Built target visualization_msgs_generate_messages_cpp
 [35m[1mScanning dependencies of target geometry_msgs_generate_messages_py[0m
 [ 10%] Built target geometry_msgs_generate_messages_py
+[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_lisp[0m
 [ 10%] Built target visualization_msgs_generate_messages_lisp
-[35m[1mScanning dependencies of target roscpp_generate_messages_eus[0m
-[ 10%] Built target roscpp_generate_messages_eus
 [35m[1mScanning dependencies of target visualization_msgs_generate_messages_nodejs[0m
-[ 10%] Built target visualization_msgs_generate_messages_nodejs
+[ 10%] Built target roscpp_generate_messages_eus
 [35m[1mScanning dependencies of target roscpp_generate_messages_py[0m
+[ 10%] Built target visualization_msgs_generate_messages_nodejs
 [ 10%] Built target roscpp_generate_messages_py
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_eus[0m
 [ 10%] Built target rosgraph_msgs_generate_messages_eus
 [35m[1mScanning dependencies of target rosgraph_msgs_generate_messages_py[0m
-[ 10%] Built target rosgraph_msgs_generate_messages_py
 [35m[1mScanning dependencies of target moveit_msgs_generate_messages_eus[0m
-[ 10%] Built target moveit_msgs_generate_messages_eus
+[ 10%] Built target rosgraph_msgs_generate_messages_py
 [35m[1mScanning dependencies of target moveit_msgs_generate_messages_py[0m
+[ 10%] Built target moveit_msgs_generate_messages_eus
 [ 10%] Built target moveit_msgs_generate_messages_py
 [35m[1mScanning dependencies of target actionlib_msgs_generate_messages_nodejs[0m
 [ 10%] Built target actionlib_msgs_generate_messages_nodejs
@@ -138,25 +138,25 @@
 [ 13%] Built target moveit_background_processing
 [35m[1mScanning dependencies of target moveit_transforms[0m
 [ 14%] [32mBuilding CXX object transforms/CMakeFiles/moveit_transforms.dir/src/transforms.cpp.o[0m
+[ 16%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_kinematics_base.so[0m
+[ 16%] Built target moveit_kinematics_base
 [35m[1mScanning dependencies of target moveit_distance_field[0m
-[ 16%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/distance_field.cpp.o[0m
-[ 17%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_kinematics_base.so[0m
-[ 17%] Built target moveit_kinematics_base
-[35m[1mScanning dependencies of target moveit_robot_model[0m
-[ 19%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/aabb.cpp.o[0m
-[ 20%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_transforms.so[0m
+[ 17%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/distance_field.cpp.o[0m
+[ 19%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_transforms.so[0m
+[ 20%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/find_internal_points.cpp.o[0m
 [ 20%] Built target moveit_transforms
-[ 22%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/fixed_joint_model.cpp.o[0m
-[ 23%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/floating_joint_model.cpp.o[0m
-[ 25%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/joint_model.cpp.o[0m
-[ 26%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/find_internal_points.cpp.o[0m
-[ 27%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/propagation_distance_field.cpp.o[0m
+[35m[1mScanning dependencies of target moveit_robot_model[0m
+[ 22%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/aabb.cpp.o[0m
+[ 23%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/fixed_joint_model.cpp.o[0m
+[ 25%] [32mBuilding CXX object distance_field/CMakeFiles/moveit_distance_field.dir/src/propagation_distance_field.cpp.o[0m
+[ 26%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/floating_joint_model.cpp.o[0m
+[ 27%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/joint_model.cpp.o[0m
 [ 29%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/joint_model_group.cpp.o[0m
 [ 30%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/link_model.cpp.o[0m
-[ 32%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/planar_joint_model.cpp.o[0m
-[ 33%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/prismatic_joint_model.cpp.o[0m
-[ 35%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_distance_field.so[0m
-[ 35%] Built target moveit_distance_field
+[ 32%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_distance_field.so[0m
+[ 32%] Built target moveit_distance_field
+[ 33%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/planar_joint_model.cpp.o[0m
+[ 35%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/prismatic_joint_model.cpp.o[0m
 [ 36%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/revolute_joint_model.cpp.o[0m
 [ 38%] [32mBuilding CXX object robot_model/CMakeFiles/moveit_robot_model.dir/src/robot_model.cpp.o[0m
 [ 39%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_robot_model.so[0m
@@ -167,11 +167,11 @@
 [ 42%] [32mBuilding CXX object robot_state/CMakeFiles/moveit_robot_state.dir/src/robot_state.cpp.o[0m
 [ 44%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_robot_state.so[0m
 [ 44%] Built target moveit_robot_state
-[35m[1mScanning dependencies of target moveit_dynamics_solver[0m
 [35m[1mScanning dependencies of target moveit_robot_trajectory[0m
+[35m[1mScanning dependencies of target moveit_dynamics_solver[0m
 [35m[1mScanning dependencies of target moveit_kinematics_metrics[0m
 [35m[1mScanning dependencies of target moveit_collision_detection[0m
-[ 45%] [32mBuilding CXX object dynamics_solver/CMakeFiles/moveit_dynamics_solver.dir/src/dynamics_solver.cpp.o[0m
+[ 47%] [32mBuilding CXX object dynamics_solver/CMakeFiles/moveit_dynamics_solver.dir/src/dynamics_solver.cpp.o[0m
 [ 47%] [32mBuilding CXX object robot_trajectory/CMakeFiles/moveit_robot_trajectory.dir/src/robot_trajectory.cpp.o[0m
 [ 48%] [32mBuilding CXX object kinematics_metrics/CMakeFiles/moveit_kinematics_metrics.dir/src/kinematics_metrics.cpp.o[0m
 [ 50%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/allvalid/collision_robot_allvalid.cpp.o[0m
@@ -183,33 +183,33 @@
 [ 55%] Built target moveit_robot_trajectory
 [35m[1mScanning dependencies of target moveit_trajectory_processing[0m
 [ 57%] [32mBuilding CXX object trajectory_processing/CMakeFiles/moveit_trajectory_processing.dir/src/iterative_time_parameterization.cpp.o[0m
-[ 58%] [32mBuilding CXX object trajectory_processing/CMakeFiles/moveit_trajectory_processing.dir/src/iterative_spline_parameterization.cpp.o[0m
-[ 60%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_octomap_filter.cpp.o[0m
-[ 61%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_robot.cpp.o[0m
-[ 63%] [32mBuilding CXX object trajectory_processing/CMakeFiles/moveit_trajectory_processing.dir/src/trajectory_tools.cpp.o[0m
-[ 64%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_tools.cpp.o[0m
-[ 66%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_trajectory_processing.so[0m
-[ 66%] Built target moveit_trajectory_processing
-[35m[1mScanning dependencies of target moveit_planning_interface[0m
-[ 67%] [32mBuilding CXX object planning_interface/CMakeFiles/moveit_planning_interface.dir/src/planning_interface.cpp.o[0m
+[ 58%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_octomap_filter.cpp.o[0m
+[ 60%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_robot.cpp.o[0m
+[ 61%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_tools.cpp.o[0m
+[ 63%] [32mBuilding CXX object trajectory_processing/CMakeFiles/moveit_trajectory_processing.dir/src/iterative_spline_parameterization.cpp.o[0m
+[ 64%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_world.cpp.o[0m
+[ 66%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/world.cpp.o[0m
+[ 67%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/world_diff.cpp.o[0m
 [ 69%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_kinematics_metrics.so[0m
 [ 69%] Built target moveit_kinematics_metrics
-[ 69%] [32mBuilding CXX object planning_interface/CMakeFiles/moveit_planning_interface.dir/src/planning_response.cpp.o[0m
-[ 70%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/collision_world.cpp.o[0m
-[ 72%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/world.cpp.o[0m
-[ 73%] [32mBuilding CXX object collision_detection/CMakeFiles/moveit_collision_detection.dir/src/world_diff.cpp.o[0m
-[ 75%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_collision_detection.so[0m
-[ 75%] Built target moveit_collision_detection
+[35m[1mScanning dependencies of target moveit_planning_interface[0m
+[ 70%] [32mBuilding CXX object planning_interface/CMakeFiles/moveit_planning_interface.dir/src/planning_interface.cpp.o[0m
+[ 72%] [32mBuilding CXX object trajectory_processing/CMakeFiles/moveit_trajectory_processing.dir/src/trajectory_tools.cpp.o[0m
+[ 72%] [32mBuilding CXX object planning_interface/CMakeFiles/moveit_planning_interface.dir/src/planning_response.cpp.o[0m
+[ 73%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_collision_detection.so[0m
+[ 73%] Built target moveit_collision_detection
 [35m[1mScanning dependencies of target moveit_collision_detection_fcl[0m
-[ 76%] [32mBuilding CXX object collision_detection_fcl/CMakeFiles/moveit_collision_detection_fcl.dir/src/collision_robot_fcl.cpp.o[0m
-[ 77%] [32mBuilding CXX object collision_detection_fcl/CMakeFiles/moveit_collision_detection_fcl.dir/src/collision_common.cpp.o[0m
+[ 75%] [32mBuilding CXX object collision_detection_fcl/CMakeFiles/moveit_collision_detection_fcl.dir/src/collision_common.cpp.o[0m
+[ 76%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_trajectory_processing.so[0m
+[ 76%] Built target moveit_trajectory_processing
+[ 77%] [32mBuilding CXX object collision_detection_fcl/CMakeFiles/moveit_collision_detection_fcl.dir/src/collision_robot_fcl.cpp.o[0m
 [ 79%] [32mBuilding CXX object collision_detection_fcl/CMakeFiles/moveit_collision_detection_fcl.dir/src/collision_world_fcl.cpp.o[0m
 [ 80%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_planning_interface.so[0m
 [ 80%] Built target moveit_planning_interface
 [ 82%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_collision_detection_fcl.so[0m
 [ 82%] Built target moveit_collision_detection_fcl
 [35m[1mScanning dependencies of target moveit_kinematic_constraints[0m
-[ 85%] [32mBuilding CXX object kinematic_constraints/CMakeFiles/moveit_kinematic_constraints.dir/src/kinematic_constraint.cpp.o[0m
+[ 83%] [32mBuilding CXX object kinematic_constraints/CMakeFiles/moveit_kinematic_constraints.dir/src/kinematic_constraint.cpp.o[0m
 [ 85%] [32mBuilding CXX object kinematic_constraints/CMakeFiles/moveit_kinematic_constraints.dir/src/utils.cpp.o[0m
 [ 86%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_kinematic_constraints.so[0m
 [ 86%] Built target moveit_kinematic_constraints
@@ -217,11 +217,11 @@
 [ 88%] [32mBuilding CXX object planning_scene/CMakeFiles/moveit_planning_scene.dir/src/planning_scene.cpp.o[0m
 [ 89%] [32m[1mLinking CXX shared library /home/nazir/ws_moveit/devel/.private/moveit_core/lib/libmoveit_planning_scene.so[0m
 [ 89%] Built target moveit_planning_scene
-[35m[1mScanning dependencies of target moveit_planning_request_adapter[0m
 [35m[1mScanning dependencies of target moveit_constraint_samplers[0m
+[35m[1mScanning dependencies of target moveit_planning_request_adapter[0m
 [ 91%] [32mBuilding CXX object planning_request_adapter/CMakeFiles/moveit_planning_request_adapter.dir/src/planning_request_adapter.cpp.o[0m
 [ 92%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/constraint_sampler.cpp.o[0m
-[ 92%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/constraint_sampler_manager.cpp.o[0m
+[ 94%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/constraint_sampler_manager.cpp.o[0m
 [ 94%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/constraint_sampler_tools.cpp.o[0m
 [ 95%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/default_constraint_samplers.cpp.o[0m
 [ 97%] [32mBuilding CXX object constraint_samplers/CMakeFiles/moveit_constraint_samplers.dir/src/union_constraint_sampler.cpp.o[0m

@@ -1,7 +1,7 @@
-[35m[1mScanning dependencies of target _rosserial_arduino_generate_messages_check_deps_Adc[0m
-[  0%] Built target _rosserial_arduino_generate_messages_check_deps_Adc
 [35m[1mScanning dependencies of target _rosserial_arduino_generate_messages_check_deps_Test[0m
 [  0%] Built target _rosserial_arduino_generate_messages_check_deps_Test
+[35m[1mScanning dependencies of target _rosserial_arduino_generate_messages_check_deps_Adc[0m
+[  0%] Built target _rosserial_arduino_generate_messages_check_deps_Adc
 [35m[1mScanning dependencies of target rosserial_arduino_generate_messages_nodejs[0m
 [  7%] [34m[1mGenerating Javascript code from rosserial_arduino/Adc.msg[0m
 [ 15%] [34m[1mGenerating Javascript code from rosserial_arduino/Test.srv[0m
