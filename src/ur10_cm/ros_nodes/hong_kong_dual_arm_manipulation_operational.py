@@ -19,6 +19,9 @@ class robot_control:
     """Initializes a robot arm with moveit and provides methods
     for tracking effector pose
     @param: group name of the arm to manipulate
+            dual_arm: to plan the motion of both UR-10 arms simultaneously
+            hong_arm: to plan the motion of hong UR-10 arm only
+            kong_arm: to plan the motion of kong UR-10 arm only
     """
 
     def __init__(self, group):

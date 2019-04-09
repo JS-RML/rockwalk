@@ -308,6 +308,8 @@ class manipulation_control_law:
 
     def import_stream_pt_from_matlab(self):
 
+        """NOT IN USE"""
+
         stream_points = sio.loadmat('/home/nazir/Documents/MATLAB/CDRM_Modeling/stream.mat')
 
         self._stream_x = stream_points['stream_x']
