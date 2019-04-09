@@ -86,7 +86,8 @@ class robot_control:
             pass
 
     def import_left_right_rocking_matlab(self):
-        lr_rocking = sio.loadmat('/home/nazir/ws_moveit/src/ur10_cm/matlab_scripts/lr_rocking.mat')
+        # lr_rocking = sio.loadmat('/home/nazir/ws_moveit/src/ur10_cm/matlab_scripts/lr_rocking.mat')
+        lr_rocking = sio.loadmat('~/ws_moveit/src/ur10_cm/matlab_scripts/lr_rocking.mat')
 
         self._right_rocking_target = lr_rocking['right_rock']
         self._left_rocking_target = lr_rocking['left_rock']
