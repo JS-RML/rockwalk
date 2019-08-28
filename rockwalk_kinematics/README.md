@@ -2,6 +2,13 @@
 
 Based on the model for a falling rolling disk.
 
+**INPUT**
+Subscribes to topics from an IMU
+1. Orientation @
+2. Angular Velocity @
+
+**OUTPU**
+
 *TODO: Add video/gif for output*
 
 ## Pre-requisites
@@ -16,6 +23,7 @@ We only subscribe to orientation of the object (quaternion) and the angular velo
 
 
 ## Installation
+Upload the code in `/arduino` to Arduino board equipped with a 9-axis motion shield.
 
 Simply run the launch file
 

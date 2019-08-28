@@ -1,8 +1,20 @@
-# rockwalk
+# *rockwalk*
 
 Rockwalk is an efficient technique to transport large objects in a passive dynamic manner.
 
 ![](media/rockwalk_gif.gif)
+
+*TO DO:* Add contact plot.
+
+
+## *rockwalk* with UR-10
+
+### Gazebo
+
+
+### Real World
+
+
 
 <!-- # Rock and Walk Manipulation with UR-10 Robot Arm
 
