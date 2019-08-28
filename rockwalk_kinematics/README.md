@@ -13,3 +13,12 @@ We only subscribe to orientation of the object (quaternion) and the angular velo
 
 ### Software:
 * `rosserial`
+
+
+## Installation
+
+Simply run the launch file
+
+```
+roslaunch rockwalk_kinematics rw_kinematics.launch
+```

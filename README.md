@@ -1,4 +1,10 @@
-# Rock and Walk Manipulation with UR-10 Robot Arm
+# rockwalk
+
+Rockwalk is an efficient technique to transport large objects in a passive dynamic manner.
+
+![](media/rockwalk_gif.gif)
+
+<!-- # Rock and Walk Manipulation with UR-10 Robot Arm
 
 
 ##  Usage
@@ -93,4 +99,4 @@ To see how the parameters are defined and a demo of our manipulation task, take 
 Read our [manuscript](http://junseo.people.ust.hk/papers/rnw.pdf) to be presented at ICRA'19.  
 
 ##  Questions or Comments?
-Feel free to contact: sanazir[at]connect[dot]ust[dot]hk
+Feel free to contact: sanazir[at]connect[dot]ust[dot]hk -->
