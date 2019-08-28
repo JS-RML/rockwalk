@@ -1,4 +1,4 @@
-# Kinematics of Rocking and Walking
+# Kinematics
 
 Based on the model for a falling rolling disk.
 
@@ -7,7 +7,12 @@ Subscribes to topics from an IMU
 1. Orientation @
 2. Angular Velocity @
 
-**OUTPU**
+**OUTPUT**
+Publish following topics
+1. Euler angles to appropriate for rolling analysis `@ euler_ginsberg`
+2. `@ twist_ginsberg`
+3. `@ object_pose`
+4. Coordinate of ground contact `@ ground_contact_coordinates`
 
 *TODO: Add video/gif for output*
 
