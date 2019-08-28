@@ -1,6 +1,6 @@
 # *rockwalk*
 
-Rockwalk is an efficient technique to transport large objects in a passive dynamic manner.
+*rockwalk* is an efficient technique to transport large objects in a passive dynamic manner. First proposed in an ICRA'19 [paper](http://junseo.people.ust.hk/papers/rnw.pdf).
 
 ![](media/rockwalk_gif.gif)
 
