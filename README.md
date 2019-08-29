@@ -19,15 +19,15 @@
 
 ## 1. Sensing modalities and other dependencies
 
-### 1a. Hardware
+### *A. Hardware*
 * Arduino Mega equipped with a 9-axis motion shield.
 
-### 1b. Software
+### *B. Software*
 
 
-## 2. *rockwalk* with UR-10
+## 2. *rockwalk* with [UR10](https://www.universal-robots.com/products/ur10-robot/)
 
-### 2a. Gazebo
+### *A. Gazebo*
 
 
-### 2b. Real World
+### *B. Real World*
