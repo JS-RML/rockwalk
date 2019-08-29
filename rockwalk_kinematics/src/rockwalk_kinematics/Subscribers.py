@@ -6,7 +6,8 @@ from tf import transformations as tfms
 
 
 class SubscriberMotionShield:
-    """Subscriber to Quaternion and Twist topics from 9-axis arduino motion shield
+    """Subscriber to QuaternionStamped and TwistStamped topics
+       from 9-axis arduino motion shield
     """
 
     def __init__(self):
@@ -18,13 +19,12 @@ class SubscriberMotionShield:
         self._twist_sub =rospy.Subscriber("twist_motion_shield", TwistStamped, self.store_twist_data)
 
     def store_quaternion_data(self, quaternion_data):
-        self._quaternion = copy.deepcopy(quaternion_data)
 
-        self._unit_imu_quaternion = tfms.unit_vector([self._quaternion.quaternion.x/1000.0,
-                                                      self._quaternion.quaternion.y/1000.0,
-                                                      self._quaternion.quaternion.z/1000.0,
-                                                      self._quaternion.quaternion.w/1000.0])
+        self._imu_quaternion = tfms.unit_vector([quaternion_data.quaternion.x/1000.0,
+                                                 quaternion_data.quaternion.y/1000.0,
+                                                 quaternion_data.quaternion.z/1000.0,
+                                                 quaternion_data.quaternion.w/1000.0])
 
 
     def store_twist_data(self, twist_data):
-        self._twist = copy.deepcopy(twist_data)
+        self._imu_twist = copy.deepcopy(twist_data) #in deg/s

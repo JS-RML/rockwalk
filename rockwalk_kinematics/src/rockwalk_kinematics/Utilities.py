@@ -1,10 +1,9 @@
 import math
 
-
-def compute_rolling_euler(rot):
-    """Euler angles for a falling rolling disk as described in:
-    pg. 317 of Advanced Engineering Dynamics 2nd Edition, J.H. Ginsberg:
-    http://mech.sharif.edu/~nejat/wp-content/uploads/2016/09/Jerry-H-Ginsberg-Advanced-engineering-dynamics-Cambridge-University-Press-1995.pdf
+def compute_euler(rot):
+    """ Computes body eulers suitable to analyze rolling motion:
+    Rot(z, \psi)*Rot(z,pi/2)*Rot(y, \theta)*Rot(z, \phi)
+    Also take a look at the README.md file.
     """
 
     if rot[2,2]!= 1 or rot[2,2]!= 1:
