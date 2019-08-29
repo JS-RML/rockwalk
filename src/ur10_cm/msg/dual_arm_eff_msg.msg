@@ -1,3 +1,0 @@
-Header header
-geometry_msgs/Pose hong_target_pose
-geometry_msgs/Pose kong_target_pose
