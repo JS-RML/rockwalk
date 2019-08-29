@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 
 import rospy
-# import rockwalk_kinematics.main
+
 from rockwalk_kinematics.Subscribers import SubscriberMotionShield
 from rockwalk_kinematics.Publishers import KinematicsPublishers
 from rockwalk_kinematics.RollingKinematics import Kinematics
-
-# For plotting
-from rockwalk_kinematics.KinematicPlots import RockwalkPlots
+from rockwalk_kinematics.Visualization import KinematicsVisualization
 
 if __name__ == '__main__':
     rospy.init_node("rockwalk_kinematics_node", anonymous=True)
@@ -15,40 +13,24 @@ if __name__ == '__main__':
 
     sub_motion_shield = SubscriberMotionShield()
 
+    pub_kinematics = KinematicsPublishers()
     rospy.sleep(3)
 
-    object_kinematics = Kinematics(sub_motion_shield)
-    pub_kinematics = KinematicsPublishers(object_kinematics)
+    object_kinematics = Kinematics(sub_motion_shield, pub_kinematics)
 
-
-    bool_plot_kinematics = True # Set to false if do not want plotting.
-
-    if bool_plot_kinematics:
-        rw_plots = RockwalkPlots(object_kinematics)
-
-        [fig_contact_plot, axis_contact_plot, background_contact_plot, points_contact_plot] = rw_plots.setup_contact_position_plot()
-
-        [figure_euler_plot, axis_euler_plot, background_euler_plot, points_euler_plot_theta, points_euler_plot_phi] = rw_plots.setup_euler_plot()
-
-        [fig_phase_plot, axis_phase_plot, background_phase_plot, points_phase_plot] = rw_plots.setup_phase_plot()
+    object_visualization = KinematicsVisualization(pub_kinematics,object_kinematics)
 
 
     rate = rospy.Rate(50)
 
     while not rospy.is_shutdown():
 
-        object_kinematics.compute_ginsberg_euler()
-        object_kinematics.compute_ginsberg_twist()
+        object_kinematics.compute_body_euler()
+        object_kinematics.compute_body_twist()
         object_kinematics.compute_object_pose()
         object_kinematics.compute_contact_coordinates()
-        pub_kinematics.publish_data()
 
-        if bool_plot_kinematics:
-            rw_plots.current_time_difference()
-            rw_plots.append_data_values()
-            rw_plots.contact_position_plot(fig_contact_plot, axis_contact_plot, background_contact_plot, points_contact_plot)
-            rw_plots.euler_plot(figure_euler_plot, axis_euler_plot, background_euler_plot, points_euler_plot_theta, points_euler_plot_phi)
-            rw_plots.phase_plot(fig_phase_plot, axis_phase_plot, background_phase_plot, points_phase_plot)
+        object_visualization.publish_object_marker()
 
         rate.sleep()
     rospy.spin()

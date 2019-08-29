@@ -2,6 +2,8 @@
 
 Based on the model for a falling rolling disk.
 
+ ![](media/rockwalk_rviz.gif)
+
 **INPUT**
 Subscribes to topics from an IMU
 1. Orientation @
