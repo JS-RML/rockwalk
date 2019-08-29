@@ -8,6 +8,15 @@
 </p>
 
 
+```
+  title={Passive Dynamic Object Locomotion by Rocking and Walking Manipulation},
+  author={Nazir, Abdullah and Seo, Jungwon},
+  booktitle={2019 International Conference on Robotics and Automation (ICRA)},
+  pages={7926--7932},
+  year={2019},
+  organization={IEEE}
+```
+
 
 ## 1. *rockwalk* with UR-10
 
