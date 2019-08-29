@@ -1,9 +1,0 @@
-<launch>
-
-  <arg name="debug" default="false" />
-
-  <include file="$(find ur10_dual_arm_gazebo_moveit_config)/launch/move_group.launch">
-    <arg name="debug" default="$(arg debug)" />
-  </include>
-
-</launch>
