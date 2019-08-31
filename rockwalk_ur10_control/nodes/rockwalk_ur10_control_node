@@ -1,0 +1,50 @@
+#!/usr/bin/env python
+
+import rospy
+from geometry_msgs.msg import Vector3, Twist, TwistStamped
+
+from rockwalk_ur10_control.UR10Control import MoveitControl
+from rockwalk_ur10_control.MotionTemplates import *
+
+from rockwalk_planner.srv import ApexPath, ApexPathRequest, ApexPathResponse
+
+
+def request_apex_path(rockwalk_step, body_euler, body_twist):
+    rospy.wait_for_service('compute_apex_path')
+
+    try:
+        apex_path_handle = rospy.ServiceProxy('compute_apex_path', ApexPath)
+        response = apex_path_handle(rockwalk_step, body_euler, body_twist)
+        return response.apex_path
+
+    except rospy.ServiceException, e:
+        print "Service call failed: %s"%e
+
+
+if __name__ == '__main__':
+    rospy.init_node("rockwalk_ur10_node", anonymous=True)
+
+
+    # ur10_moveit_control = MoveitControl("manipulator")
+
+    # ur10_moveit_control.setup_planning_scene()
+
+    # kinematics_sub = Subscribers()
+
+    # apex_path = request_apex_path(kinematics_sub._body_euler, kinematics_sub._body_twist)
+
+    rockwalk_step = 4
+    body_euler = Vector3(0,0.5,0)
+    body_twist = TwistStamped()
+    body_twist.twist.linear = Vector3(1,2,3)
+    body_twist.twist.angular = Vector3(4,5,6)
+
+
+    apex_path = request_apex_path(rockwalk_step, body_euler, body_twist)
+
+    print(apex_path)
+    #request trajectory
+
+
+
+    rospy.spin()

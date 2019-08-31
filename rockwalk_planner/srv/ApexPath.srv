@@ -1,0 +1,5 @@
+int64 rockwalk_step
+geometry_msgs/Vector3 body_euler
+geometry_msgs/TwistStamped body_twist
+---
+geometry_msgs/Point[] apex_path
