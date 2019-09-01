@@ -5,6 +5,7 @@ from geometry_msgs.msg import Vector3, Twist, TwistStamped
 
 from rockwalk_ur10_control.UR10Control import MoveitControl
 from rockwalk_ur10_control.MotionTemplates import *
+from rockwalk_ur10_control.RelocationTiming import *
 
 from rockwalk_planner.srv import ApexPath, ApexPathRequest, ApexPathResponse
 
