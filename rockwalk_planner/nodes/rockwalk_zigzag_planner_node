@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+
+import rospy
+
+from rockwalk_planner.ZigzagApexPathGenerator import ZigzagApexPath
+from rockwalk_planner.ApexPointServer import ApexPointServer
+
+
+if __name__ == '__main__':
+    rospy.init_node("rockwalk_zigzag_planner_node", anonymous=True)
+
+
+    zigzag_apex_path_generator = ZigzagApexPath()
+
+    ## The following command takes few minutes to execute. Saves matlab variables
+    ## into matlab directory. So only necessary to execute when you make changes to its argument.
+    ## See the class ZigzagWaypoints to see how this method is defined.
+
+    zigzag_waypoints_generator.fixed_apex_vector_fields()
+
+    zigzag_apex_path_generator.generate_zigzag_apex_path()
+
+    zigzag_apex_path = zigzag_apex_path_generator.load_zigzag_apex_path()
+
+    ## call ros service to (next) apex point requests
+    apex_point_server = ApexPointServer(zigzag_apex_path)
+
+    rospy.spin()
