@@ -1,4 +1,5 @@
 import sys
+import copy
 import rospy
 import moveit_commander
 
@@ -62,3 +63,9 @@ class MoveitControl:
         self._scene.add_box("table", table_pose, size = (0.5,0.5,0.5))
 
         rospy.sleep(0.1)
+
+
+    def get_current_pose(self):
+        current_pose = copy.deepcopy(self._group.get_current_pose().pose)
+
+        return current_pose

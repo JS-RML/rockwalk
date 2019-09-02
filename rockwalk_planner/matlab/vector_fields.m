@@ -1,4 +1,4 @@
-function vector_fields(cone_radius, cone_length, cone_eccentricity, apex_height)
+function vector_fields(cone_radius, cone_length, cone_eccentricity, apex_height, matlab_dir_path)
   %{
   This scripts outputs the positive and negative vector fields together with
   the parameters. The vector fields (over an annulus) correspond to the
@@ -192,13 +192,13 @@ function vector_fields(cone_radius, cone_length, cone_eccentricity, apex_height)
 
 
   %Save vector fields data and parameters
-  filename = 'vector_field_pos.mat';
+  filename = fullfile(matlab_dir_path, 'vector_field_pos.mat');
   save(filename, 'X_ann_pos', 'Y_ann_pos', 'U_ann_pos', 'V_ann_pos')
 
-  filename = 'vector_field_neg.mat';
+  filename = fullfile(matlab_dir_path, 'vector_field_neg.mat');
   save(filename, 'X_ann_neg', 'Y_ann_neg', 'U_ann_neg', 'V_ann_neg')
 
-  filename = 'params.mat';
+  filename = fullfile(matlab_dir_path, 'params.mat');
   save(filename, 'AX', 'h', 'R', 'hc', 'r', 'del_lb', 'del_ub')
 
 

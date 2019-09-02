@@ -1,51 +1,40 @@
 #!/usr/bin/env python
 
+import copy
 import rospy
-from geometry_msgs.msg import Vector3, Twist, TwistStamped
+from geometry_msgs.msg import Vector3, Pose, Twist, TwistStamped
 
 from rockwalk_ur10_control.UR10Control import MoveitControl
+from rockwalk_ur10_control.Subscribers import SubscriberRockwalkKinematics
+from rockwalk_ur10_control.RelocationTiming import zigzag_relocation_timing
 from rockwalk_ur10_control.MotionTemplates import *
-from rockwalk_ur10_control.RelocationTiming import *
-
-from rockwalk_planner.srv import ApexPath, ApexPathRequest, ApexPathResponse
-
-
-def request_apex_path(rockwalk_step, body_euler, body_twist):
-    rospy.wait_for_service('compute_apex_path')
-
-    try:
-        apex_path_handle = rospy.ServiceProxy('compute_apex_path', ApexPath)
-        response = apex_path_handle(rockwalk_step, body_euler, body_twist)
-        return response.apex_path
-
-    except rospy.ServiceException, e:
-        print "Service call failed: %s"%e
 
 
 if __name__ == '__main__':
     rospy.init_node("rockwalk_ur10_node", anonymous=True)
 
+    ur10_moveit_control = MoveitControl("manipulator")
+    ur10_moveit_control.setup_planning_scene()
 
-    # ur10_moveit_control = MoveitControl("manipulator")
+    # initialize arm pose:
+    initial_pose = initial_robot_pose_1()
+    ur10_moveit_control.reach_target_pose(initial_pose)
 
-    # ur10_moveit_control.setup_planning_scene()
+    rw_kinematics_sub = SubscriberRockwalkKinematics()
 
-    # kinematics_sub = Subscribers()
+    rospy.sleep(5)
 
-    # apex_path = request_apex_path(kinematics_sub._body_euler, kinematics_sub._body_twist)
+    rockwalk_step = 0
 
-    rockwalk_step = 4
-    body_euler = Vector3(0,0.5,0)
-    body_twist = TwistStamped()
-    body_twist.twist.linear = Vector3(1,2,3)
-    body_twist.twist.angular = Vector3(4,5,6)
+    rate = rospy.Rate(50)
 
+    while not rospy.is_shutdown():
 
-    apex_path = request_apex_path(rockwalk_step, body_euler, body_twist)
+        rockwalk_step = zigzag_relocation_timing(rockwalk_step,
+                                                 rw_kinematics_sub._body_euler,
+                                                 rw_kinematics_sub._body_twist,
+                                                 ur10_moveit_control, initial_pose)
 
-    print(apex_path)
-    #request trajectory
-
-
+        rate.sleep()
 
     rospy.spin()

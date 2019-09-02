@@ -1,4 +1,4 @@
-function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading_direction)
+function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading_direction, matlab_dir_path)
   %{
   This script outputs a series of anchor points which a robot end-effector
   (assumed attached to the cone's apex) must follow to create a straight line
@@ -13,9 +13,10 @@ function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading
   figure('units','normalized','outerposition',[0 0 1 1])
 
   %Transcribing rocking values to a variable.
-  filename = 'lr_rocking.mat';
-  right_rock = zeros(total_rocking_steps-1, 2);
-  left_rock = zeros(total_rocking_steps, 2);
+  filename = fullfile(matlab_dir_path, 'lr_rocking.mat');
+
+  right_rock = zeros((total_rocking_steps/2)-1, 2);
+  left_rock = zeros((total_rocking_steps/2), 2);
 
 
   start_pt = flowGivenPhi(rocking_angle, AX, h, heading_direction);
@@ -34,7 +35,7 @@ function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading
   drawStreamLines(stream_x, stream_y, 'k')
 
 
-  anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt)
+  anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt);
   new_start_pt = current_stream_pt;
   left_rock(1,:) = anchor_point';
 
@@ -54,10 +55,10 @@ function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading
 
 
 
-  for rocking_step = 2:total_rocking_steps
+  for rocking_step = 2:total_rocking_steps/2
 
 
-      anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt)
+      anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt);
       new_start_pt = current_stream_pt;
       right_rock(rocking_step-1,:) = anchor_point';
       anchor_rot_dir = -1*anchor_rot_dir;
@@ -74,7 +75,7 @@ function integral_curves_concatenate(rocking_angle, total_rocking_steps, heading
 
 
 
-      anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt)
+      anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt);
       new_start_pt = current_stream_pt;
       left_rock(rocking_step,:) = anchor_point';
       anchor_rot_dir = -1*anchor_rot_dir;
@@ -104,10 +105,10 @@ function drawStreamLines(stream_x, stream_y, color)
     plot(stream_x, stream_y, ...
     'LineWidth', 2.0, ...
     'Color', color)
-    axis ([-0.2 0.1 -.5 .7])
+    axis ([-1 1 -.5 .5])
     hold on
     drawnow
-    pause(0.50)
+    pause(0.150)
 
 end
 
@@ -155,7 +156,7 @@ end
 function new_anchor_point = anchorPoint(anchor_point, current_stream_pt, new_start_pt)
 
     motion_dir =  current_stream_pt-new_start_pt;
-    new_anchor_point = anchor_point + motion_dir
+    new_anchor_point = anchor_point + motion_dir;
 
 end
 
@@ -321,8 +322,8 @@ function start_pt = flowGivenPhi(phi, AX, h, rot_angle)
 
     norm_point = sqrt(norm(subs_phi_AX)^2 - h^2);
 
-    start_pt_x = norm_point*cos(rot_angle);
-    start_pt_y = norm_point*sin(rot_angle);
+    start_pt_x = norm_point*cos(pi-rot_angle);
+    start_pt_y = norm_point*sin(pi-rot_angle);
 
 
     start_pt = [start_pt_x start_pt_y];
