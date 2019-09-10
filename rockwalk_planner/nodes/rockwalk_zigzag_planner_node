@@ -16,7 +16,7 @@ if __name__ == '__main__':
     ## into matlab directory. So only necessary to execute when you make changes to its argument.
     ## See the class ZigzagWaypoints to see how this method is defined.
 
-    zigzag_waypoints_generator.fixed_apex_vector_fields()
+    zigzag_apex_path_generator.fixed_apex_vector_fields()
 
     zigzag_apex_path_generator.generate_zigzag_apex_path()
 
