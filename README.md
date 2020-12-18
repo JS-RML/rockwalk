@@ -6,9 +6,11 @@ the statue by repeated rocking. Our rock-and-walk object transport technique is 
 that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector. A set of experiments demonstrate successful rockand-walk object transport under a range of terrain conditions.
 
 
+
 ![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github-01.png)
 
-**Full video link**
+
+**Full Video Link**
 
 [Rock-and-Walk video](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
 
