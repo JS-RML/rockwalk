@@ -5,7 +5,7 @@ This package is an implementation of a novel robotic manipulation capability for
 the statue by repeated rocking. Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector
 that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.
 
-![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github-01.png)
+![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github-01-01.png)
 
 
 **Full Video Link**
