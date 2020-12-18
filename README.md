@@ -8,9 +8,9 @@ that can cage the object, 2) two robot arms to interact with the object via cabl
 
 **Full video link**
 
-[Rock-and-Walk](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
+[Rock-and-Walk Video](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
 
-**Published Paper**
+**Published Papers**
 
 [A. Nazir and J. Seo, "Passive Dynamic Object Locomotion by Rocking and Walking Manipulation," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.](https://ieeexplore.ieee.org/document/8794163)
 
@@ -19,7 +19,7 @@ that can cage the object, 2) two robot arms to interact with the object via cabl
 
 ### 2.1 Hardware
 * [Universal Robot UR10 Robot Arm](https://www.universal-robots.com/products/ur10-robot/)
-* [Arduino Mega 2560] (https://store.arduino.cc/usa/mega-2560-r3) and an [Arduino 9 Axis Motion Shield](https://store.arduino.cc/usa/9-axis-motion-shield)
+* [Arduino Mega 2560](https://store.arduino.cc/usa/mega-2560-r3) and an [Arduino 9 Axis Motion Shield](https://store.arduino.cc/usa/9-axis-motion-shield)
 
 
 ### 2.2 Software
