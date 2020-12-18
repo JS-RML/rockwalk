@@ -18,9 +18,18 @@ A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking 
 ## 2. Prerequistes
 
 ### 2.1 Hardware
-* [Universal Robot UR10 Robot Arm](https://www.universal-robots.com/products/ur10-robot/)
 * [Arduino Mega 2560](https://store.arduino.cc/usa/mega-2560-r3) and an [Arduino 9 Axis Motion Shield](https://store.arduino.cc/usa/9-axis-motion-shield)
+* [Universal Robot UR10 Robot Arm](https://www.universal-robots.com/products/ur10-robot/)
 
 
 ### 2.2 Software
+* [Matlab](https://www.mathworks.com/products/matlab.html)
+* [ROS](https://www.ros.org/)
 * [python-urx](https://github.com/SintefManufacturing/python-urx)
+
+## 3. Usage
+
+### 3.1 Passive Dynamics Simulation
+Matlab implementation to compute passive dynamics of the object modeled as an oblique-cone that has a circular base and a vertical rod attached to it is provided. The motion of the object can be visualized in [RViz](http://wiki.ros.org/rviz).
+
+
