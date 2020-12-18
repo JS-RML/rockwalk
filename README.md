@@ -14,7 +14,11 @@ that can cage the object, 2) two robot arms to interact with the object via cabl
 
 **Published Papers**
 
+<sub>
+
 A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
+
+</sub>
 
 
 ## 2. Prerequistes
