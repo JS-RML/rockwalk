@@ -70,12 +70,16 @@ Next, calibrate the motion shield and use its output to compute object state (as
 ```
 rosrun rockwalk_kinematics rockwalk_kinematics_node
 ```
-Finally, run the following nodes to implement rock-and-walk in a single-arm setting
+Finally, run the following nodes to implement rock-and-walk in a single-arm setting (with a caging end-effector)
 ```
 rosrun rockwalk_ur10_control single_arm_caging_labfloor_rockwalk
 ```
-or, in a dual-arm setting
+or, in a dual-arm setting (with cables)
 ```
 rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 ```
+
+<p align="right">
+  <img width="50%" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+</p>
 
