@@ -79,7 +79,10 @@ or, in a dual-arm setting (with cables)
 rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 ```
 
-<img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif"><img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+<p align="center">
+  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
+  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+</p>
 
 
 
