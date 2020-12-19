@@ -28,9 +28,22 @@ A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking 
 * [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
 * [ROS](https://www.ros.org/) and [python-urx](https://github.com/SintefManufacturing/python-urx) for robot control
 
+### 2.3 Build on ROS
+Using [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) in your catkin workspace
+```
+cd ~/catkin_ws/src
+git clone https://github.com/HKUST-RML/rockwalk.git
+cd ..
+catkin build
+```
+
 ## 3. Usage
+
 
 ### 3.1 Passive Dynamics Simulation
 Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. The motion of the object can be visualized in [RViz](http://wiki.ros.org/rviz).
 
 #### 3.1.1 Symbolic Computation
+
+
+#### 3.1.2 Symbolic Computation
