@@ -1,0 +1,369 @@
+#!/usr/bin/env python
+import rospy
+import copy
+import math
+import tf
+import numpy as np
+
+from tf import transformations as tfms
+
+from geometry_msgs.msg import Point, Quaternion, Pose, Vector3
+from visualization_msgs.msg import Marker
+from std_msgs.msg import Header, ColorRGBA
+
+import scipy.io as sio
+
+
+# OBJECT_RADIUS = 0.35
+# FROM BODY FRAME TO MARKER FRAME
+# BODY_MARKERFRAME_QUATERNION = tfms.quaternion_from_euler(math.pi/2, math.pi/2, 0, 'rxyz')
+
+# BODY_MARKERFRAME_POSITION = np.array([[-OBJECT_RADIUS],[-OBJECT_RADIUS],[0],[0]])
+
+
+OBJECT_RADIUS = 0.35
+
+BODY_MARKERFRAME_QUATERNION = tfms.quaternion_from_euler(0, 0, math.pi/2, 'rxyz')
+BODY_MARKERFRAME_POSITION = np.array([[0],[0],[0],[0]])
+
+
+class KinematicsVisualization:
+
+    def __init__(self):
+
+        self._object_marker_publisher = rospy.Publisher('object_marker', Marker, queue_size=10)
+        self._contact_path_marker_publisher = rospy.Publisher('contact_path_marker', Marker, queue_size=10)
+        self._apex_path_marker_publisher = rospy.Publisher('apex_path_marker', Marker, queue_size=10)
+        self._apex_velocity_marker_publisher = rospy.Publisher('apex_velocity_marker', Marker, queue_size=10)
+        self._CoM_position_marker_publisher = rospy.Publisher('CoM_marker', Marker, queue_size=10)
+        self._CoM_path_marker_publisher = rospy.Publisher('CoM_path_marker', Marker, queue_size=10)
+        self._CoM_velocity_marker_publisher = rospy.Publisher('CoM_velocity_marker', Marker, queue_size=10)
+        self._angular_velocity_marker_publisher = rospy.Publisher('angular_velocity_marker', Marker, queue_size=10)
+
+        self._CoM_position_publisher = rospy.Publisher('CoM_position', Point, queue_size=10)
+        self._CoM_velocity_publisher = rospy.Publisher('CoM_velocity', Point, queue_size=10)
+
+        self._ke_pe_te_publisher = rospy.Publisher('ke_pe_te', Vector3, queue_size=10)
+
+        self._plane1_marker_publisher = rospy.Publisher('plane1_marker', Marker, queue_size=10)
+
+        self.initialize_tf_broadcasters_listeners()
+
+        self._contact_points = []
+        self._apex_points = []
+        self._CoM_points = []
+
+
+    def load_object_trajectory(self):
+
+        fixed_apex_sol = sio.loadmat('/home/nazir/rockwalk_ws/src/simulation/FixedApexSolutionAll.mat')
+
+        self._object_trajectory = fixed_apex_sol['y']
+        secondary_data = fixed_apex_sol['data']
+        self._object_secondary_data = secondary_data[0,0]
+
+    def publish_plane1_marker(self):
+
+
+        plane_center = copy.deepcopy(self._CoM_position)
+
+        O_G = np.array([self._contact_position.x, self._contact_position.y, self._contact_position.z])
+        O_CoM = np.array([self._CoM_position.x, self._CoM_position.y, self._CoM_position.z])
+        O_A = np.array([self._apex_position.x, self._apex_position.y, self._apex_position.z])
+
+        vec_CoM_G = O_G-O_CoM
+        vec_CoM_A = O_A-O_CoM
+
+        plane1_normal = np.cross(vec_CoM_G, vec_CoM_A)
+        plane1_unit_normal = plane1_normal/np.linalg.norm(plane1_normal)
+
+        rot_vec = np.cross(plane1_unit_normal,[0,0,1])
+        ang = np.arccos(np.dot(plane1_unit_normal,[0,0,1]))
+
+        quat = tfms.quaternion_about_axis(ang, -rot_vec)
+
+        marker = Marker(
+                    type=Marker.CUBE,
+                    action=Marker.ADD,
+                    id=91,
+                    pose = Pose(plane_center,Quaternion(quat[0],quat[1],quat[2],quat[3])),
+                    scale=Vector3(2.5, 2, 0.001),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(0.5,.5,0,0.5)
+                    )
+
+        self._plane1_marker_publisher.publish(marker)
+
+    def publish_CoM_position_marker(self, count):
+
+        CoM_position_data = self._object_secondary_data['cm_position_values']
+
+        self._CoM_position = Point(CoM_position_data[count,0],CoM_position_data[count,1],CoM_position_data[count,2])
+
+
+        marker = Marker(
+                    type=Marker.SPHERE,
+                    action=Marker.ADD,
+                    id=11,
+                    pose = Pose(self._CoM_position,Quaternion(0,0,0,1)),
+                    scale=Vector3(0.06, .06, .06),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(.86,.08,.24,1)
+                    )
+
+        self._CoM_position_marker_publisher.publish(marker)
+
+        self._CoM_position_publisher.publish(self._CoM_position)
+
+    def publish_CoM_path_marker(self):
+
+        self._CoM_points.append(self._CoM_position)
+
+        marker = Marker(
+                    type=Marker.LINE_STRIP,
+                    action=Marker.ADD,
+                    id=12,
+                    points = self._CoM_points,
+                    scale=Vector3(0.005, .01, .01),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(1,.27,0,1)
+                    )
+
+        self._CoM_path_marker_publisher.publish(marker)
+
+    def publish_CoM_velocity_marker(self, count):
+
+        CoM_velocity_data = self._object_secondary_data['cm_velocity_values']
+
+        self._CoM_velocity = Point(CoM_velocity_data[count,0],CoM_velocity_data[count,1],CoM_velocity_data[count,2])
+
+
+        vector_start_point = copy.deepcopy(self._CoM_position)
+        vector_end_point = Point(vector_start_point.x + 0.3*self._CoM_velocity.x,
+                                 vector_start_point.y + 0.3*self._CoM_velocity.y,
+                                 vector_start_point.z + 0.3*self._CoM_velocity.z)
+
+        marker = Marker(
+                    type=Marker.ARROW,
+                    action=Marker.ADD,
+                    id=13,
+                    points = [vector_start_point, vector_end_point],
+                    scale=Vector3(0.015, .030, 0.030),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(.86,.08,.24,1)
+                    )
+
+        self._CoM_velocity_marker_publisher.publish(marker)
+
+        self._CoM_velocity_publisher.publish(self._CoM_velocity)
+
+
+    def publish_angular_velocity_marker(self, count):
+
+        angular_velocity_data = self._object_secondary_data['omega_spatial_values']
+
+        self._angular_velocity = Point(angular_velocity_data[count,0], angular_velocity_data[count,1], angular_velocity_data[count,2])
+
+
+        vector_start_point = copy.deepcopy(self._contact_position)
+        vector_end_point = Point(vector_start_point.x + 0.5*self._angular_velocity.x,
+                                 vector_start_point.y + 0.5*self._angular_velocity.y,
+                                 vector_start_point.z + 0.5*self._angular_velocity.z)
+
+        marker = Marker(
+                    type=Marker.ARROW,
+                    action=Marker.ADD,
+                    id=113,
+                    points = [vector_start_point, vector_end_point],
+                    scale=Vector3(0.015, .030, 0.030),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(.86,.38,.34,1)
+                    )
+
+        self._angular_velocity_marker_publisher.publish(marker)
+
+
+    def publish_apex_path_marker(self, count):
+
+        apex_position_data = self._object_secondary_data['apex_position_values']
+        self._apex_position = Point(apex_position_data[count,0],apex_position_data[count,1],apex_position_data[count,2])
+
+        self._apex_points.append(self._apex_position)
+
+        marker = Marker(
+                    type=Marker.LINE_STRIP,
+                    action=Marker.ADD,
+                    id=21,
+                    points = self._apex_points,
+                    scale=Vector3(0.005, .01, .01),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(0.25,0.41,0.88,1)
+                    )
+
+        self._apex_path_marker_publisher.publish(marker)
+
+    def publish_apex_velocity_marker(self, count):
+
+        apex_velocity_data = self._object_secondary_data['apex_velocity_values']
+
+        self._apex_velocity = Point(apex_velocity_data[count,0],apex_velocity_data[count,1],apex_velocity_data[count,2])
+
+
+        vector_start_point = copy.deepcopy(self._apex_position)
+        vector_end_point = Point(vector_start_point.x + 0.4*self._apex_velocity.x,
+                                 vector_start_point.y + 0.4*self._apex_velocity.y,
+                                 vector_start_point.z + 0.4*self._apex_velocity.z)
+
+        marker = Marker(
+                    type=Marker.ARROW,
+                    action=Marker.ADD,
+                    id=22,
+                    points = [vector_start_point, vector_end_point],
+                    scale=Vector3(0.010, .020, 0.020),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(0,0,0.545,1)
+                    )
+
+        self._apex_velocity_marker_publisher.publish(marker)
+
+    def publish_contact_path_marker(self, count):
+
+        contact_position_data = self._object_secondary_data['contact_position_values']
+        self._contact_position = Point(contact_position_data[count,0],contact_position_data[count,1],0)
+
+        self._contact_points.append(self._contact_position)
+
+        marker = Marker(
+                    type=Marker.LINE_STRIP,
+                    action=Marker.ADD,
+                    id=31,
+                    points = self._contact_points,
+                    scale=Vector3(0.005, .01, .01),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(.63,.32,.18 ,1)
+                    )
+
+        self._contact_path_marker_publisher.publish(marker)
+
+    def publish_object_marker(self):
+
+        world_markerframe_quaternion = tfms.quaternion_multiply(self._world_bodyframe_quaternion,
+                                                                BODY_MARKERFRAME_QUATERNION)
+
+        world_bodyframe_rot = tfms.quaternion_matrix(self._world_bodyframe_quaternion)
+        world_diskcenter_marker_vec = np.matmul(world_bodyframe_rot, BODY_MARKERFRAME_POSITION)
+
+        marker_pose = Pose()
+        marker_pose.position = Point(self._disk_center_position.x + world_diskcenter_marker_vec[0],
+                                     self._disk_center_position.y + world_diskcenter_marker_vec[1],
+                                     self._disk_center_position.z + world_diskcenter_marker_vec[2])
+
+        marker_pose.orientation = Quaternion(world_markerframe_quaternion[0],
+                                             world_markerframe_quaternion[1],
+                                             world_markerframe_quaternion[2],
+                                             world_markerframe_quaternion[3])
+
+        marker = Marker(
+                    type=Marker.MESH_RESOURCE,
+                    action=Marker.ADD,
+                    id=0,
+                    pose = marker_pose,
+                    scale=Vector3(1, 1, 1),
+                    header=Header(frame_id="world"),
+                    color=ColorRGBA(.70,.70,.70 ,1),
+                    mesh_resource="package://rockwalk_kinematics/object_model/large_cone.dae"
+                    )
+
+        self._object_marker_publisher.publish(marker)
+
+    def publish_ke_pe_te(self, count):
+
+        ke = self._object_secondary_data['ke_values']
+        pe = self._object_secondary_data['pe_values']
+
+        ke_pe_te_energy = Vector3()
+        ke_pe_te_energy.x = ke[count] #kinetic energy
+        ke_pe_te_energy.y = pe[count] #potential energy
+        ke_pe_te_energy.z = ke[count] + pe[count] #potential energy
+
+        self._ke_pe_te_publisher.publish(ke_pe_te_energy)
+
+    def compute_object_pose(self, count):
+        self._disk_center_position = Vector3()
+        self._disk_center_position.x = self._object_trajectory[count,0]
+        self._disk_center_position.y = self._object_trajectory[count,1]
+        self._disk_center_position.z = OBJECT_RADIUS*np.sin(self._object_trajectory[count,3])
+
+
+        #----
+        rot_psi = tfms.rotation_matrix(self._object_trajectory[count,2], [0,0,1])
+        init_rot = tfms.rotation_matrix(math.pi/2, [0,0,1])
+        rot_theta = tfms.rotation_matrix(self._object_trajectory[count,3], [0,1,0])
+        rot_phi = tfms.rotation_matrix(self._object_trajectory[count,4], [0,0,1])
+
+
+        rot_StoQ = np.matmul(np.matmul(rot_psi, init_rot),rot_theta) # this frame
+        # does not roll with the object. So suitable to determine ground contact point
+
+        self._world_b_frame_quaternion = tfms.quaternion_from_matrix(rot_StoQ);
+
+        world_bodyframe_rot = np.matmul(rot_StoQ, rot_phi)
+        self._world_bodyframe_quaternion = tfms.quaternion_from_matrix(world_bodyframe_rot)
+
+
+        count += 1
+
+        #if count == self._object_trajectory.shape[0]:
+        #    count = 0
+
+        return count
+
+    def initialize_tf_broadcasters_listeners(self):
+        self._broadcaster = tf.TransformBroadcaster()
+        # self._listener = tf.TransformListener()
+
+    def broadcast_transforms(self):
+
+        self._broadcaster.sendTransform((self._disk_center_position.x,self._disk_center_position.y,self._disk_center_position.z),
+                                        (self._world_b_frame_quaternion),
+                                        rospy.Time.now(),
+                                        "bFrame",
+                                        "world")
+
+        self._broadcaster.sendTransform((self._disk_center_position.x,self._disk_center_position.y,self._disk_center_position.z),
+                                        (self._world_bodyframe_quaternion),
+                                        rospy.Time.now(),
+                                        "bodyFrame",
+                                        "world")
+
+if __name__ == '__main__':
+
+    rospy.init_node("simulation_rviz_node", anonymous=True)
+
+    kv = KinematicsVisualization()
+
+    kv.load_object_trajectory()
+
+    count = 0
+
+    rate = rospy.Rate(50)
+
+    while not rospy.is_shutdown() and count< np.size(kv._object_trajectory,0)-1:
+
+            count = kv.compute_object_pose(count)
+            kv.publish_object_marker()
+            kv.publish_contact_path_marker(count)
+            kv.publish_CoM_position_marker(count)
+            kv.publish_CoM_path_marker()
+            kv.publish_CoM_velocity_marker(count)
+            kv.publish_angular_velocity_marker(count)
+            kv.publish_apex_path_marker(count)
+            kv.publish_apex_velocity_marker(count)
+
+            kv.publish_ke_pe_te(count)
+
+            kv.publish_plane1_marker()
+            kv.broadcast_transforms()
+            rate.sleep()
+
+    rospy.spin()

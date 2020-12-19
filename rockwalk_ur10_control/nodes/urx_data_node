@@ -1,0 +1,123 @@
+#!/usr/bin/env python
+
+import os
+import urx
+import copy
+import rospy
+import time
+import math
+import math3d as m3d
+import numpy as np
+
+
+from geometry_msgs.msg import Vector3, Pose, PoseStamped, Twist, TwistStamped, Wrench, WrenchStamped
+from sensor_msgs.msg import JointState
+
+from rockwalk_ur10_control.urxRobotSetup import RobotSetup
+from rockwalk_ur10_control.Publishers import RobotControlPublishers
+
+
+HONG_IP = '192.168.1.102'
+KONG_IP = '192.168.1.10'
+
+def publish_kong_joint_state(joint_angles, robot_publishers):
+
+    kong_joint_state = JointState()
+
+    for count in range(len(joint_angles)):
+
+        kong_joint_state.position.append(joint_angles[count])
+
+    robot_publishers._kong_joint_state_publisher.publish(kong_joint_state)
+
+def publish_hong_tcp_pose(tcp_pose, robot_publishers):
+
+    pose_msg = Pose()
+    pose_msg.position.x = tcp_pose[0]
+    pose_msg.position.y = tcp_pose[1]
+    pose_msg.position.z = tcp_pose[2]
+    pose_msg.orientation.x = 0
+    pose_msg.orientation.y = 0
+    pose_msg.orientation.z = 0
+    pose_msg.orientation.w = 0
+
+    robot_publishers._hong_tcp_pose_publisher.publish(pose_msg)
+
+
+
+def publish_hong_tcp_force(tcp_force, robot_publishers):
+
+    wrench_msg = Wrench()
+    wrench_msg.force.x = tcp_force[0]
+    wrench_msg.force.y = tcp_force[1]
+    wrench_msg.force.z = tcp_force[2]
+    wrench_msg.torque.x = tcp_force[3]
+    wrench_msg.torque.y = tcp_force[4]
+    wrench_msg.torque.z = tcp_force[5]
+
+    robot_publishers._hong_wrench_publisher.publish(wrench_msg)
+
+
+
+def publish_kong_tcp_pose(tcp_pose, robot_publishers):
+
+    pose_msg = Pose()
+    pose_msg.position.x = tcp_pose[0]
+    pose_msg.position.y = tcp_pose[1]
+    pose_msg.position.z = tcp_pose[2]
+    pose_msg.orientation.x = 0
+    pose_msg.orientation.y = 0
+    pose_msg.orientation.z = 0
+    pose_msg.orientation.w = 0
+
+    robot_publishers._kong_tcp_pose_publisher.publish(pose_msg)
+
+
+def publish_kong_tcp_force(tcp_force, robot_publishers):
+
+    wrench_msg = Wrench()
+    wrench_msg.force.x = tcp_force[0]
+    wrench_msg.force.y = tcp_force[1]
+    wrench_msg.force.z = tcp_force[2]
+    wrench_msg.torque.x = tcp_force[3]
+    wrench_msg.torque.y = tcp_force[4]
+    wrench_msg.torque.z = tcp_force[5]
+
+    robot_publishers._kong_wrench_publisher.publish(wrench_msg)
+
+
+if __name__ == '__main__':
+    rospy.init_node("ur10_data_node", anonymous=True)
+
+    robot_publishers = RobotControlPublishers()
+    robot_publishers.initialize_publishers_1()
+
+    hong_setup = RobotSetup(HONG_IP)
+    hong = hong_setup.get_robot()
+    hong_rtm = hong.get_realtime_monitor()
+
+    kong_setup = RobotSetup(KONG_IP)
+    kong = kong_setup.get_robot()
+    kong_rtm = kong.get_realtime_monitor()
+
+
+
+    rate = rospy.Rate(50)
+
+    while not rospy.is_shutdown():
+
+        hong_all_data = hong_rtm.get_all_data()
+        kong_all_data = kong_rtm.get_all_data()
+
+        publish_hong_tcp_pose(hong_all_data['tcp'], robot_publishers)
+        publish_hong_tcp_force(hong_all_data['tcp_force'], robot_publishers)
+
+
+        publish_kong_tcp_pose(kong_all_data['tcp'], robot_publishers)
+        publish_kong_tcp_force(kong_all_data['tcp_force'], robot_publishers)
+
+        rate.sleep()
+
+    rospy.spin()
+
+# publish_kong_joint_state(kong_all_data['qActual'], robot_publishers)

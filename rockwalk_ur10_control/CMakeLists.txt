@@ -159,7 +159,12 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 install(PROGRAMS
- nodes/rockwalk_ur10_node
+ nodes/dual_arm_cable_labfloor_rockwalk
+ nodes/single_arm_caging_labfloor_rockwalk
+ nodes/single_arm_caging_rockwalk_initialization
+ nodes/single_arm_caging_treadmill_teleop_rockwalk
+ nodes/single_arm_caging_rockwalk_turn
+ nodes/urx_data_node
  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
