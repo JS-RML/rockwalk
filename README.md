@@ -8,9 +8,7 @@ Our work is motivated by an interesting question in archaeology, how the giant r
 ![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github_new-01.png)
 
 
-**Full Video Link**
-
-[Rock-and-Walk video](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
+[**Full Video Link**](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
 
 **Published Papers**
 
