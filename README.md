@@ -27,6 +27,7 @@ A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking 
 ### 2.2 Software
 * [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
 * [ROS](https://www.ros.org/) and [python-urx](https://github.com/SintefManufacturing/python-urx) for robot control
+* [rosserial](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
 
 ### 2.3 Build on ROS
 Using [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) in your catkin workspace
