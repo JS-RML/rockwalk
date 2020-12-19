@@ -1,33 +1,36 @@
-# *rockwalk*
+# *Rock-and-Walk*
 
-## 0. Overview
-***rockwalk*** is an efficient technique to transport large objects with a (roughly) circular base. A simple passive end-effector *cages* the object at a point off its rolling axis, while the robot relocates the end-effector sideways to rock the object. This causes the object to take (small) transverse steps during each rocking motion, in much the same way as the *parallel-parking* maneuver. In fact, this technique is motivated by an archaeological [study](https://www.youtube.com/watch?v=J5YR0uqPAI8) which suggests that the massive *Moai* statues of Easter Island might have been transported by rocking them with long ropes.
+## 1. Overview
+This package is an implementation of a novel robotic manipulation capability for transporting an object on the ground in a dynamic and nonprehensile manner. The object is manipulated to rock from side to side repeatedly; in the meantime, the force of gravity enables the object to roll along a zigzag path that is eventually heading forward. We call it ***rock-and-walk*** object manipulation. 
 
-<p align="center">
-  <img src="https://github.com/HKUST-RML/rockwalk/blob/master/media/rockwalk_gif.gif" alt="rockwalk with UR-10 robot arm"/>
-</p>
+Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) done by archaeologists that it is possible to “walk” the statue by repeated rocking. Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.
 
-
-```
-  title={Passive Dynamic Object Locomotion by Rocking and Walking Manipulation},
-  author={Nazir, Abdullah and Seo, Jungwon},
-  booktitle={2019 International Conference on Robotics and Automation (ICRA)},
-  pages={7926--7932},
-  year={2019},
-  organization={IEEE}
-```
-
-## 1. Sensing modalities and other dependencies
-
-### *A. Hardware*
-* Arduino Mega equipped with a 9-axis motion shield.
-
-### *B. Software*
+![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github_new-01.png)
 
 
-## 2. *rockwalk* with [UR10](https://www.universal-robots.com/products/ur10-robot/)
+**Full Video Link**
 
-### *A. Gazebo*
+[Rock-and-Walk video](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
+
+**Published Papers**
+
+A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
 
 
-### *B. Real World*
+## 2. Prerequistes
+
+### 2.1 Hardware
+* [Arduino Mega 2560](https://store.arduino.cc/usa/mega-2560-r3) and an [Arduino 9 Axis Motion Shield](https://store.arduino.cc/usa/9-axis-motion-shield)
+* [Universal Robot UR10 Robot Arm](https://www.universal-robots.com/products/ur10-robot/)
+
+
+### 2.2 Software
+* [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
+* [ROS](https://www.ros.org/) and [python-urx](https://github.com/SintefManufacturing/python-urx) for robot control
+
+## 3. Usage
+
+### 3.1 Passive Dynamics Simulation
+Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. The motion of the object can be visualized in [RViz](http://wiki.ros.org/rviz).
+
+
