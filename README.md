@@ -62,21 +62,22 @@ roslaunch simulation_rviz fixed_apex.launch
 
 ### 3.2 Rock-and-Walk by Single- and Dual-Arm Manipulation
 
-First, publish motion shield data in ROS using rosserial. Then calibrate the motion shield and use its output to compute object state:
+First, publish motion shield data in ROS using rosserial. Then calibrate the motion shield and use the output to compute object state:
 ```
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200
+
 *calibrate motion sheild*
+
 rosrun rockwalk_kinematics rockwalk_kinematics_node
 ```
 
-Then run the following nodes to implement rock-and-walk in a single-arm setting (with a caging end-effector)
+Then run the following nodes to implement rock-and-walk in a single-arm setting (with a caging end-effector), or, in a dual-arm setting (with cables):
+
 ```
 rosrun rockwalk_ur10_control single_arm_caging_labfloor_rockwalk
-```
-or, in a dual-arm setting (with cables)
-```
 rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 ```
+
 <p align="center">
   <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
   <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
