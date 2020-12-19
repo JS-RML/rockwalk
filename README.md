@@ -28,6 +28,7 @@ A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking 
 * [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
 * [ROS](https://www.ros.org/) and [python-urx](https://github.com/SintefManufacturing/python-urx) for robot control
 * [rosserial](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
+* [teleop_twist_keyboard](https://github.com/ros-teleop/teleop_twist_keyboard) to perform teleoperated rock-and-walk on a treadmill
 
 ### 2.3 Build on ROS
 Using [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) in your catkin workspace
