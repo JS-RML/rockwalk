@@ -43,7 +43,20 @@ catkin build
 ### 3.1 Passive Dynamics Simulation
 Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. The motion of the object can be visualized in [RViz](http://wiki.ros.org/rviz).
 
-#### 3.1.1 Symbolic Computation
+To first obtain and then solve the dynamic model in Matlab
+```
+>> cd simulation/
+>> rolling_disk_eom.m
+>> fixed_apex_sim.m
+```
+Parmeters for the oblique-cone model can be altered in the `simulation/cone_parameters.m` file. To visualize the simulation in RViz
+```
+roslaunch simulation_rviz fixed_apex.launch
+```
+
+### 3.2 Rock-and-Walk by Single-Arm Manipulation
 
 
-#### 3.1.2 Numeric Computation and Visualization
+### 3.3 Rock-and-Walk by Dual-Arm Manipulation
+
+
