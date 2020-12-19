@@ -71,7 +71,7 @@ rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200
 rosrun rockwalk_kinematics rockwalk_kinematics_node
 ```
 
-Then run the following nodes to implement rock-and-walk in a single-arm setting (with a caging end-effector), or, in a dual-arm setting (with cables):
+Then run the following nodes to implement rock-and-walk in a single-arm setting with a caging end-effector, or, in a dual-arm setting with cables:
 
 ```
 rosrun rockwalk_ur10_control single_arm_caging_labfloor_rockwalk
