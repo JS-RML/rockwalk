@@ -1,0 +1,248 @@
+#!/usr/bin/env python
+
+"""
+Run the following command to execute keyboard teleop node:
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py _repeat_rate:=50 _speed:=0.0 _turn:=1
+
+keyboard input:
+u : turn left
+i : go straight
+p : turn right
+
+(viewed in the direction of forward motion)
+"""
+
+import os
+import urx
+import copy
+import rospy
+import time
+import math
+import math3d as m3d
+import numpy as np
+
+from tf import transformations as tfms
+
+from std_msgs.msg import Float64
+from geometry_msgs.msg import Vector3, Pose, Twist, TwistStamped
+
+from rockwalk_ur10_control.urxRobotSetup import RobotSetup
+from rockwalk_ur10_control.Publishers import RobotControlPublishers
+from rockwalk_ur10_control.Subscribers import SubscriberRockwalkControl
+
+KONG_IP = '192.168.1.10'
+
+def saturate_teleop_control(rockwalk_sub):
+
+    # left and right as seen by the robot. todo: change to CW and CCW
+    if rockwalk_sub._cmd_vel.angular.z == 0:
+        turn_left = True
+        turn_right = True
+
+    elif rockwalk_sub._cmd_vel.angular.z == 1.0:
+        turn_left = False
+        turn_right = True
+
+    elif rockwalk_sub._cmd_vel.angular.z == -1.0:
+        turn_left = True
+        turn_right = False
+
+    else:
+        turn_left = False
+        turn_right = False
+
+    return turn_left, turn_right
+
+def compute_end_effector_position_difference(init_eef_position_x, rockwalk_sub):
+
+    current_eef_position_x = rockwalk_sub._kong_tcp_pose.position.x
+
+    diff_eef_position_x = current_eef_position_x - init_eef_position_x # if diff is positive, you need to slow down. If it is negative speed up.
+
+    return diff_eef_position_x
+
+def nutation_control(kong, desired_nutation, rockwalk_sub):
+
+    rot_psi = tfms.rotation_matrix(rockwalk_sub._body_euler.x, [0,0,1])
+    init_rot = tfms.rotation_matrix(math.pi/2, [0,0,1])
+    y_prime_axis = np.matmul(np.matmul(rot_psi, init_rot),np.array([[0],[1],[0],[0]]))
+
+
+    vec_GA = np.array([[rockwalk_sub._apex_position.x - rockwalk_sub._ground_contact.x],
+                       [rockwalk_sub._apex_position.y - rockwalk_sub._ground_contact.y],
+                       [rockwalk_sub._apex_position.z - rockwalk_sub._ground_contact.z],
+                       [0]])
+
+    nutation_error = rockwalk_sub._min_nutation.data - desired_nutation
+
+    tau = 1.0*nutation_error
+
+    if abs(tau) > 0.017:
+        tau = np.sign(tau)*0.017
+
+    rot_y =  tfms.rotation_matrix(-tau, [0,1,0])
+
+    # rot_y_prime =  tfms.rotation_matrix(-tau, [y_prime_axis[0,0],y_prime_axis[1,0],y_prime_axis[2,0]])
+    pose_to = np.matmul(rot_y, vec_GA) - vec_GA
+
+    kong.movel((pose_to[0,0], pose_to[1,0], 0, 0, 0, 0), 1.8, 0.5, wait=False, relative=True) # treadmill 1.4, 0.25
+
+
+def precess_vector_GA(kong, angle, rockwalk_sub):
+
+    vec_GA = np.array([[rockwalk_sub._apex_position.x - rockwalk_sub._ground_contact.x],
+                       [rockwalk_sub._apex_position.y - rockwalk_sub._ground_contact.y],
+                       [rockwalk_sub._apex_position.z - rockwalk_sub._ground_contact.z],
+                       [0]])
+
+    rot_z_to = tfms.rotation_matrix(angle, [0,0,1])
+    pose_to = np.matmul(rot_z_to, vec_GA) - vec_GA # to get relative pose
+
+    dist = math.sqrt(pose_to[0,0]**2 + pose_to[1,0]**2) #+ pose_to[2,0]**2)
+    time = 0.30 #0.45
+    reloc_speed = dist/time
+
+    kong.movel((pose_to[0,0], pose_to[1,0], 1e-6, 0, 0, 0), 1.8, reloc_speed, wait=False, relative=True)
+
+
+def pid_energy_control(e_int, rockwalk_sub, previous_time, desired_nutation, e_int_eef, diff_eef_position_x):
+
+    e = rockwalk_sub._dke.data
+    e_dot = rockwalk_sub._dkedt.data
+
+    current_time = rospy.get_time()
+    dt = current_time-previous_time
+    e_int += e*dt
+
+    nutation_error = rockwalk_sub._min_nutation.data - desired_nutation
+    e_int_eef += diff_eef_position_x*dt
+
+
+    K0 = 0.076
+    K1 = 0.46 #0.45
+    K2 = 0.12 #0.12
+    K3 = 0.012 #0.012
+    tau_0 = K0 + K1*nutation_error - K2*diff_eef_position_x - K3*e_int_eef
+
+    Kp = 1.20
+    Ki = 0.10
+    Kd = 0.10
+
+    tau = tau_0 - (Kp*e + Ki*e_int + Kd*e_dot)
+
+
+    R = math.sqrt((rockwalk_sub._apex_position.x - rockwalk_sub._ground_contact.x)**2 +\
+                  (rockwalk_sub._apex_position.y - rockwalk_sub._ground_contact.y)**2)
+
+    precess_angle = tau/R
+
+    if math.degrees(abs(precess_angle)) > 10.0:
+        print("saturation")
+        precess_angle = np.sign(precess_angle)*math.radians(10.0)
+
+    return tau, precess_angle, e_int, e_int_eef, current_time
+
+
+if __name__ == '__main__':
+    rospy.init_node("rockwalk_ur10_node", anonymous=True)
+
+    # initialize Publisher
+    control_pub = RobotControlPublishers()
+    control_pub.initialize_publishers_2()
+
+    # initialize subscribers
+    rockwalk_sub = SubscriberRockwalkControl()
+    rospy.sleep(2)
+
+    kong_setup = RobotSetup(KONG_IP)
+    kong = kong_setup.get_robot()
+    kong_setup.set_home_configuration_kong()
+    rospy.sleep(3)
+
+    #----------------------
+    max_rockwalk_steps = 200
+    rockwalk_step = 0
+    detect_mean_pos = False
+
+
+    rate = rospy.Rate(50)
+
+
+    rockwalk_begin = raw_input("Press enter to begin rockwalk")
+
+
+    if rockwalk_begin == "":
+        e_int = 0.0
+        previous_time = rospy.get_time()
+
+        desired_nutation = 0.35 #math.radians(23)
+
+        initial_ground_contact = copy.deepcopy(rockwalk_sub._ground_contact)
+
+        init_eef_position_x =  rockwalk_sub._kong_tcp_pose.position.x
+        diff_eef_position_x = 0.0
+        e_int_eef = 0.0
+
+        tau_nutation = 0.0
+
+        while not rospy.is_shutdown():
+
+            turn_left, turn_right = saturate_teleop_control(rockwalk_sub)
+
+            if rockwalk_step < max_rockwalk_steps:
+
+                if rockwalk_sub._body_twist.twist.angular.z > 0.3 and rockwalk_sub._body_twist.twist.angular.z < 1.6 \
+                    and rockwalk_sub._body_euler.z > np.radians(17) and (rockwalk_step % 2) == 0:
+
+
+                    if turn_left == True:
+                        rospy.loginfo("Left vaulting in a straight line")
+                        tau, precess_angle, e_int, e_int_nutation, previous_time = pid_energy_control(e_int, rockwalk_sub, previous_time,
+                                                                                                      desired_nutation, e_int_eef, diff_eef_position_x)
+                        precess_vector_GA(kong, -precess_angle, rockwalk_sub)
+                        control_pub._control_action_publisher.publish(Float64(tau))
+
+                    rockwalk_step += 1
+                    detect_mean_pos = True
+
+
+
+                elif rockwalk_sub._body_twist.twist.angular.z < -0.3  and rockwalk_sub._body_twist.twist.angular.z > -1.6 \
+                    and  rockwalk_sub._body_euler.z < np.radians(-17) and (rockwalk_step % 2) == 1:
+
+
+                    if turn_right == True:
+                        rospy.loginfo("Right vaulting in a straight line")
+                        tau, precess_angle, e_int, e_int_nutation, previous_time = pid_energy_control(e_int, rockwalk_sub, previous_time,
+                                                                                                      desired_nutation, e_int_eef, diff_eef_position_x)
+                        precess_vector_GA(kong, precess_angle, rockwalk_sub)
+                        control_pub._control_action_publisher.publish(Float64(tau))
+
+
+                    rockwalk_step += 1
+                    detect_mean_pos = True
+
+
+                elif abs(rockwalk_sub._body_twist.twist.angular.z) > 0.40 and abs(rockwalk_sub._body_euler.z) < np.radians(15) \
+                    and detect_mean_pos == True and kong.is_program_running() == False:
+
+                    rospy.loginfo("Posture Control")
+                    nutation_control(kong, desired_nutation, rockwalk_sub)
+
+                    diff_eef_position_x = compute_end_effector_position_difference(init_eef_position_x, rockwalk_sub)
+
+                    detect_mean_pos = False
+                    print(rockwalk_step)
+
+                    control_pub._control_action_publisher.publish(Float64(0))
+
+
+                else:
+                    control_pub._control_action_publisher.publish(Float64(0))
+
+            else:
+                final_ground_contact = copy.deepcopy(rockwalk_sub._ground_contact)
+                print(final_ground_contact.x - initial_ground_contact.x)
+                break
+
+            rate.sleep()

@@ -1,0 +1,7 @@
+<launch>
+
+  <node name="fixed_apex_node" pkg="simulation_rviz" type="fixed_apex_node" respawn="false" output="screen"/>
+
+  <node type="rviz" name="rviz" pkg="rviz"/>
+
+</launch>

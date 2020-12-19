@@ -4,6 +4,7 @@
     <param name="baud" value="115200"/>
   </node>
 
-  <node name="rockwalk_kinematics_node" pkg="rockwalk_kinematics" type="rockwalk_kinematics_node" respawn="false" output="screen"/>
+  <!-- <node name="rockwalk_kinematics_node" pkg="rockwalk_kinematics" type="rockwalk_kinematics_node" respawn="false" output="screen"/> -->
+
 
 </launch>

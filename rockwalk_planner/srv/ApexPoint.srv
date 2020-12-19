@@ -1,4 +1,0 @@
-# for zigzag rockwalk
-int64 rockwalk_step
----
-geometry_msgs/Point apex_point
