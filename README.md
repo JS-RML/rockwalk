@@ -60,9 +60,22 @@ roslaunch simulation_rviz fixed_apex.launch
 </p>
 
 
-### 3.2 Rock-and-Walk by Single-Arm Manipulation
+### 3.2 Rock-and-Walk by Single- and Dual-Arm Manipulation
 
-
-### 3.3 Rock-and-Walk by Dual-Arm Manipulation
-
+First, publish motion shield data in ROS using rosserial:
+```
+roslaunch rockwalk_kinematics rw_kinematics.launch
+```
+Next, calibrate the motion shield and use its output to compute object state (assuming the object rolls without slipping):
+```
+rosrun rockwalk_kinematics rockwalk_kinematics_node
+```
+Finally, run the following nodes to implement rock-and-walk in a single-arm setting
+```
+rosrun rockwalk_ur10_control single_arm_caging_labfloor_rockwalk
+```
+or, in a dual-arm setting
+```
+rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
+```
 
