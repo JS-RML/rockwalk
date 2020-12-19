@@ -56,10 +56,10 @@ class KinematicsVisualization:
 
     def load_object_trajectory(self):
 
-        moving_apex_sol = sio.loadmat('~/rockwalk_ws/src/simulation/FixedApexSolutionAll.mat')
+        fixed_apex_sol = sio.loadmat('/home/nazir/rockwalk_ws/src/simulation/FixedApexSolutionAll.mat')
 
-        self._object_trajectory = moving_apex_sol['y']
-        secondary_data = moving_apex_sol['data']
+        self._object_trajectory = fixed_apex_sol['y']
+        secondary_data = fixed_apex_sol['data']
         self._object_secondary_data = secondary_data[0,0]
 
     def publish_plane1_marker(self):
@@ -338,8 +338,7 @@ class KinematicsVisualization:
 
 if __name__ == '__main__':
 
-    rospy.init_node("rockwalk_dynamics_node", anonymous=True)
-
+    rospy.init_node("simulation_rviz_node", anonymous=True)
 
     kv = KinematicsVisualization()
 
