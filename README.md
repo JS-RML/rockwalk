@@ -48,4 +48,4 @@ Our Matlab implementation computes passive dynamics of the object, modeled as an
 #### 3.1.1 Symbolic Computation
 
 
-#### 3.1.2 Symbolic Computation
+#### 3.1.2 Numeric Computation and Visualization
