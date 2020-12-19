@@ -12,7 +12,7 @@ clear all
 addpath('./helper_functions')
 
 % true if parameters defined symbolically 
-isSymbolic = true; %should be true here
+isSymbolic = false;
 cone_params = cone_parameters(isSymbolic);
 
 q = sym('q', [6,1]); % six generalized coordinates. Only 5 independent
@@ -21,7 +21,6 @@ ddqdt = sym('ddqdt',[6,1]); % generalized accelerations
 
 [rot_sb, rot_sbprime] = coordinate_frames(q);
 
-
 %------------------------------------------------------------------------%
 
 % center of mass position, velocity. Disk center velocity, and rolling
@@ -29,11 +28,11 @@ ddqdt = sym('ddqdt',[6,1]); % generalized accelerations
 
 cm_position = cm_position(q, rot_sb, rot_sbprime, cone_params);
 
-cm_velocity = cm_velocity(q,dqdt, rot_sb, cone_params);
+cm_velocity = cm_velocity(q, dqdt, rot_sb, cone_params);
 
 disk_center_velocity = disk_center_velocity(q, dqdt, rot_sb, rot_sbprime, cone_params);
 
-rolling_constraint_matrix = rolling_constraint_matrix(disk_center_velocity, dqdt);
+A_rolling = rolling_constraint_matrix(disk_center_velocity, dqdt);
 
 %------------------------------------------------------------------------%
 
@@ -69,12 +68,25 @@ matrix_eom = matrix_eom(dqdt,ddqdt,EL_equations);
 
 
 %------------------------------------------------------------------------%
+contact_position = contact_coordinates(q, rot_sb, cone_params);
+%------------------------------------------------------------------------%
+
+apex_position = apex_position(q, rot_sb, rot_sbprime, cone_params);
+
+apex_velocity = apex_velocity(q, dqdt, rot_sb, cone_params);
+
+
+%-------------------------------------------------------------------------%
+cm_acceleration = cm_acceleration(cm_velocity, q, dqdt, ddqdt);
+
+%-------------------------------------------------------------------------%
+
 
 save('DynamicEquations.mat',...
-     'EL_equations','matrix_eom',...
-     'cone_params','q','dqdt','ddqdt',...
+     'EL_equations','matrix_eom','cone_params','q','dqdt','ddqdt',...
      'disk_center_velocity','cm_position','cm_velocity',...
-     'rolling_constraint_matrix')
+     'contact_position','apex_position','apex_velocity','A_rolling',...
+     'ke','pe', 'cm_acceleration', 'd_dLdqdt_dt')
 
 
 

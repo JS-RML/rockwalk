@@ -1,9 +1,9 @@
-function vec_O_CM_s = cm_position(q, rot_sb, rot_sbprime, disk_params)
+function vec_O_CM_s = cm_position(q, rot_sb, rot_sbprime, cone_params)
 
     %-------------------------------------
-    radius = disk_params.radius;
-    x_cm = disk_params.lateral_CM_offset;
-    z_cm = disk_params.vertical_CM_offset;
+    radius = cone_params.radius;
+    x_cm = cone_params.lateral_CM_offset;
+    z_cm = cone_params.vertical_CM_offset;
     %-------------------------------------
 
     vec_GD_s = rot_sb*[-radius;0;0]; % ground to center of disk vector in s frame
