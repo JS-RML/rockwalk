@@ -85,4 +85,7 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 
 
 ### 3.3 Rock-and-Walk by Aerial Manipulation
+... Coming soon ...
 
+## 4. Maintenance
+For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk)
