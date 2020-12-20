@@ -85,7 +85,12 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 
 
 ### 3.3 Rock-and-Walk by Aerial Manipulation
-... Coming soon ...
+Detailed instructions on executing rock-and-walk using a quadrotor equipped with a zero-mobility end-effector can be found in `aerial_manipulation/README.md`.
+
+<p align="center">
+  <img width="35%" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
+</p>
+
 
 ## 4. Maintenance
 For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk)
