@@ -1,0 +1,16 @@
+# 
+# Definition of all trackable objects
+# Identifier corresponds to Trackable ID set in Tracking Tools
+#
+rigid_bodies:
+    '1':
+        pose: mocap/uav
+        pose2d: uav/ground_pose
+        child_frame_id: uav
+        parent_frame_id: world
+    '2':
+      pose: mocap/cone
+      pose2d: cone/ground_pose
+      child_frame_id: cone
+      parent_frame_id: world
+
