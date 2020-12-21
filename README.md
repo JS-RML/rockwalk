@@ -92,4 +92,4 @@ Detailed instructions on executing rock-and-walk using a quadrotor equipped with
 
 
 ## 4. Maintenance
-For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk)
+For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk) and Pu Xu (pxuaf[at]connect.ust.hk)
