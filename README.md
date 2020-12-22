@@ -41,13 +41,13 @@ catkin build
 ### 3.1 Repository Organization
 The following provides a brief description of each folder contained in this repository
 ```
-1. aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
-2. cad_models: contains .stl files for the object models used in the experiments
-3. media: contains visual images/gifs of rock-and-walk
-4. rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain object state as it rolls without slipping
-5. rockwalk_ur10_control: ROS pakcage to implement rock-and-walk in a single- or dual-arm setting
-6. simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
-7. simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
+1. /aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
+2. /cad_models: contains .stl files for the object models used in the experiments
+3. /media: contains visual images/gifs of rock-and-walk
+4. /rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain object state as it rolls without slipping
+5. /rockwalk_ur10_control: ROS pakcage to implement rock-and-walk in a single- or dual-arm setting
+6. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
+7. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
 
 ### 3.2 Passive Dynamics Simulation
