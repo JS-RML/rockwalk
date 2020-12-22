@@ -38,8 +38,19 @@ catkin build
 
 ## 3. Usage
 
+### 3.1 Repository Organization
+The following provides a brief description of each folder contained in this repository
+```
+1. aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
+2. cad_models: contains .stl files for the object models used in the experiments
+3. media: contains visual images/gifs of rock-and-walk
+4. rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain state of the object as it rolls without slipping
+5. rockwalk_ur10_control: ROS pakcage to implement rock-and-walk in a single- or dual-arm setting
+6. simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
+7. simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
+```
 
-### 3.1 Passive Dynamics Simulation
+### 3.2 Passive Dynamics Simulation
 
 Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. The motion of the object can be visualized in [RViz](http://wiki.ros.org/rviz).
 
@@ -59,7 +70,7 @@ roslaunch simulation_rviz fixed_apex.launch
 </p>
 
 
-### 3.2 Rock-and-Walk by Single- and Dual-Arm Manipulation
+### 3.3 Rock-and-Walk by Single- and Dual-Arm Manipulation
 
 First, publish motion shield data in ROS using rosserial. Then calibrate the motion shield and use the output to compute object state:
 ```
@@ -83,7 +94,7 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 </p>
 
 
-### 3.3 Rock-and-Walk by Aerial Manipulation
+### 3.4 Rock-and-Walk by Aerial Manipulation
 Detailed instructions on executing rock-and-walk using a quadrotor equipped with a zero-mobility end-effector can be found in `aerial_manipulation/README.md`
 
 <p align="center">
