@@ -8,9 +8,9 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 
 
 <p align="center">
-  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
-  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
-  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
+  <img height="170" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
+  <img height="170" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+  <img height="170" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
 </p>
 
 
