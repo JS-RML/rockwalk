@@ -95,7 +95,7 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 
 
 ### 3.4 Rock-and-Walk by Aerial Manipulation
-Detailed instructions on executing rock-and-walk using a quadrotor equipped with a caging end-effector can be found in `aerial_manipulation/README.md`
+Detailed instructions on executing rock-and-walk using a quadrotor equipped with a caging end-effector can be found in `aerial_manipulation/README.md`. Note our current implementation with quadrotor requires motion capture system to obtain state of both the quadrotor and the object.
 
 
 
