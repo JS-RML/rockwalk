@@ -13,6 +13,11 @@ Our implementation employs a feedback control strategy for sustainable rock-and-
   <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
 </p>
 
+**Related Papers**
+<!--1. A. Nazir, P. Xu and J. Seo, "Rock-and-Walk Manipulation: A Method of Dynamic Object Transport," submitted to IEEE Transactions on Robotics (Under review).-->
+1. A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
+
+
 <!--This repository is an implementation of a novel robotic manipulation capability for transporting an object on the ground in a dynamic and nonprehensile manner. The object is manipulated to rock from side to side repeatedly; in the meantime, the force of gravity enables the object to roll along a zigzag path that is eventually heading forward. We call it ***rock-and-walk*** object manipulation. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) done by archaeologists that it is possible to “walk” the statue by repeated rocking.
 Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.-->
 
@@ -92,10 +97,6 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 Detailed instructions on executing rock-and-walk using a quadrotor equipped with a caging end-effector can be found in `aerial_manipulation/README.md`
 
 
-## 4. Publications
-
-<!--1. A. Nazir, P. Xu and J. Seo, "Rock-and-Walk Manipulation: A Method of Dynamic Object Transport," submitted to IEEE Transactions on Robotics (Under review).-->
-1. A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
 
 ## Contact Us
 For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk) and Pu Xu (pxuaf[at]connect.ust.hk)
