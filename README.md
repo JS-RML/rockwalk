@@ -31,7 +31,8 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 
 ### 2.2 Software
 * [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
-* [ROS](https://www.ros.org/) and [python-urx](https://github.com/SintefManufacturing/python-urx) for robot control
+* [ROS Kinetic](https://www.ros.org/) running on [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+* [python-urx](https://github.com/SintefManufacturing/python-urx) for UR10 robot arm control
 * [rosserial](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
 * [teleop_twist_keyboard](https://github.com/ros-teleop/teleop_twist_keyboard) to perform teleoperated rock-and-walk on a treadmill
 
