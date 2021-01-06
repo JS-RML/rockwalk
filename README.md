@@ -1,5 +1,6 @@
 # *Rock-and-Walk*
 
+
 ## 1. Overview
 This repository is an implementation of a novel robotic manipulation capability for transporting an object on the ground in a dynamic and nonprehensile manner. The object is manipulated to rock from side to side repeatedly; in the meantime, the force of gravity enables the object to roll along a zigzag path that is eventually heading forward. We call it ***rock-and-walk*** object manipulation. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) done by archaeologists that it is possible to “walk” the statue by repeated rocking.
 
@@ -39,7 +40,7 @@ The following provides a brief description of each folder contained in this repo
 
 
 ### 3.1 Installation
-To install ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them.
+For ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly from Matlab.
 
 
 ### 3.2 Passive Dynamics Simulation
