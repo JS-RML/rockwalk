@@ -37,11 +37,7 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 
 ## 3. Usage
 
-### 3.1 Installation
-For ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
-
-
-### 3.2 Repository Organization
+### 3.1 Repository Organization and Installation
 The following provides a brief description of each folder contained in this repository
 ```
 1. /aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
@@ -51,8 +47,10 @@ The following provides a brief description of each folder contained in this repo
 5. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
 6. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
+For ROS packages, first downloaded them into your catkin workspace. Then run `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
 
-### 3.3 Passive Dynamics Simulation
+
+### 3.2 Passive Dynamics Simulation
 
 Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. Our dynamic formulation only considers the center of mass of the object, while ignoring its moment of inertia. The motion of the object is visualized in [RViz](http://wiki.ros.org/rviz).
 
@@ -72,7 +70,7 @@ roslaunch simulation_rviz fixed_apex.launch
 </p>
 
 
-### 3.4 Rock-and-Walk by Single- and Dual-Arm Manipulation
+### 3.3 Rock-and-Walk by Single- and Dual-Arm Manipulation
 
 First, publish motion shield data in ROS using rosserial. Then calibrate the motion shield and use the output to compute object state:
 ```
@@ -89,7 +87,7 @@ rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 ```
 
 
-### 3.5 Rock-and-Walk by Aerial Manipulation
+### 3.4 Rock-and-Walk by Aerial Manipulation
 Detailed instructions on executing rock-and-walk using a quadrotor equipped with a caging end-effector can be found in `aerial_manipulation/README.md`
 
 
