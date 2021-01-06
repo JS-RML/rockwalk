@@ -78,9 +78,7 @@ roslaunch simulation_rviz fixed_apex.launch
 First, publish motion shield data in ROS using rosserial. Then calibrate the motion shield and use the output to compute object state:
 ```
 rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200
-
-*calibrate motion sheild*
-
+***calibrate motion sheild***
 rosrun rockwalk_kinematics rockwalk_kinematics_node
 ```
 
