@@ -50,7 +50,7 @@ The following provides a brief description of each folder contained in this repo
 1. /aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
 2. /cad_models: contains .stl files for the object models used in the experiments
 3. /rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain object state as it rolls without slipping
-4. /rockwalk_ur10_control: ROS package to implement rock-and-walk in a single- or dual-arm setting
+4. /rockwalk_ur10_control: ROS package to implement rock-and-walk in a single- or dual-arm setting using Arduino-MotionShield mounted on the object
 5. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
 6. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
