@@ -8,9 +8,9 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 
 
 <p align="center">
-  <img height="145" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
-  <img height="145" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
-  <img height="145" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
+  <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
+  <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+  <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
 </p>
 
 
@@ -48,7 +48,7 @@ The following provides a brief description of each folder contained in this repo
 
 
 ### 3.1 Installation
-For ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly from Matlab.
+For ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
 
 
 ### 3.2 Passive Dynamics Simulation
