@@ -48,7 +48,7 @@ The following provides a brief description of each folder contained in this repo
 5. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
 6. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
-For ROS packages, first downloaded them into your catkin workspace. Then run `catkin build` command from [**catkin_tools**](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
+To install ROS packages, first downloaded them into your catkin workspace and then run `catkin build` command from [**catkin_tools**](https://catkin-tools.readthedocs.io/en/latest/installing.html). Matlab scripts can be executed directly in Matlab.
 
 
 ### 3.2 Passive Dynamics Simulation
