@@ -23,15 +23,6 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 * [rosserial](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
 * [teleop_twist_keyboard](https://github.com/ros-teleop/teleop_twist_keyboard) to perform teleoperated rock-and-walk on a treadmill
 
-### 2.3 Build on ROS
-Using [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) in your catkin workspace
-```
-cd ~/catkin_ws/src
-git clone https://github.com/HKUST-RML/rockwalk.git
-cd ..
-catkin build
-```
-
 ## 3. Usage
 
 ### 3.1 Repository Organization
@@ -45,6 +36,11 @@ The following provides a brief description of each folder contained in this repo
 6. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
 7. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
+
+
+### 3.1 Installation
+To install ROS packages, first downloaded them into your catkin workspace. Then use `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them.
+
 
 ### 3.2 Passive Dynamics Simulation
 
