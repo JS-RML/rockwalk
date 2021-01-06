@@ -6,9 +6,22 @@ This repository is an implementation of a novel robotic manipulation capability 
 
 Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.
 
+**Previews**
+
+<p align="center">
+  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
+  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
+</p>
+
+
+<p align="center">
+  <img width="35%" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
+</p>
+
+
 [**Full Video Link**](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
 
-![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github_new-01.png)
+<!--![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github_new-01.png)-->
 
 
 ## 2. Prerequistes
@@ -81,18 +94,10 @@ rosrun rockwalk_ur10_control single_arm_caging_labfloor_rockwalk
 rosrun rockwalk_ur10_control dual_arm_cable_labfloor_rockwalk
 ```
 
-<p align="center">
-  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
-  <img height="200" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/cable_rockwalk.gif">
-</p>
-
 
 ### 3.4 Rock-and-Walk by Aerial Manipulation
 Detailed instructions on executing rock-and-walk using a quadrotor equipped with a caging end-effector can be found in `aerial_manipulation/README.md`
 
-<p align="center">
-  <img width="35%" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
-</p>
 
 
 
