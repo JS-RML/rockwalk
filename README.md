@@ -57,7 +57,7 @@ For ROS packages, first downloaded them into your catkin workspace. Then use `ca
 
 Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. Our dynamic formulation only considers the center of mass of the object, while ignoring its moment of inertia. The motion of the object is visualized in [RViz](http://wiki.ros.org/rviz).
 
-To first obtain and then solve the dynamic model in Matlab
+To obtain and solve the dynamic model in Matlab
 ```
 >> cd simulation/
 >> rolling_disk_eom.m
