@@ -3,7 +3,7 @@
 
 ## 1. Overview
 
-This repository contains implementation codes of robotic [rock-and-walk manipulation](https://youtu.be/yyURupLXQjk) for dynamic and non-prehensile object transport. The object, which is in contact with an environmental surface, is basically manipulated to rock from side to side about the contact point iteratively by the robot system. In the meantime, the passive dynamics due to gravity enables the object to roll along a zigzag path that leads to a forward walk. Rock-and-walk is a special-purpose method that enables the transport of a certain class of objects, which are too large and heavy to apply other primary methods such as grasping- or pushing-based operations. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) performed by archaeologists that it is possible to walk the statue by iterative rocking. 
+This repository contains implementation codes of robotic [***rock-and-walk*** **manipulation**](https://youtu.be/yyURupLXQjk) for dynamic and non-prehensile object transport. The object, which is in contact with an environmental surface, is basically manipulated to rock from side to side about the contact point iteratively by the robot system. In the meantime, the passive dynamics due to gravity enables the object to roll along a zigzag path that leads to a forward walk. Rock-and-walk is a special-purpose method that enables the transport of a certain class of objects, which are too large and heavy to apply other primary methods such as grasping- or pushing-based operations. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) performed by archaeologists that it is possible to walk the statue by iterative rocking. 
 
 Our implementation employs a feedback control strategy for sustainable rock-and-walk gaiting through the effective regulation of the object’s energy and posture in multiple robotic settings: **caging-based single-arm manipulation**, **cable-driven dual-arm manipulation**, and **aerial manipulation**.
 
@@ -48,12 +48,12 @@ The following provides a brief description of each folder contained in this repo
 5. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
 6. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
-For ROS packages, first downloaded them into your catkin workspace. Then run `catkin build` command from [catkin_tools](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
+For ROS packages, first downloaded them into your catkin workspace. Then run `catkin build` command from [**catkin_tools**](https://catkin-tools.readthedocs.io/en/latest/installing.html) to install them. Matlab scripts can be executed directly in Matlab.
 
 
 ### 3.2 Passive Dynamics Simulation
 
-Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. Our dynamic formulation only considers the center of mass of the object, while ignoring its moment of inertia. The motion of the object is visualized in [RViz](http://wiki.ros.org/rviz).
+Our Matlab implementation computes passive dynamics of the object, modeled as an oblique-cone that has a circular base and a vertical rod attached to it, as it rolls without slipping on a flat surface. Our dynamic formulation only considers the center of mass of the object, while ignoring its moment of inertia. The motion of the object is visualized in [**RViz**](http://wiki.ros.org/rviz).
 
 To obtain and solve the dynamic model in Matlab
 ```
