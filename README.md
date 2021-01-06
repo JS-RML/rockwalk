@@ -2,10 +2,10 @@
 
 
 ## 1. Overview
-This repository is an implementation of a novel robotic manipulation capability for transporting an object on the ground in a dynamic and nonprehensile manner. The object is manipulated to rock from side to side repeatedly; in the meantime, the force of gravity enables the object to roll along a zigzag path that is eventually heading forward. We call it ***rock-and-walk*** object manipulation. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) done by archaeologists that it is possible to “walk” the statue by repeated rocking.
 
-Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.
+This repository presents the implementation of robotic rock-and-walk manipulation for dynamic and non-prehensile object transport. The object, which is in contact with an environmental surface, is basically manipulated to rock from side to side about the contact point iteratively by the robot system. In the meantime, the passive dynamics due to gravity enables the object to roll along a zigzag path that leads to a forward walk. Rock-and-walk is a special-purpose method that enables the transport of a certain class of objects, which are too large and heavy to apply other primary methods such as grasping- or pushing-based operations. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) performed by archaeologists that it is possible to walk the statue by iterative rocking. 
 
+Our implementation employs a feedback control strategy for sustainable rock-and-walk gaiting through the effective regulation of the object’s energy and posture. An extensive set of experiments demonstrate the viability and practicality of our approach, which is implemented in multiple robotic settings: caging-based single-arm manipulation, cable-driven dual-arm manipulation, and aerial manipulation.
 
 <p align="center">
   <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/caging_rockwalk.gif">
@@ -13,8 +13,11 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
   <img height="150" src="https://github.com/HKUST-RML/rockwalk/blob/master/media/aerial_rockwalk.gif">
 </p>
 
+<!--This repository is an implementation of a novel robotic manipulation capability for transporting an object on the ground in a dynamic and nonprehensile manner. The object is manipulated to rock from side to side repeatedly; in the meantime, the force of gravity enables the object to roll along a zigzag path that is eventually heading forward. We call it ***rock-and-walk*** object manipulation. Our work is motivated by an interesting question in archaeology, how the giant rock statues of Easter Island (known as “moai”) were transported several hundred years ago, and a recent [demonstration](https://www.youtube.com/watch?v=J5YR0uqPAI8&ab_channel=NationalGeographic) done by archaeologists that it is possible to “walk” the statue by repeated rocking.
+Our rock-and-walk object transport technique is implemented in multiple robotic settings: 1) one robot arm with an end-effector that can cage the object, 2) two robot arms to interact with the object via cables, and 3) an aerial robot with the caging end-effector.-->
 
-[**Full Video Link**](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)
+
+<!--[**Full Video Link**](https://drive.google.com/file/d/1Nx8kZgXvVKMN7lSgfyp2BvnqaPJYh2qx/view?usp=sharing)-->
 
 <!--![](https://github.com/HKUST-RML/rockwalk/blob/master/media/intro_photo_github_new-01.png)-->
 
@@ -39,11 +42,10 @@ The following provides a brief description of each folder contained in this repo
 ```
 1. /aerial_manipulation: contains ROS packages for rock-and-walk implementation with a quadrotor using mocap
 2. /cad_models: contains .stl files for the object models used in the experiments
-3. /media: contains visual images/gifs of rock-and-walk
-4. /rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain object state as it rolls without slipping
-5. /rockwalk_ur10_control: ROS package to implement rock-and-walk in a single- or dual-arm setting
-6. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
-7. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
+3. /rockwalk_kinematics: ROS package to acquire data from motion shield and process to obtain object state as it rolls without slipping
+4. /rockwalk_ur10_control: ROS package to implement rock-and-walk in a single- or dual-arm setting
+5. /simulation: Matlab codes for passive dynamic simulation of object rolling on ground with its control point fixed
+6. /simulation_rviz: ROS package to visualize passive dynamic simulation in RViz
 ```
 
 
