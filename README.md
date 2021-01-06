@@ -94,9 +94,8 @@ Detailed instructions on executing rock-and-walk using a quadrotor equipped with
 
 ## 4. Publications
 
-1. A. Nazir, P. Xu and J. Seo, "Rock-and-Walk Manipulation: A Method of Dynamic Object Transport," submitted to IEEE Transactions on Robotics (Under review).
+<!--1. A. Nazir, P. Xu and J. Seo, "Rock-and-Walk Manipulation: A Method of Dynamic Object Transport," submitted to IEEE Transactions on Robotics (Under review).-->
+1. A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
 
-2. A. Nazir and J. Seo, "[Passive Dynamic Object Locomotion by Rocking and Walking Manipulation](https://ieeexplore.ieee.org/document/8794163)," 2019 International Conference on Robotics and Automation (ICRA), Montreal, QC, Canada, 2019, pp. 7926-7932, doi: 10.1109/ICRA.2019.8794163.
-
-
+## Contact Us
 For technical enquiry, please contact Abdullah Nazir (a.nazir[at]connect.ust.hk) and Pu Xu (pxuaf[at]connect.ust.hk)
