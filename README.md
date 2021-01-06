@@ -25,16 +25,16 @@ Our rock-and-walk object transport technique is implemented in multiple robotic 
 ## 2. Prerequistes
 
 ### 2.1 Hardware
-* [Arduino Mega 2560](https://store.arduino.cc/usa/mega-2560-r3) and an [Arduino 9 Axis Motion Shield](https://store.arduino.cc/usa/9-axis-motion-shield)
-* [Universal Robot UR10 Robot Arm](https://www.universal-robots.com/products/ur10-robot/)
+* [**Arduino Mega 2560**](https://store.arduino.cc/usa/mega-2560-r3) and an [**Arduino 9 Axis Motion Shield**](https://store.arduino.cc/usa/9-axis-motion-shield)
+* [**Universal Robot UR10 Robot Arm**](https://www.universal-robots.com/products/ur10-robot/)
 
 
 ### 2.2 Software
-* [Matlab](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
-* [ROS Kinetic](https://www.ros.org/) running on [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
-* [python-urx](https://github.com/SintefManufacturing/python-urx) for UR10 robot arm control
-* [rosserial](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
-* [teleop_twist_keyboard](https://github.com/ros-teleop/teleop_twist_keyboard) to perform teleoperated rock-and-walk on a treadmill
+* [**Matlab**](https://www.mathworks.com/products/matlab.html) for object's passive dynamics simulation
+* [**ROS Kinetic**](https://www.ros.org/) running on [Ubuntu 16.04](http://releases.ubuntu.com/16.04/)
+* [**python-urx**](https://github.com/SintefManufacturing/python-urx) for UR10 robot arm control
+* [**rosserial**](http://wiki.ros.org/rosserial) to acquire data from Arduino 9 Axis Motion Shield
+* [**teleop_twist_keyboard**](https://github.com/ros-teleop/teleop_twist_keyboard) to perform teleoperated rock-and-walk on a treadmill
 
 ## 3. Usage
 
